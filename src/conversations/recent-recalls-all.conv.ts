@@ -5,12 +5,6 @@ let ssml = require('ssml');
 
 export class RecentRecallsAllConversations {
   public Default(recall: IRecentRecall): string {
-    const options = {
-      weekday: 'long',
-      day: 'numeric',
-      year: 'numeric',
-      month: 'long',
-    };
     var date = new Date(recall.date_published * 1000);
 
     const ssmlDoc = new ssml();
