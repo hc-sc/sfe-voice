@@ -6,15 +6,15 @@ import {
 
 test('Recent Should get back recall information', async () => {
   const repository = new RecallRepository();
-  var result = await repository.GetHealthRecalls();
+  var result = await repository.GetRecentRecalls();
 
   expect(result).toBeTruthy();
 });
 
 test('Search Should get back recall information', async () => {
   const repository = new RecallRepository();
-  var options = new RecallSearchOptions('cake', RecallCategory.Food, 10, 0);
-  var result = await repository.SearchHealthRecalls(options);
+  var options = new RecallSearchOptions('cake', RecallCategory.Food, 10, 0, "en");
+  var result = await repository.SearchRecalls(options);
 
   expect(result).toBeTruthy();
 });

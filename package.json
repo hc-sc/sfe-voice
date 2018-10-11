@@ -35,6 +35,8 @@
     "@types/express": "^4.16.0",
     "actions-on-google": "^2.3.0",
     "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "ssml": "0.0.4",
     "typed-rest-client": "^1.0.9"
   },
   "devDependencies": {
