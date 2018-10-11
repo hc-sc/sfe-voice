@@ -30,7 +30,7 @@ import { RecentRecallsAllConversations } from 'conversations/recent-recalls-all.
     }
   
     public async ApplyIntent() {
-      this.app.intent('recent recalls - next', async conv => {
+      this.app.intent('recent recalls - all - next', async conv => {
           let context = conv.contexts.get(RecentRecallsAllFollowupContext.ContextName);
           let conversation = new RecentRecallsAllConversations();
           if(context != undefined)
