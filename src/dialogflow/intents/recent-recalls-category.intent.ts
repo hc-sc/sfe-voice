@@ -88,7 +88,6 @@ import {
             context
           ));
           conv.ask(conversation.Default(recall));
-          conv.contexts;
           return;
         }
   
