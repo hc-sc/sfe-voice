@@ -6,6 +6,7 @@ import {
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
 import { ContextName } from './contexts/recall-context-names';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
+import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-followup.context';
 
 export class RecentRecallAllIntent {
   app: DialogflowApp<
@@ -34,11 +35,15 @@ export class RecentRecallAllIntent {
       let repository = new RecallRepository();
       let conversation = new RecentRecallsAllConversations();
       let recentRecallResults = await repository.GetRecentRecalls();
-      
+
+
       if(recentRecallResults != null && recentRecallResults.results.ALL.length > 0)
       {
-        const recall = recentRecallResults.results.ALL[0];        
+        let context = new RecentRecallsAllFollowupContext(recentRecallResults.results.ALL);
+        const recall = context.CurrentRecall;
+        conv.contexts.set(context.ContextName, 2, <any>context)
         conv.ask(conversation.Default(recall))
+        conv.contexts
         return;
       }
       
