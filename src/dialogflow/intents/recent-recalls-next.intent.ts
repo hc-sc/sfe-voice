@@ -43,6 +43,7 @@ export class RecentRecallNextIntent {
         let recalls = <IRecentRecall[]>context.parameters._recalls;
         let counter = <number>context.parameters._counter;
         let allContext = new RecentRecallsAllFollowupContext(recalls, counter);
+        conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(allContext));
         let utterance = conversation.Default(allContext.NextRecall);
         conv.ask(utterance);
         return;
