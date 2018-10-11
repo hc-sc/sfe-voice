@@ -11,7 +11,6 @@ export interface IUser {
 }
 
 export class RecallRepository {
-
   public async GetRecentRecalls(): Promise<IAllRecentRecalls | null> {
     const httpc = new HttpClient('food-recall');
     const res = await httpc.get(
@@ -29,7 +28,9 @@ export class RecallRepository {
     const httpc = new HttpClient('food-recall');
     const baseUrl =
       'http://healthycanadians.gc.ca/recall-alert-rappel-avis/api';
-    const url = `${baseUrl}/search?search=${options.Search}&lim=${options.Limit}&off=${options.Offset}&cat=${options.Category}&lang=${options.Language}`;
+    const url = `${baseUrl}/search?search=${options.Search}&lim=${
+      options.Limit
+    }&off=${options.Offset}&cat=${options.Category}&lang=${options.Language}`;
 
     const res = await httpc.get(url);
     const body = await res.readBody();

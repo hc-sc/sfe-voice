@@ -21,26 +21,22 @@ export class RecentRecallsAllFollowupContext {
     return this._counter;
   }
 
-  public get CurrentRecall():IRecentRecall
-  {
-      return this.Recalls[this.Counter - 1];
+  public get CurrentRecall(): IRecentRecall {
+    return this.Recalls[this.Counter - 1];
   }
 
-  public get PreviousRecall():IRecentRecall
-  {
-      if(this._counter > 1)
-      {
-          this._counter--;
-      }
-      return this.CurrentRecall;
+  public get PreviousRecall(): IRecentRecall {
+    if (this._counter > 1) {
+      this._counter--;
+    }
+    return this.CurrentRecall;
   }
 
-  public get NextRecall():IRecentRecall
-  {
-      if(this._counter < this._recalls.length){
-        this._counter++;
-      }
-      return this.CurrentRecall;
+  public get NextRecall(): IRecentRecall {
+    if (this._counter < this._recalls.length) {
+      this._counter++;
+    }
+    return this.CurrentRecall;
   }
 
   public static get ContextName(): string {

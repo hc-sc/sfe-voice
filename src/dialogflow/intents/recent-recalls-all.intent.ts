@@ -1,7 +1,7 @@
 import {
   DialogflowApp,
   Contexts,
-  DialogflowConversation
+  DialogflowConversation,
 } from 'actions-on-google';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
 import { ContextName } from './contexts/recall-context-names';
@@ -36,18 +36,25 @@ export class RecentRecallAllIntent {
       let conversation = new RecentRecallsAllConversations();
       let recentRecallResults = await repository.GetRecentRecalls();
 
-
-      if(recentRecallResults != null && recentRecallResults.results.ALL.length > 0)
-      {
-        let context = new RecentRecallsAllFollowupContext(recentRecallResults.results.ALL);
+      if (
+        recentRecallResults != null &&
+        recentRecallResults.results.ALL.length > 0
+      ) {
+        let context = new RecentRecallsAllFollowupContext(
+          recentRecallResults.results.ALL
+        );
         const recall = context.CurrentRecall;
-        conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>context)
-        conv.ask(conversation.Default(recall))
-        conv.contexts
+        conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(
+          context
+        ));
+        conv.ask(conversation.Default(recall));
+        conv.contexts;
         return;
       }
-      
-      conv.close("It seems something has gone wrong getting the recall information. Please try again later");
+
+      conv.close(
+        'It seems something has gone wrong getting the recall information. Please try again later'
+      );
       return;
     });
   }

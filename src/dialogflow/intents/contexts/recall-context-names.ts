@@ -1,4 +1,4 @@
 export enum ContextName {
   None = '',
-  RecentRecallsAllFollowup = "recentrecalls-all-followup"
+  RecentRecallsAllFollowup = 'recentrecalls-all-followup',
 }

@@ -7,9 +7,9 @@ enum RecallCategory {
 }
 
 enum Languages {
-  None = "",
-  English = "en",
-  French = "fr"
+  None = '',
+  English = 'en',
+  French = 'fr',
 }
 
 class RecallSearchOptions {
@@ -26,7 +26,7 @@ class RecallSearchOptions {
     category: RecallCategory,
     limit: number,
     offset: number,
-    lang: string,
+    lang: string
   ) {
     this.search = search;
     this.category = category;
@@ -51,13 +51,18 @@ class RecallSearchOptions {
     return this.offset;
   }
 
-  get Language(): string{
+  get Language(): string {
     return this.lang;
   }
 
-  public static get Default():RecallSearchOptions
-  {
-    return new RecallSearchOptions("", RecallCategory.None, 10, 0, Languages.English);
+  public static get Default(): RecallSearchOptions {
+    return new RecallSearchOptions(
+      '',
+      RecallCategory.None,
+      10,
+      0,
+      Languages.English
+    );
   }
 }
 

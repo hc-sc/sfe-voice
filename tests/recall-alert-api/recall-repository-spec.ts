@@ -13,7 +13,13 @@ test('Recent Should get back recall information', async () => {
 
 test('Search Should get back recall information', async () => {
   const repository = new RecallRepository();
-  var options = new RecallSearchOptions('cake', RecallCategory.Food, 10, 0, "en");
+  var options = new RecallSearchOptions(
+    'cake',
+    RecallCategory.Food,
+    10,
+    0,
+    'en'
+  );
   var result = await repository.SearchRecalls(options);
 
   expect(result).toBeTruthy();
