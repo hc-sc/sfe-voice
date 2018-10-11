@@ -9,6 +9,7 @@ import { RecentRecallAllIntent } from './intents/recent-recalls-all.intent';
 import { RecentRecallNextIntent } from './intents/recent-recalls-next.intent';
 import { RecentRecallPreviousIntent } from './intents/recent-recalls-previous.intent';
 import { RecentRecallAllNoYes } from './intents/recent recalls-all-no-yes.intent';
+import { RecentRecallCategoryIntent } from './intents/recent-recalls-category.intent';
 
 export class ActionFactory {
   app: DialogflowApp<
@@ -30,6 +31,8 @@ export class ActionFactory {
   public Create(): OmniHandler {
     const recentRecallsAll = new RecentRecallAllIntent(this.app);
     recentRecallsAll.ApplyIntent();
+    const recentRecallsCategory = new RecentRecallCategoryIntent(this.app);
+    recentRecallsCategory.ApplyIntent();
     const recentRecallsAllNext = new RecentRecallNextIntent(this.app);
     recentRecallsAllNext.ApplyIntent();
     const recentRecallsAllPrevious = new RecentRecallPreviousIntent(this.app);
