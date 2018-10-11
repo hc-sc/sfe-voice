@@ -39,10 +39,11 @@ export class RecentRecallAllIntent {
       {
         const recall = recentRecallResults.results.ALL[0];        
         conv.ask(conversation.Default(recall))
+        return;
       }
       
       conv.close("It seems something has gone wrong getting the recall information. Please try again later");
-
+      return;
     });
   }
 }

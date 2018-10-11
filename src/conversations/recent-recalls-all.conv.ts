@@ -24,7 +24,7 @@ export class RecentRecallsAllConversations
                })
                .break(500)
                .say(recall.title)
-               .break(500)
+               .break(1000)
                .say("Would you like to hear the next recall?")
         
         return ssmlDoc.toString();
