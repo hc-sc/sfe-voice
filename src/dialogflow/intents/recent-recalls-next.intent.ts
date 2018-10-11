@@ -36,6 +36,10 @@ export class RecentRecallNextIntent {
       );
       let conversation = new RecentRecallsAllConversations();
       if (context != undefined) {
+
+        console.log("********* NEXT CONTEXT PARAMETERS *********");
+        console.log(JSON.stringify(context.parameters));
+
         let recalls = <IRecentRecall[]>context.parameters.Recalls;
         let counter = <number>context.parameters.Counter;
         let allContext = new RecentRecallsAllFollowupContext(recalls, counter);
