@@ -1,5 +1,6 @@
 import { IRecentRecall } from 'recall-alert-api/models/recent-recall';
 import { ContextName } from './recall-context-names';
+import { DialogflowConversation, Contexts } from 'actions-on-google';
 
 export class RecentRecallsAllFollowupContext {
   private _recalls: IRecentRecall[];
@@ -37,6 +38,32 @@ export class RecentRecallsAllFollowupContext {
       this._counter++;
     }
     return this.CurrentRecall;
+  }
+
+  public Save(conv: DialogflowConversation<any, any, Contexts>) {
+    conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(
+     this 
+    ));
+  }
+
+  public static Create(
+    conv: DialogflowConversation<any, any, Contexts>
+  ): RecentRecallsAllFollowupContext | undefined {
+    let context = conv.contexts.get(
+      RecentRecallsAllFollowupContext.ContextName
+    );
+
+    if (context != undefined) {
+      console.log('********* NEXT CONTEXT PARAMETERS *********');
+      console.log(JSON.stringify(context.parameters));
+
+      let recalls = <IRecentRecall[]>context.parameters._recalls;
+      let counter = <number>context.parameters._counter;
+
+      return new RecentRecallsAllFollowupContext(recalls, counter);
+    }
+
+    return undefined;
   }
 
   public static get ContextName(): string {

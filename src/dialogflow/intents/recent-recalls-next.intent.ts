@@ -31,23 +31,17 @@ export class RecentRecallNextIntent {
 
   public async ApplyIntent() {
     this.app.intent('recent recalls - all - next', async conv => {
-      let context = conv.contexts.get(
-        RecentRecallsAllFollowupContext.ContextName
-      );
-      let conversation = new RecentRecallsAllConversations();
-      if (context != undefined) {
 
-        console.log("********* NEXT CONTEXT PARAMETERS *********");
-        console.log(JSON.stringify(context.parameters));
+      const conversation = new RecentRecallsAllConversations();    
+      const context = RecentRecallsAllFollowupContext.Create(conv);
 
-        let recalls = <IRecentRecall[]>context.parameters._recalls;
-        let counter = <number>context.parameters._counter;
-        let allContext = new RecentRecallsAllFollowupContext(recalls, counter);
-        conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(allContext));
-        let utterance = conversation.Default(allContext.NextRecall);
+      if(context != undefined)
+      {
+        const utterance = conversation.Default(context.NextRecall);
+        context.Save(conv);
         conv.ask(utterance);
         return;
-      }
+      }      
 
       conv.close('Something has gone wrong. Please start again.');
       return;
