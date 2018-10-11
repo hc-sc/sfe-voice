@@ -7,6 +7,7 @@ import {
 } from 'actions-on-google';
 import { RecentRecallAllIntent } from './intents/recent-recalls-all.intent';
 import { RecentRecallNextIntent } from './intents/recent-recalls-next.intent';
+import { RecentRecallPreviousIntent } from './intents/recent-recalls-previous.intent';
 
 export class ActionFactory {
   app: DialogflowApp<
@@ -30,6 +31,8 @@ export class ActionFactory {
     recentRecallsAll.ApplyIntent();
     const recentRecallsAllNext = new RecentRecallNextIntent(this.app);
     recentRecallsAllNext.ApplyIntent();
+    const recentRecallsAllPrevious = new RecentRecallPreviousIntent(this.app);
+    recentRecallsAllPrevious.ApplyIntent();
 
     return this.app;
   }
