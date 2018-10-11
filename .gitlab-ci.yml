@@ -1,0 +1,19 @@
+image: node:latest
+
+stages:
+  - production
+
+production:
+  type: deploy
+  stage: production
+  image: ruby:latest
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=food-recall-assistant --api-key=$HEROKU_API_KEY
+  environment:
+    name: production
+    url: https://food-recall-assistant.herokuapp.com/
+  only:
+    - master
