@@ -45,9 +45,11 @@ export class RecentRecallNextIntent {
         let allContext = new RecentRecallsAllFollowupContext(recalls, counter);
         let utterance = conversation.Default(allContext.NextRecall);
         conv.ask(utterance);
+        return;
       }
 
       conv.close('Something has gone wrong. Please start again.');
+      return;
     });
   }
 }
