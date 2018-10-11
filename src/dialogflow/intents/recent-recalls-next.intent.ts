@@ -40,8 +40,8 @@ export class RecentRecallNextIntent {
         console.log("********* NEXT CONTEXT PARAMETERS *********");
         console.log(JSON.stringify(context.parameters));
 
-        let recalls = <IRecentRecall[]>context.parameters.Recalls;
-        let counter = <number>context.parameters.Counter;
+        let recalls = <IRecentRecall[]>context.parameters._recalls;
+        let counter = <number>context.parameters._counter;
         let allContext = new RecentRecallsAllFollowupContext(recalls, counter);
         let utterance = conversation.Default(allContext.NextRecall);
         conv.ask(utterance);
