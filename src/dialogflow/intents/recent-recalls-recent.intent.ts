@@ -6,7 +6,7 @@ import {
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
 import { ContextName } from './contexts/recall-context-names';
 
-export class RecallSearchIntent {
+export class RecentRecallRecentIntent {
   app: DialogflowApp<
     any,
     any,
