@@ -8,7 +8,7 @@ export class RecentRecallsAllFollowupContext {
   /**
    *
    */
-  constructor(recalls: IRecentRecall[], counter: number = 0) {
+  constructor(recalls: IRecentRecall[], counter: number = 1) {
     this._recalls = recalls;
     this._counter = counter;
   }
@@ -23,7 +23,24 @@ export class RecentRecallsAllFollowupContext {
 
   public get CurrentRecall():IRecentRecall
   {
-      return this.Recalls[this.Counter];
+      return this.Recalls[this.Counter - 1];
+  }
+
+  public get PreviousRecall():IRecentRecall
+  {
+      if(this._counter > 1)
+      {
+          this._counter--;
+      }
+      return this.CurrentRecall;
+  }
+
+  public get NextRecall():IRecentRecall
+  {
+      if(this._counter < this._recalls.length){
+        this._counter++;
+      }
+      return this.CurrentRecall;
   }
 
   public get ContextName(): string {
