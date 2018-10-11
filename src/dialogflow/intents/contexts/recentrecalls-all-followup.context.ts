@@ -43,7 +43,7 @@ export class RecentRecallsAllFollowupContext {
       return this.CurrentRecall;
   }
 
-  public get ContextName(): string {
+  public static get ContextName(): string {
     return ContextName.RecentRecallsAllFollowup;
   }
 }

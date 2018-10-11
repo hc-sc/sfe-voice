@@ -6,6 +6,7 @@ import {
   OmniHandler,
 } from 'actions-on-google';
 import { RecentRecallAllIntent } from './intents/recent-recalls-all.intent';
+import { RecentRecallNextIntent } from './intents/recent-recalls-next.intent';
 
 export class ActionFactory {
   app: DialogflowApp<
@@ -25,8 +26,10 @@ export class ActionFactory {
   }
 
   public Create(): OmniHandler {
-    const recentRecallsRecent = new RecentRecallAllIntent(this.app);
-    recentRecallsRecent.ApplyIntent();
+    const recentRecallsAll = new RecentRecallAllIntent(this.app);
+    recentRecallsAll.ApplyIntent();
+    const recentRecallsAllNext = new RecentRecallNextIntent(this.app);
+    recentRecallsAllNext.ApplyIntent();
 
     return this.app;
   }

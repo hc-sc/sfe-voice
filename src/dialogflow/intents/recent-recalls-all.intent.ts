@@ -41,7 +41,7 @@ export class RecentRecallAllIntent {
       {
         let context = new RecentRecallsAllFollowupContext(recentRecallResults.results.ALL);
         const recall = context.CurrentRecall;
-        conv.contexts.set(context.ContextName, 2, <any>context)
+        conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>context)
         conv.ask(conversation.Default(recall))
         conv.contexts
         return;
