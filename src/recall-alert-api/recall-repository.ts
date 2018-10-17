@@ -1,5 +1,9 @@
 import { HttpClient } from 'typed-rest-client/HttpClient';
-import { IRecentRecall, IAllRecentRecalls, IRecentRecallResults } from './models/recent-recall';
+import {
+  IRecentRecall,
+  IAllRecentRecalls,
+  IRecentRecallResults,
+} from './models/recent-recall';
 import { RecallSearchOptions } from './models/recall-search-options';
 import { IRecallSearchResult } from './models/recall-search-results';
 

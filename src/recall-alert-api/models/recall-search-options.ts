@@ -55,7 +55,13 @@ class RecallSearchOptions {
     return this.lang;
   }
 
-  public static Default(searchTerm = '', recallCategory = RecallCategory.None, limit = 15, offset = 0, lang = Languages.English): RecallSearchOptions {
+  public static Default(
+    searchTerm = '',
+    recallCategory = RecallCategory.None,
+    limit = 15,
+    offset = 0,
+    lang = Languages.English
+  ): RecallSearchOptions {
     return new RecallSearchOptions(
       searchTerm,
       recallCategory,

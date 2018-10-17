@@ -1,4 +1,4 @@
-import { IRecentRecall } from "./recent-recall";
+import { IRecentRecall } from './recent-recall';
 
 interface IRecallSearchResult {
   results: IRecentRecall[];

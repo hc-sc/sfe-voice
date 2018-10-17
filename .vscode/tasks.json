@@ -54,6 +54,14 @@
       "problemMatcher": [
         "$eslint-stylish"
       ]
+    },
+    {
+      "type": "shell",
+      "label": "server",
+      "command": "node",
+      "args": [
+        "./lib/app/server.js"
+      ]
     }
   ]
 }
