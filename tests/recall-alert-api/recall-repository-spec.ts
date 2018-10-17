@@ -20,7 +20,8 @@ test('Search Should get back recall information', async () => {
     0,
     'en'
   );
-  var result = await repository.SearchRecalls(options);
+  let result = await repository.SearchRecalls(options);
 
-  expect(result).toBeTruthy();
+  expect(result.results).toBeTruthy();
+  expect(result.results_count).toBeTruthy();
 });

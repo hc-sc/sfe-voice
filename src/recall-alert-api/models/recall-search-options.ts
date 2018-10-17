@@ -55,13 +55,13 @@ class RecallSearchOptions {
     return this.lang;
   }
 
-  public static get Default(): RecallSearchOptions {
+  public static Default(searchTerm = '', recallCategory = RecallCategory.None, limit = 15, offset = 0, lang = Languages.English): RecallSearchOptions {
     return new RecallSearchOptions(
-      '',
-      RecallCategory.None,
-      10,
-      0,
-      Languages.English
+      searchTerm,
+      recallCategory,
+      limit,
+      offset,
+      lang
     );
   }
 }

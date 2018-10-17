@@ -1,5 +1,5 @@
 import { HttpClient } from 'typed-rest-client/HttpClient';
-import { IRecentRecall, IAllRecentRecalls } from './models/recent-recall';
+import { IRecentRecall, IAllRecentRecalls, IRecentRecallResults } from './models/recent-recall';
 import { RecallSearchOptions } from './models/recall-search-options';
 import { IRecallSearchResult } from './models/recall-search-results';
 
@@ -24,7 +24,7 @@ export class RecallRepository {
 
   public async SearchRecalls(
     options: RecallSearchOptions
-  ): Promise<IRecentRecall> {
+  ): Promise<IRecallSearchResult> {
     const httpc = new HttpClient('food-recall');
     const baseUrl =
       'http://healthycanadians.gc.ca/recall-alert-rappel-avis/api';
@@ -35,7 +35,7 @@ export class RecallRepository {
     const res = await httpc.get(url);
     const body = await res.readBody();
     console.log(body);
-    const recall: IRecentRecall = JSON.parse(body);
+    const recall: IRecallSearchResult = JSON.parse(body);
     return recall;
   }
 }
