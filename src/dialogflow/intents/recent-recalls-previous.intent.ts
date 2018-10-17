@@ -4,7 +4,6 @@ import {
     DialogflowConversation,
   } from 'actions-on-google';
   import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-followup.context';
-  import { IRecentRecall } from 'recall-alert-api/models/recent-recall';
   import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
   
   export class RecentRecallPreviousIntent {

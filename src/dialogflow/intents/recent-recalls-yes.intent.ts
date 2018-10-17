@@ -4,9 +4,11 @@ import {
   DialogflowConversation,
 } from 'actions-on-google';
 import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-followup.context';
-import { IRecentRecall } from 'recall-alert-api/models/recent-recall';
-import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
+import { RecentRecallsAllConversations } from 'conversations/recent-recalls-all.conv';
 
+/**
+ * Deals with the recent recalls - all - yes intent.
+ */
 export class RecentRecallNextIntent {
   app: DialogflowApp<
     any,
@@ -16,7 +18,7 @@ export class RecentRecallNextIntent {
   >;
 
   /**
-   *
+   * Default Constructor
    */
   constructor(
     app: DialogflowApp<
@@ -29,8 +31,11 @@ export class RecentRecallNextIntent {
     this.app = app;
   }
 
+  /**
+   * Applies the google action intent logic to the conversation
+   */
   public async ApplyIntent() {
-    this.app.intent('recent recalls - all - next', async conv => {
+    this.app.intent('recent recalls - all - yes', async conv => {
 
       const conversation = new RecentRecallsAllConversations();    
       const context = RecentRecallsAllFollowupContext.Create(conv);

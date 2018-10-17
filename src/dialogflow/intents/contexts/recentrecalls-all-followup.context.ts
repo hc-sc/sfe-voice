@@ -2,12 +2,19 @@ import { IRecentRecall } from 'recall-alert-api/models/recent-recall';
 import { ContextName } from './recall-context-names';
 import { DialogflowConversation, Contexts } from 'actions-on-google';
 
+/**
+ * The class represents the recenentrecalls-all-followup context
+ * It stores information on the recalls to iterate and the current counter.
+ * It can be used to iterate the list, and to save and rehydrate the 
+ * context from a conversation
+ */
 export class RecentRecallsAllFollowupContext {
   private _recalls: IRecentRecall[];
   private _counter: number;
 
   /**
-   *
+   * Base constructor
+   * 
    */
   constructor(recalls: IRecentRecall[], counter: number = 1) {
     this._recalls = recalls;
