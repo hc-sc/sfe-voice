@@ -5,7 +5,7 @@ import { DialogflowConversation, Contexts } from 'actions-on-google';
 /**
  * The class represents the recenentrecalls-all-followup context
  * It stores information on the recalls to iterate and the current counter.
- * It can be used to iterate the list, and to save and rehydrate the 
+ * It can be used to iterate the list, and to save and rehydrate the
  * context from a conversation
  */
 export class RecentRecallsAllFollowupContext {
@@ -14,7 +14,7 @@ export class RecentRecallsAllFollowupContext {
 
   /**
    * Base constructor
-   * 
+   *
    */
   constructor(recalls: IRecentRecall[], counter: number = 1) {
     this._recalls = recalls;
@@ -49,7 +49,7 @@ export class RecentRecallsAllFollowupContext {
 
   public Save(conv: DialogflowConversation<any, any, Contexts>) {
     conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(
-     this 
+      this
     ));
   }
 

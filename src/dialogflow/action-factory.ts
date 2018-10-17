@@ -6,7 +6,7 @@ import {
   OmniHandler,
 } from 'actions-on-google';
 import { RecentRecallAllIntent } from './intents/recent-recalls-all.intent';
-import { RecentRecallNextIntent } from './intents/recent-recalls-yes.intent';
+import { RecentRecallYesIntent } from './intents/recent-recalls-yes.intent';
 import { RecentRecallPreviousIntent } from './intents/recent-recalls-previous.intent';
 import { RecentRecallAllNoYes } from './intents/recent recalls-all-no-yes.intent';
 import { RecentRecallCategoryIntent } from './intents/recent-recalls-category.intent';
@@ -33,8 +33,8 @@ export class ActionFactory {
     recentRecallsAll.ApplyIntent();
     const recentRecallsCategory = new RecentRecallCategoryIntent(this.app);
     recentRecallsCategory.ApplyIntent();
-    const recentRecallsAllNext = new RecentRecallNextIntent(this.app);
-    recentRecallsAllNext.ApplyIntent();
+    const recentRecallsAllYes = new RecentRecallYesIntent(this.app);
+    recentRecallsAllYes.ApplyIntent();
     const recentRecallsAllPrevious = new RecentRecallPreviousIntent(this.app);
     recentRecallsAllPrevious.ApplyIntent();
     const recentRecallsAllNoYes = new RecentRecallAllNoYes(this.app);
