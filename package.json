@@ -37,7 +37,8 @@
     "express": "^4.16.3",
     "moment": "^2.22.2",
     "ssml": "0.0.4",
-    "typed-rest-client": "^1.0.9"
+    "typed-rest-client": "^1.0.9",
+    "xml-escape": "^1.1.0"
   },
   "devDependencies": {
     "@types/jest": "^22.0.1",

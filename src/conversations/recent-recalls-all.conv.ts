@@ -2,11 +2,12 @@ import { IRecentRecall } from '../recall-alert-api/models/recent-recall';
 import moment from 'moment';
 
 let ssml = require('ssml');
+let xmlescape = require('xml-escape');
 
 export class RecentRecallsAllConversations {
   public Default(recall: IRecentRecall): string {
     var date = new Date(recall.date_published * 1000);
-
+    recall.title = xmlescape(recall.title);
     const ssmlDoc = new ssml();
     ssmlDoc
       .say('There was a recall published on')
