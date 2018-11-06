@@ -1,11 +1,11 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
+import { LanguageService } from '../../language/languageService';
 import {
   RecallSearchOptions,
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
-import { LanguageService } from '../../language/LanguageService';
 
 export class SearchRecallHandler implements RequestHandler {
   private readonly RecallMethod: string = 'RecallMethod';
