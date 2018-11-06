@@ -41,7 +41,7 @@ export class CategoryRecallHandler implements RequestHandler {
     let counter: number = 0;
     const repository = new RecallRepository();
     let message: string = '';
-    message += `Sure, `;
+    message += `Sure, ${language}, ${request.locale}`;
     let recalls: IRecallSearchResult;
 
     switch (category) {
