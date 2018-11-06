@@ -63,7 +63,7 @@ export class YesIntentHandler implements RequestHandler {
       case 'RecentRecalls':
         {
           if (!dataPersist) {
-            const result = await repository.GetRecentRecalls();
+            const result = await repository.GetRecentRecalls(options);
             if (!result) {
               speechText += `Something went wrong`;
             } else {

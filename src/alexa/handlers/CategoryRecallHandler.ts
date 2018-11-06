@@ -41,7 +41,7 @@ export class CategoryRecallHandler implements RequestHandler {
     let counter: number = 0;
     const repository = new RecallRepository();
     let message: string = '';
-    message += `Sure, ${language}, ${request.locale}`;
+    message += `Sure, `;
     let recalls: IRecallSearchResult;
 
     switch (category) {
@@ -53,7 +53,7 @@ export class CategoryRecallHandler implements RequestHandler {
           0,
           language
         );
-        recalls = await repository.GetRecallsByCategory(options);
+        recalls = await repository.SearchRecalls(options);
         message += `Here is the latest Food related recall in ${language}. ${recalls.results[
           counter
         ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}`;
@@ -68,7 +68,7 @@ export class CategoryRecallHandler implements RequestHandler {
           0,
           language
         );
-        recalls = await repository.GetRecallsByCategory(options);
+        recalls = await repository.SearchRecalls(options);
         message += `Here is the latest Vehicle related recall. ${recalls.results[
           counter
         ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}`;
@@ -83,7 +83,7 @@ export class CategoryRecallHandler implements RequestHandler {
           0,
           language
         );
-        recalls = await repository.GetRecallsByCategory(options);
+        recalls = await repository.SearchRecalls(options);
         message += `Here is the latest Medical related recall. ${
           recalls.results[counter].title
         }`;
@@ -98,7 +98,7 @@ export class CategoryRecallHandler implements RequestHandler {
           0,
           language
         );
-        recalls = await repository.GetRecallsByCategory(options);
+        recalls = await repository.SearchRecalls(options);
         message += `Here is the latest Consumer Product related recall. ${recalls.results[
           counter
         ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}`;
@@ -113,7 +113,7 @@ export class CategoryRecallHandler implements RequestHandler {
           0,
           language
         );
-        recalls = await repository.GetRecallsByCategory(options);
+        recalls = await repository.SearchRecalls(options);
         message += `Here is the latest Food recall. ${recalls.results[
           counter
         ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}`;

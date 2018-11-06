@@ -1,7 +1,10 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
-
+import {
+  RecallSearchOptions,
+  RecallCategory,
+} from '../../recall-alert-api/models/recall-search-options';
 /**
  *  This class handles all requests to Alexa
  *  regarding the most recent recalls in
@@ -16,7 +19,6 @@ export class RecentRecallHandler implements RequestHandler {
 
   public canHandle(handlerInput: HandlerInput): boolean | Promise<boolean> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
-    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
     return (
       request.type === 'IntentRequest' &&
       request.intent.name === 'RecentResponseIntent'
@@ -27,13 +29,23 @@ export class RecentRecallHandler implements RequestHandler {
     const askAgain: string = ' Would you like to hear the next recall?';
     const searchType: string = 'RecentRecalls';
     const responseBuilder = handlerInput.responseBuilder;
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+
+    let options = new RecallSearchOptions(
+      '',
+      RecallCategory.None,
+      0,
+      0,
+      language
+    );
 
     const repository = new RecallRepository();
     let message: string = '';
 
     message += `Sure, `;
 
-    const result = await repository.GetRecentRecalls();
+    const result = await repository.GetRecentRecalls(options);
     let counter: number = 0;
 
     if (!result) {

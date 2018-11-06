@@ -6,7 +6,10 @@ import {
 
 test('Recent Should get back recall information', async () => {
   const repository = new RecallRepository();
-  var result = await repository.GetRecentRecalls();
+
+  let options = new RecallSearchOptions('', RecallCategory.None, 0, 0, 'en');
+
+  var result = await repository.GetRecentRecalls(options);
 
   expect(result).toBeTruthy();
 });

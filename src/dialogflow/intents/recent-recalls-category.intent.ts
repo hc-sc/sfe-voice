@@ -7,6 +7,10 @@ import { RecallRepository } from '../../recall-alert-api/recall-repository';
 import { ContextName } from './contexts/recall-context-names';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-followup.context';
+import {
+  RecallSearchOptions,
+  RecallCategory,
+} from '../../recall-alert-api/models/recall-search-options';
 
 export class RecentRecallCategoryIntent {
   app: DialogflowApp<
@@ -36,7 +40,15 @@ export class RecentRecallCategoryIntent {
       async (conv, { RecallType }) => {
         let repository = new RecallRepository();
         let conversation = new RecentRecallsAllConversations();
-        let recentRecallResults = await repository.GetRecentRecalls();
+        let options = new RecallSearchOptions(
+          '',
+          RecallCategory.None,
+          0,
+          0,
+          'en'
+        );
+
+        let recentRecallResults = await repository.GetRecentRecalls(options);
         let context: RecentRecallsAllFollowupContext;
 
         if (
