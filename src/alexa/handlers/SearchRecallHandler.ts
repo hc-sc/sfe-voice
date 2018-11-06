@@ -5,6 +5,7 @@ import {
   RecallSearchOptions,
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
+import { LanguageService } from '../../language/LanguageService';
 
 export class SearchRecallHandler implements RequestHandler {
   private readonly RecallMethod: string = 'RecallMethod';
@@ -28,6 +29,8 @@ export class SearchRecallHandler implements RequestHandler {
         ? intent.slots.Search.value
         : 'SR';
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
     let searchType: string = 'SearchRecalls';
     handlerInput.attributesManager.setSessionAttributes({
       [this.RecallMethod]: searchType,
@@ -53,7 +56,7 @@ export class SearchRecallHandler implements RequestHandler {
 
     const result = await repository.SearchRecalls(options);
     let counter: number = 0;
-    const askAgain: string = 'Would you like to hear the next recall?';
+    const askAgain: string = languageService.dictionary['askAgain'];
 
     if (!result) {
       message += `Something went wrong`;
