@@ -1,0 +1,47 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "sample weather test",
+          "intents": [
+              {
+                  "name": "AMAZON.FallbackIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "GetWeatherIntent",
+                  "slots": [
+                      {
+                          "name": "location",
+                          "type": "AMAZON.City"
+                      }
+                  ],
+                  "samples": [
+                      "current weather at {location}",
+                      "weather at {location}",
+                      "{location} current weather",
+                      "{location} weather",
+                      "current weather",
+                      "weather"
+                  ]
+              }
+          ],
+          "types": []
+      }
+  }
+}

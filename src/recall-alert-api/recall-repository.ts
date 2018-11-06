@@ -42,4 +42,24 @@ export class RecallRepository {
     const recall: IRecallSearchResult = JSON.parse(body);
     return recall;
   }
+
+  public async GetRecallsByCategory(
+    options: RecallSearchOptions
+  ): Promise<IRecallSearchResult> {
+    const httpc = new HttpClient('food-recall');
+    const baseUrl =
+      'http://healthycanadians.gc.ca/recall-alert-rappel-avis/api';
+    const url = `${baseUrl}/search?search=${options.Search}&lang=${
+      options.Language
+    }
+                &cat=${options.Category}&lim=${options.Limit}&off=${
+      options.Offset
+    }`;
+    console.log(url);
+    const res = await httpc.get(url);
+    const body = await res.readBody();
+    console.log(body);
+    const recall: IRecallSearchResult = JSON.parse(body);
+    return recall;
+  }
 }
