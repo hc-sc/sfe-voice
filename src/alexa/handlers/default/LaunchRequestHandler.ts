@@ -1,20 +1,22 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
-import { Response } from 'ask-sdk-model';
+import { IntentRequest, Response } from 'ask-sdk-model';
+import { LanguageService } from '../../../language/languageService';
 
 export class LaunchRequestHandler implements RequestHandler {
   public canHandle(handlerInput: HandlerInput): boolean | Promise<boolean> {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   }
   public handle(handlerInput: HandlerInput): Response | Promise<Response> {
-    const speechText =
-      'Welcome to your portal for Recalls Canada. Would you like to hear about recent recalls?' +
-      ' Or search for a specific recall by saying "Search for" and the item you are looking for, ' +
-      'or by category by saying Medical, Vehicle, Consumer Products or Food.';
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+    const speechText: string = languageService.dictionary['welcome'];
 
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
-      .withSimpleCard('Sample Recall Test', speechText)
+      .withSimpleCard(languageService.dictionary['appName'], speechText)
       .getResponse();
   }
 }

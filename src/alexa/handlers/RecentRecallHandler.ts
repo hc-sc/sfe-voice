@@ -46,8 +46,6 @@ export class RecentRecallHandler implements RequestHandler {
     const repository = new RecallRepository();
     let message: string = '';
 
-    message += languageService.dictionary['sure'];
-
     const result = await repository.GetRecentRecalls(options);
     let counter: number = 0;
 

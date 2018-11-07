@@ -16,7 +16,7 @@ export default {
   cannotUnderstand:
     'FR Sorry, I cannot understand the command. Please say again.',
   smthWrong: 'FR Something went wrong',
-  mostRecent: 'FR These are the most recent recalls.',
+  mostRecent: 'FR Sure,  These are the most recent recalls.',
   okNext: 'FR Ok, the next recall is ',
   resultsEnd: 'FR End of recalls, no more results',
   vehicleLatest: 'FR Here is the latest Vehicle related recall.',
