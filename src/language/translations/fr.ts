@@ -1,6 +1,6 @@
 export default {
   welcome:
-    'Bienvenue au portail de Rappel Canada. Voulez-vous de l\'information au sujet des rappels recents? Cherchez-vous de l\'info (information) au sujet des rappels recents? Ou rechercher un rappel specifique en disant "Je cherche pour..." et le sujet que vous chercher. ',
+    "Bienvenue au portail de Rappel Canada. Voulez-vous de l'information au sujet des rappels recents? Cherchez-vous de l'info (information) au sujet des rappels recents? Ou rechercher un rappel specifique en disant "Je cherche pour..." et le sujet que vous chercher. ",
   appName: 'FR Sample Recall Test',
   goodbye: 'FR Goodbye!',
   askNext: 'FR Do you want to hear the next recall?',
