@@ -42,15 +42,11 @@ export class RepeatIntentHandler implements RequestHandler {
 
     let message: string = '';
 
-    // if (recallList.length >= counter + 1) {
     message += `No problem, `;
     message += `${recallList[counter - 1].title.replace(
       /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
       ''
     )}`;
-    // } else {
-    //   message += 'End of recalls, no more results';
-    // }
 
     handlerInput.attributesManager.setSessionAttributes({
       [this.Counter]: counter,

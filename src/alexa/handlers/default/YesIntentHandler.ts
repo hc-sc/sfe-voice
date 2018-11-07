@@ -76,6 +76,7 @@ export class YesIntentHandler implements RequestHandler {
         }
         break;
       default: {
+        //TODO: Change this
         speechText += 'Switch Case Default, something probably went wrong';
       }
     }
