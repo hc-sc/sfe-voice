@@ -1,6 +1,7 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
+import { LanguageService } from '../../language/languageService';
 import {
   RecallSearchOptions,
   RecallCategory,
@@ -26,11 +27,13 @@ export class RecentRecallHandler implements RequestHandler {
   }
 
   public async handle(handlerInput: HandlerInput): Promise<Response> {
-    const askAgain: string = ' Would you like to hear the next recall?';
     const searchType: string = 'RecentRecalls';
     const responseBuilder = handlerInput.responseBuilder;
     const request = handlerInput.requestEnvelope.request as IntentRequest;
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+    const askAgain: string = languageService.dictionary['askAgain'];
 
     let options = new RecallSearchOptions(
       '',
@@ -43,17 +46,20 @@ export class RecentRecallHandler implements RequestHandler {
     const repository = new RecallRepository();
     let message: string = '';
 
-    message += `Sure, `;
+    message += languageService.dictionary['sure'];
 
     const result = await repository.GetRecentRecalls(options);
     let counter: number = 0;
 
     if (!result) {
-      message += `Something went wrong`;
+      message += languageService.dictionary['smthWrong'];
     } else {
-      message += `These are the most recent recalls. ${result.results.ALL[
-        counter++
-      ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}.`;
+      message += `${
+        languageService.dictionary['mostRecent']
+      } ${result.results.ALL[counter++].title.replace(
+        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+        ''
+      )}.`;
 
       handlerInput.attributesManager.setSessionAttributes({
         [this.RecallMethod]: searchType,
@@ -65,7 +71,7 @@ export class RecentRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + askAgain)
       .reprompt(askAgain)
-      .withSimpleCard('Sample Recall Test', message)
+      .withSimpleCard(languageService.dictionary['appName'], message)
       .getResponse();
   }
 }

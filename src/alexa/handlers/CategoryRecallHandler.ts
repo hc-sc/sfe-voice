@@ -6,6 +6,7 @@ import {
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
+import { LanguageService } from '../../language/languageService';
 import { IRecallSearchResult } from '../../recall-alert-api/models/recall-search-results';
 
 export class CategoryRecallHandler implements RequestHandler {
@@ -25,6 +26,9 @@ export class CategoryRecallHandler implements RequestHandler {
   public async handle(handlerInput: HandlerInput): Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+    let promptAgain = `. ${languageService.dictionary['askAgain']}`;
     const responseBuilder = handlerInput.responseBuilder;
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
@@ -41,7 +45,7 @@ export class CategoryRecallHandler implements RequestHandler {
     let counter: number = 0;
     const repository = new RecallRepository();
     let message: string = '';
-    message += `Sure, `;
+    message += languageService.dictionary['sure'];
     let recalls: IRecallSearchResult;
 
     switch (category) {
@@ -54,9 +58,12 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `Here is the latest Food related recall in ${language}. ${recalls.results[
-          counter
-        ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}`;
+        message += `${
+          languageService.dictionary['foodLatest']
+        } ${recalls.results[counter].title.replace(
+          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+          ''
+        )}`;
         counter++;
         break;
       }
@@ -69,9 +76,12 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `Here is the latest Vehicle related recall. ${recalls.results[
-          counter
-        ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}`;
+        message += `${
+          languageService.dictionary['vehicleLatest']
+        } ${recalls.results[counter].title.replace(
+          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+          ''
+        )}`;
         counter++;
         break;
       }
@@ -84,7 +94,7 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `Here is the latest Medical related recall. ${
+        message += `${languageService.dictionary['medicalLatest']} ${
           recalls.results[counter].title
         }`;
         counter++;
@@ -99,9 +109,12 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `Here is the latest Consumer Product related recall. ${recalls.results[
-          counter
-        ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}`;
+        message += `${
+          languageService.dictionary['consumerLatest']
+        } ${recalls.results[counter].title.replace(
+          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+          ''
+        )}`;
         counter++;
         break;
       }
@@ -114,9 +127,12 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `Here is the latest Food recall. ${recalls.results[
-          counter
-        ].title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '')}`;
+        message += `${
+          languageService.dictionary['foodLatest']
+        } ${recalls.results[counter].title.replace(
+          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+          ''
+        )}`;
         counter++;
       }
     }
@@ -129,12 +145,12 @@ export class CategoryRecallHandler implements RequestHandler {
       [this.RecallList]: recalls.results,
     });
 
-    const askAgain: string = '. Would you like to hear the next recall?';
+    const askAgain: string = `. ${languageService.dictionary['askNext']}`;
 
     return responseBuilder
       .speak(message + askAgain)
       .reprompt(askAgain)
-      .withSimpleCard('Sample Recall Test', message)
+      .withSimpleCard(languageService.dictionary['appName'], message)
       .getResponse();
   }
 }

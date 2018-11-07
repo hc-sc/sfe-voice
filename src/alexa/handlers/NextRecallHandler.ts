@@ -1,6 +1,6 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
-
+import { LanguageService } from '../../language/languageService';
 /**
  *  This class handles the iteration through
  *  the array of recalls from the API. It also
@@ -23,7 +23,11 @@ export class NextRecallHandler implements RequestHandler {
   }
 
   public async handle(handlerInput: HandlerInput): Promise<Response> {
-    let promptAgain = '. Do you want to hear the next recall?';
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+    let promptAgain = `. ${languageService.dictionary['askAgain']}`;
     const responseBuilder = handlerInput.responseBuilder;
     let counter: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
@@ -41,13 +45,13 @@ export class NextRecallHandler implements RequestHandler {
     let message: string = '';
 
     if (recallList.length >= counter + 1) {
-      message += `Ok, the next recall is `;
+      message += languageService.dictionary['okNext'];
       message += `${recallList[counter++].title.replace(
         /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
         ''
       )}`;
     } else {
-      message += 'End of recalls, no more results';
+      message += languageService.dictionary['resultsEnd'];
     }
 
     handlerInput.attributesManager.setSessionAttributes({
@@ -60,7 +64,7 @@ export class NextRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + promptAgain)
       .reprompt(promptAgain)
-      .withSimpleCard('Sample Recall Test', message)
+      .withSimpleCard(languageService.dictionary['appName'], message)
       .getResponse();
   }
 }
