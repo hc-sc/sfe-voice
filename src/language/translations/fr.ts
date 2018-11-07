@@ -23,7 +23,6 @@ export default {
   medicalLatest: "D'accord, voici le dernier rappel lie aux medecine",
   consumerLatest:
     "D'accord, voici le dernier rappel lie aux produits de consommation",
-  foodLatest:
-    "D'accord, voici le dernier rappel lie aux produits de consommation",
+  foodLatest: "D'accord, voici le dernier rappel lie aux l'aliment",
   endReason: "La session s'est termine pour une raison quelconque. ",
 };
