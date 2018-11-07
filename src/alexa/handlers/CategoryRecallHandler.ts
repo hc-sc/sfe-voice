@@ -33,9 +33,9 @@ export class CategoryRecallHandler implements RequestHandler {
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
     const category = (intent &&
-    intent.slots &&
-    intent.slots.Category &&
-    intent.slots.Category.value
+      intent.slots &&
+      intent.slots.Category &&
+      intent.slots.Category.value
       ? intent.slots.Category.value
       : 'Food'
     )
@@ -45,7 +45,6 @@ export class CategoryRecallHandler implements RequestHandler {
     let counter: number = 0;
     const repository = new RecallRepository();
     let message: string = '';
-    message += languageService.dictionary['sure'];
     let recalls: IRecallSearchResult;
 
     switch (category) {
@@ -60,10 +59,10 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${
           languageService.dictionary['foodLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+          } ${recalls.results[counter].title.replace(
+            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+            ''
+          )}`;
         counter++;
         break;
       }
@@ -78,10 +77,10 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${
           languageService.dictionary['vehicleLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+          } ${recalls.results[counter].title.replace(
+            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+            ''
+          )}`;
         counter++;
         break;
       }
@@ -96,7 +95,7 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${languageService.dictionary['medicalLatest']} ${
           recalls.results[counter].title
-        }`;
+          }`;
         counter++;
         break;
       }
@@ -111,10 +110,10 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${
           languageService.dictionary['consumerLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+          } ${recalls.results[counter].title.replace(
+            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+            ''
+          )}`;
         counter++;
         break;
       }
@@ -129,10 +128,10 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${
           languageService.dictionary['foodLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+          } ${recalls.results[counter].title.replace(
+            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+            ''
+          )}`;
         counter++;
       }
     }

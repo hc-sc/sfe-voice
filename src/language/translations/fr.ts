@@ -19,9 +19,9 @@ export default {
   mostRecent: 'FR Sure,  These are the most recent recalls.',
   okNext: 'FR Ok, the next recall is ',
   resultsEnd: 'FR End of recalls, no more results',
-  vehicleLatest: 'FR Here is the latest Vehicle related recall.',
-  medicalLatest: 'FR Here is the latest Medical related recall.',
-  consumerLatest: 'FR Here is the latest Consumer Product related recall.',
-  foodLatest: 'FR Here is the latest Food recall.',
+  vehicleLatest: 'FR Sure, Here is the latest Vehicle related recall.',
+  medicalLatest: 'FR Sure, Here is the latest Medical related recall.',
+  consumerLatest: 'FR Sure, Here is the latest Consumer Product related recall.',
+  foodLatest: 'FR Sure, Here is the latest Food recall.',
   endReason: 'FR Session ended with reason',
 };
