@@ -28,4 +28,6 @@ export default {
   foodLatest: "D'accord, voici le dernier rappel lie aux l'aliment",
   endReason: "La session s'est termine pour une raison quelconque. ",
   thanksGdbye: "Merci d'avoir utiliser notre app Rappel. Aurevoir",
+  seemsWrong:
+    ' FR It seems something has gone wrong getting the recall information. Please try again later',
 };

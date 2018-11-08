@@ -1,6 +1,6 @@
 export default {
   welcome:
-    'Welcome to your portal for Recalls Canada. Would you like to hear about recent recalls? Or search for a specific recall by saying "Search for" and the item you are looking for, or by category by saying Medical, Vehicle, Consumer Products or Food.',
+    'Welcome to your portal for Recalls Canada. The recall data presented is from the recalls and safety alerts provided from Healthy Canadians. Would you like to hear about recent recalls? Or search for a specific recall by saying "Search for" and the item you are looking for, or by category by saying Medical, Vehicle, Consumer Products or Food.',
   rewelcome:
     'What do you want to do now? Would you like to hear about recent recalls? Or search for a specific recall by saying "Search for" and the item you are looking for, or by category by saying Medical, Vehicle, Consumer Products or Food.',
   appName: 'Sample Recall Test',
@@ -19,11 +19,15 @@ export default {
   smthWrong: 'Something went wrong',
   mostRecent: 'Sure, These are the most recent recalls.',
   okNext: 'Ok, the next recall is ',
-  resultsEnd: 'End of recalls, no more results',
+  resultsEnd:
+    'End of recalls, no more results. For more information on any recalls, please visit www.healthycanadians.gc.ca',
   vehicleLatest: 'Sure, Here is the latest Vehicle related recall.',
   medicalLatest: 'Sure, Here is the latest Medical related recall.',
   consumerLatest: 'Sure, Here is the latest Consumer Product related recall.',
   foodLatest: 'Sure, Here is the latest Food related recall.',
   endReason: 'Session ended with reason',
-  thanksGdbye: 'Thanks for using our Recall App, goodbye',
+  thanksGdbye:
+    'Thanks for using our Recall App, for more information on any recalls please visit www.healthycanadians.gc.ca, goodbye',
+  seemsWrong:
+    'It seems something has gone wrong getting the recall information. Please try again later',
 };

@@ -11,6 +11,7 @@ import {
   RecallSearchOptions,
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
+import { LanguageService } from '../../language/languageService';
 
 export class RecentRecallCategoryIntent {
   app: DialogflowApp<
@@ -47,6 +48,10 @@ export class RecentRecallCategoryIntent {
           0,
           'en'
         );
+        const language =
+          conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+        const languageService = new LanguageService();
+        languageService.use(language);
 
         let recentRecallResults = await repository.GetRecentRecalls(options);
         let context: RecentRecallsAllFollowupContext;
@@ -97,13 +102,11 @@ export class RecentRecallCategoryIntent {
           conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <
             any
           >context);
-          conv.ask(conversation.Default(recall));
+          conv.ask(conversation.Default(recall) + language);
           return;
         }
 
-        conv.close(
-          'It seems something has gone wrong getting the recall information. Please try again later'
-        );
+        conv.close(languageService.dictionary[`seemsWrong`]);
         return;
       }
     );
