@@ -52,6 +52,14 @@ export class NextRecallHandler implements RequestHandler {
       )}`;
     } else {
       message += languageService.dictionary['resultsEnd'];
+
+      handlerInput.attributesManager.setSessionAttributes({
+        [this.Counter]: counter,
+        [this.RecallList]: recallList,
+        [this.RecallMethod]: recallnamePersist,
+        [this.SearchTerm]: searchtermPersist,
+      });
+
       return responseBuilder
         .speak(message)
         .withSimpleCard(languageService.dictionary['appName'], message)
