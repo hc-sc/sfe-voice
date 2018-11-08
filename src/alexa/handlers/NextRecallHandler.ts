@@ -53,7 +53,7 @@ export class NextRecallHandler implements RequestHandler {
     } else {
       message += languageService.dictionary['resultsEnd'];
       return responseBuilder
-        .speak(message + promptAgain)
+        .speak(message)
         .withSimpleCard(languageService.dictionary['appName'], message)
         .getResponse();
     }
