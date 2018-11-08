@@ -79,7 +79,7 @@ export class NextRecallHandler implements RequestHandler {
     });
 
     return responseBuilder
-      .speak(msg /*message + promptAgain*/)
+      .speak(message + promptAgain)
       .reprompt(promptAgain)
       .withSimpleCard(languageService.dictionary['appName'], message)
       .getResponse();
