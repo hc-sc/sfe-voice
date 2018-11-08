@@ -47,10 +47,10 @@ export class NextRecallHandler implements RequestHandler {
     ];
 
     let message: string = '';
-    let msg: string = '';
+    // let msg: string = '';
 
     if (recallList.length >= counter + 1) {
-      msg = conversation.Default(recallList[counter++]);
+      // msg = conversation.Default(recallList[counter++]);
       message += languageService.dictionary['okNext'];
       message += `${recallList[counter++].title.replace(
         /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
