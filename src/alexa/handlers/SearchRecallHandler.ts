@@ -10,6 +10,8 @@ import {
 export class SearchRecallHandler implements RequestHandler {
   private readonly RecallMethod: string = 'RecallMethod';
   private readonly SearchTerm: string = 'SearchTerm';
+  private readonly Counter: string = 'Counter';
+  private readonly RecallList: string = 'RecallList';
 
   public canHandle(handlerInput: HandlerInput): boolean | Promise<boolean> {
     const request = handlerInput.requestEnvelope.request;
@@ -32,10 +34,6 @@ export class SearchRecallHandler implements RequestHandler {
     const languageService = new LanguageService();
     languageService.use(language);
     let searchType: string = 'SearchRecalls';
-    handlerInput.attributesManager.setSessionAttributes({
-      [this.RecallMethod]: searchType,
-      [this.SearchTerm]: search.toString(),
-    });
 
     const repository = new RecallRepository();
     let message: string = '';
@@ -61,8 +59,15 @@ export class SearchRecallHandler implements RequestHandler {
     if (!result) {
       message += `Something went wrong`;
     } else {
-      message += `${result.results[0].title} .`;
+      message += `${result.results[counter++].title} .`;
     }
+
+    handlerInput.attributesManager.setSessionAttributes({
+      [this.RecallMethod]: searchType,
+      [this.SearchTerm]: search.toString(),
+      [this.Counter]: counter,
+      [this.RecallList]: result.results,
+    });
 
     return responseBuilder
       .speak(message + askAgain)
