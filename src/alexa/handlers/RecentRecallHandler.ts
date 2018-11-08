@@ -38,7 +38,7 @@ export class RecentRecallHandler implements RequestHandler {
     let options = new RecallSearchOptions(
       '',
       RecallCategory.None,
-      0,
+      5,
       0,
       language
     );
@@ -54,10 +54,10 @@ export class RecentRecallHandler implements RequestHandler {
     } else {
       message += `${
         languageService.dictionary['mostRecent']
-      } ${result.results.ALL[counter++].title.replace(
-        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-        ''
-      )}.`;
+        } ${result.results.ALL[counter++].title.replace(
+          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+          ''
+        )}.`;
 
       handlerInput.attributesManager.setSessionAttributes({
         [this.RecallMethod]: searchType,

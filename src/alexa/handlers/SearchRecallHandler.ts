@@ -47,7 +47,7 @@ export class SearchRecallHandler implements RequestHandler {
     const options = new RecallSearchOptions(
       searchName,
       RecallCategory.None,
-      1,
+      5,
       0,
       language
     );
