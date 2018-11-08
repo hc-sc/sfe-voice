@@ -1,5 +1,6 @@
 import { ErrorHandler, HandlerInput } from 'ask-sdk';
-import { Response } from 'ask-sdk-model';
+import { IntentRequest, Response } from 'ask-sdk-model';
+import { LanguageService } from '../../../language/languageService';
 
 export class CustomErrorHandler implements ErrorHandler {
   public canHandle(
@@ -12,11 +13,18 @@ export class CustomErrorHandler implements ErrorHandler {
     handlerInput: HandlerInput,
     error: Error
   ): Response | Promise<Response> {
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+    const message = `${languageService.dictionary[`cannotUnderstand`]}`;
+
+    // tslint:disable-next-line
     console.log(`Error handled: ${error.message}`);
 
     return handlerInput.responseBuilder
-      .speak("Sorry, I can't understand the command. Please say again.")
-      .reprompt("Sorry, I can't understand the command. Please say again.")
+      .speak(message)
+      .reprompt(message)
       .getResponse();
   }
 }

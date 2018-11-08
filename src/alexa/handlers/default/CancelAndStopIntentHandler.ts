@@ -1,5 +1,6 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
-import { Response } from 'ask-sdk-model';
+import { IntentRequest, Response } from 'ask-sdk-model';
+import { LanguageService } from '../../../language/languageService';
 
 export class CancelAndStopIntentHandler implements RequestHandler {
   public canHandle(handlerInput: HandlerInput): boolean | Promise<boolean> {
@@ -13,7 +14,12 @@ export class CancelAndStopIntentHandler implements RequestHandler {
   }
 
   public handle(handlerInput: HandlerInput): Response | Promise<Response> {
-    const message = 'Goodbye!';
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+
+    const message = `${languageService.dictionary[`goodbye`]}`;
 
     return handlerInput.responseBuilder
       .speak(message)

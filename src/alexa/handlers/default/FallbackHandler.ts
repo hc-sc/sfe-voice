@@ -1,5 +1,6 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
-import { Response } from 'ask-sdk-model';
+import { IntentRequest, Response } from 'ask-sdk-model';
+import { LanguageService } from '../../../language/languageService';
 
 export class FallbackHandler implements RequestHandler {
   public canHandle(handlerInput: HandlerInput): boolean | Promise<boolean> {
@@ -10,9 +11,13 @@ export class FallbackHandler implements RequestHandler {
     );
   }
   public handle(handlerInput: HandlerInput): Response | Promise<Response> {
-    const reprompt = 'What can I help you with?';
-    const message = `Recall Canada test cannot help you with that. It can tell you about current Canadian Recalls. ${reprompt}`;
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
 
+    const reprompt = `${languageService.dictionary[`askHelp`]}`;
+    const message = `${languageService.dictionary[`fallBack`]}`;
     return handlerInput.responseBuilder
       .speak(message)
       .reprompt(reprompt)
