@@ -1,9 +1,10 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
-import { Response } from 'ask-sdk-model';
+import { LanguageService } from '../../../language/languageService';
+import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../../recall-alert-api/recall-repository';
 import {
-  RecallSearchOptions,
   RecallCategory,
+  RecallSearchOptions,
 } from '../../../recall-alert-api/models/recall-search-options';
 
 export class YesIntentHandler implements RequestHandler {
@@ -21,9 +22,14 @@ export class YesIntentHandler implements RequestHandler {
   }
 
   public async handle(handlerInput: HandlerInput): Promise<Response> {
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
     const repository = new RecallRepository();
-    let speechText = 'Sure, the next recall is ';
-    let promptAgain = '. Do you want to hear another recall?';
+    let message = `${languageService.dictionary[`nextRecall`]}`;
+    let promptAgain = `${languageService.dictionary[`askAnother`]}`;
+
     let persist: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
     ];
@@ -51,12 +57,12 @@ export class YesIntentHandler implements RequestHandler {
       case 'SearchRecalls':
         {
           const result = await repository.SearchRecalls(options);
-          promptAgain += 'Would you like to hear the next recall?';
+          promptAgain += `${languageService.dictionary[`askAgain`]}`;
 
           if (!result) {
-            speechText += `Something went wrong`;
+            message += `${languageService.dictionary[`smthWrong`]}`;
           } else {
-            speechText += `${result.results[persist++].title} . In Switch case`;
+            message += `${result.results[persist++].title}`;
           }
         }
         break;
@@ -65,19 +71,18 @@ export class YesIntentHandler implements RequestHandler {
           if (!dataPersist) {
             const result = await repository.GetRecentRecalls(options);
             if (!result) {
-              speechText += `Something went wrong`;
+              message += `${languageService.dictionary[`smthWrong`]}`;
             } else {
               dataPersist = result.results.ALL;
-              speechText += ` ${dataPersist[persist++].title}`;
+              message += ` ${dataPersist[persist++].title}`;
             }
           } else {
-            speechText += ` ${dataPersist[persist++].title} `;
+            message += ` ${dataPersist[persist++].title} `;
           }
         }
         break;
       default: {
-        //TODO: Change this
-        speechText += 'Switch Case Default, something probably went wrong';
+        message += `${languageService.dictionary[`smthWrong`]}`;
       }
     }
 
@@ -89,9 +94,9 @@ export class YesIntentHandler implements RequestHandler {
     });
 
     return handlerInput.responseBuilder
-      .speak(speechText + promptAgain)
+      .speak(message + promptAgain)
       .reprompt(promptAgain)
-      .withSimpleCard('Sample Recall Test', speechText)
+      .withSimpleCard(languageService.dictionary[`appName`], message)
       .getResponse();
   }
 }

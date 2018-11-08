@@ -1,5 +1,6 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
+import { LanguageService } from '../../../language/languageService';
 
 /**
  *  This class handles requests to repeat the
@@ -23,7 +24,13 @@ export class RepeatIntentHandler implements RequestHandler {
   }
 
   public async handle(handlerInput: HandlerInput): Promise<Response> {
-    let promptAgain = '. Do you want to hear the next recall?';
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+
+    const promptAgain = `${languageService.dictionary[`askNext`]}`;
+
     const responseBuilder = handlerInput.responseBuilder;
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
@@ -41,8 +48,7 @@ export class RepeatIntentHandler implements RequestHandler {
     ];
 
     let message: string = '';
-
-    message += `No problem, `;
+    message += `${languageService.dictionary[`noProblem`]}`;
     message += `${recallList[counter - 1].title.replace(
       /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
       ''
@@ -58,7 +64,7 @@ export class RepeatIntentHandler implements RequestHandler {
     return responseBuilder
       .speak(message + promptAgain)
       .reprompt(promptAgain)
-      .withSimpleCard('Sample Recall Test', message)
+      .withSimpleCard(languageService.dictionary[`appName`], message)
       .getResponse();
   }
 }

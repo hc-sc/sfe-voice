@@ -20,7 +20,7 @@ export class NoIntentHandler implements RequestHandler {
 
     return handlerInput.responseBuilder
       .speak(message)
-      .withSimpleCard('Sample Recall Test', message)
+      .withSimpleCard(languageService.dictionary[`appName`], message)
       .getResponse();
   }
 }

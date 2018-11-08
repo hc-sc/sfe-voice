@@ -1,5 +1,6 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
-import { Response, SessionEndedRequest } from 'ask-sdk-model';
+import { IntentRequest, Response, SessionEndedRequest } from 'ask-sdk-model';
+import { LanguageService } from '../../../language/languageService';
 
 export class SessionEndedRequestHandler implements RequestHandler {
   public canHandle(handlerInput: HandlerInput): boolean | Promise<boolean> {
@@ -7,10 +8,17 @@ export class SessionEndedRequestHandler implements RequestHandler {
   }
 
   public handle(handlerInput: HandlerInput): Response | Promise<Response> {
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+
+    // tslint:disable-next-line
     console.log(
-      `Session ended with reason: ${
-        (handlerInput.requestEnvelope.request as SessionEndedRequest).reason
-      }`
+      `${languageService.dictionary[`endReason`]}` +
+        `${
+          (handlerInput.requestEnvelope.request as SessionEndedRequest).reason
+        }`
     );
     return handlerInput.responseBuilder.getResponse();
   }
