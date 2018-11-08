@@ -11,12 +11,12 @@ export class LaunchRequestHandler implements RequestHandler {
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
     const languageService = new LanguageService();
     languageService.use(language);
-    const speechText: string = languageService.dictionary['welcome'];
+    const message: string = languageService.dictionary[`welcome`];
 
     return handlerInput.responseBuilder
-      .speak(speechText)
-      .reprompt(speechText)
-      .withSimpleCard(languageService.dictionary['appName'], speechText)
+      .speak(message)
+      .reprompt(message)
+      .withSimpleCard(languageService.dictionary[`appName`], message)
       .getResponse();
   }
 }

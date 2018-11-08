@@ -1,6 +1,6 @@
 export default {
   welcome:
-    "Bienvenue au portail de Rappel Canada. Voulez-vous de l'information au sujet des rappels recents? Cherchez-vous de l'info (information) au sujet des rappels recents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. ",
+    "Bienvenue au portail de Rappel Canada. Voulez-vous de l'information au sujet des rappels recents? Cherchez-vous de l'info au sujet des rappels recents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. ",
   appName: 'Sample Recall Test',
   goodbye: 'Aurevoir',
   askNext: 'Voulez-vous savoir les prochains rappel?',
@@ -8,7 +8,7 @@ export default {
   sure: "D'accord",
   noProblem: 'Pas de probleme',
   askHelp: 'Comment puis-je aider?',
-  askAgain: 'Est-ce que vous voulez savoir le prochain rappel?',
+  askAgain: ' Est-ce que vous voulez savoir le prochain rappel?',
   askAnother: 'Voulez-vous savoir les prochains rappel?',
   canAsk: 'Vous pouvez vous interroger au sujet des rappels au Canada',
   fallBack:
@@ -25,4 +25,5 @@ export default {
     "D'accord, voici le dernier rappel lie aux produits de consommation",
   foodLatest: "D'accord, voici le dernier rappel lie aux l'aliment",
   endReason: "La session s'est termine pour une raison quelconque. ",
+  thanksGdbye: "Merci d'avoir utiliser notre app Rappel. Aurevoir",
 };

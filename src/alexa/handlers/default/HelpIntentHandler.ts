@@ -1,5 +1,6 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
-import { Response } from 'ask-sdk-model';
+import { IntentRequest, Response } from 'ask-sdk-model';
+import { LanguageService } from '../../../language/languageService';
 
 export class HelpIntentHandler implements RequestHandler {
   public canHandle(handlerInput: HandlerInput): boolean | Promise<boolean> {
@@ -10,11 +11,16 @@ export class HelpIntentHandler implements RequestHandler {
   }
 
   public handle(handlerInput: HandlerInput): Response | Promise<Response> {
-    const message = 'you can ask about current recalls in Canada!';
+    const request = handlerInput.requestEnvelope.request as IntentRequest;
+    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const languageService = new LanguageService();
+    languageService.use(language);
+
+    const message = `${languageService.dictionary[`canAsk`]}`;
 
     return handlerInput.responseBuilder
       .speak(message)
-      .withSimpleCard('Sample Recall Test', message)
+      .withSimpleCard(languageService.dictionary[`appName`], message)
       .getResponse();
   }
 }

@@ -23,4 +23,5 @@ export default {
   consumerLatest: 'Sure, Here is the latest Consumer Product related recall.',
   foodLatest: 'Sure, Here is the latest Food related recall.',
   endReason: 'Session ended with reason',
+  thanksGdbye: 'Thanks for using our Recall App, goodbye',
 };
