@@ -28,6 +28,7 @@ export class NextRecallHandler implements RequestHandler {
     const languageService = new LanguageService();
     languageService.use(language);
     let promptAgain = `. ${languageService.dictionary['askAgain']}`;
+    let rewelcome = `. ${languageService.dictionary['rewelcome']}`;
     const responseBuilder = handlerInput.responseBuilder;
     let counter: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
@@ -52,16 +53,15 @@ export class NextRecallHandler implements RequestHandler {
       )}`;
     } else {
       message += languageService.dictionary['resultsEnd'];
-
       handlerInput.attributesManager.setSessionAttributes({
         [this.Counter]: counter,
         [this.RecallList]: recallList,
         [this.RecallMethod]: recallnamePersist,
         [this.SearchTerm]: searchtermPersist,
       });
-
       return responseBuilder
-        .speak(message)
+        .speak(message + rewelcome)
+        .reprompt(rewelcome)
         .withSimpleCard(languageService.dictionary['appName'], message)
         .getResponse();
     }
