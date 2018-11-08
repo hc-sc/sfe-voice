@@ -54,10 +54,10 @@ export class SearchRecallHandler implements RequestHandler {
 
     const result = await repository.SearchRecalls(options);
     let counter: number = 0;
-    const askAgain: string = languageService.dictionary['askAgain'];
+    const askAgain: string = languageService.dictionary[`askAgain`];
 
     if (!result) {
-      message += `Something went wrong`;
+      message += languageService.dictionary[`smthWrong`];
     } else {
       message += `${result.results[counter++].title} .`;
     }
@@ -72,7 +72,7 @@ export class SearchRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + askAgain)
       .reprompt(askAgain)
-      .withSimpleCard('Sample Recall Test', message)
+      .withSimpleCard(languageService.dictionary[`appName`], message)
       .getResponse();
   }
 }
