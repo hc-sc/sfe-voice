@@ -33,11 +33,13 @@ export class CategoryRecallHandler implements RequestHandler {
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
     const category = (intent &&
-    intent.slots &&
-    intent.slots.Category &&
-    intent.slots.Category.value
-      ? intent.slots.Category.value
-      : 'Food'
+      intent.slots &&
+      intent.slots.Category &&
+      intent.slots.Category.resolutions &&
+      intent.slots.Category.resolutions.resolutionsPerAuthority &&
+      intent.slots.Category.resolutions.resolutionsPerAuthority[0].values
+      ? intent.slots.Category.resolutions.resolutionsPerAuthority[0].values[0].value.id
+      : ''
     )
       .toString()
       .toLowerCase();
@@ -48,7 +50,7 @@ export class CategoryRecallHandler implements RequestHandler {
     let recalls: IRecallSearchResult;
 
     switch (category) {
-      case 'food': {
+      case 'fd': {
         let options = new RecallSearchOptions(
           '',
           RecallCategory.Food,
@@ -59,14 +61,14 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${
           languageService.dictionary['foodLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+          } ${recalls.results[counter].title.replace(
+            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+            ''
+          )}`;
         counter++;
         break;
       }
-      case 'vehicle': {
+      case 'vh': {
         let options = new RecallSearchOptions(
           '',
           RecallCategory.Vehicles,
@@ -77,14 +79,14 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${
           languageService.dictionary['vehicleLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+          } ${recalls.results[counter].title.replace(
+            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+            ''
+          )}`;
         counter++;
         break;
       }
-      case 'medical': {
+      case 'md': {
         let options = new RecallSearchOptions(
           '',
           RecallCategory.HealthProducts,
@@ -95,11 +97,11 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${languageService.dictionary['medicalLatest']} ${
           recalls.results[counter].title
-        }`;
+          }`;
         counter++;
         break;
       }
-      case 'consumer products': {
+      case 'cp': {
         let options = new RecallSearchOptions(
           '',
           RecallCategory.ConsumerProducts,
@@ -110,10 +112,10 @@ export class CategoryRecallHandler implements RequestHandler {
         recalls = await repository.SearchRecalls(options);
         message += `${
           languageService.dictionary['consumerLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+          } ${recalls.results[counter].title.replace(
+            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
+            ''
+          )}`;
         counter++;
         break;
       }
