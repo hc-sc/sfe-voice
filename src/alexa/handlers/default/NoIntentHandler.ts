@@ -16,10 +16,12 @@ export class NoIntentHandler implements RequestHandler {
     const languageService = new LanguageService();
     languageService.use(language);
 
-    const message = `${languageService.dictionary[`thanksGdbye`]}`;
+    const message = languageService.dictionary[`noProblem`];
+    const reprompt = languageService.dictionary[`rewelcome`];
 
     return handlerInput.responseBuilder
-      .speak(message)
+      .speak(message + reprompt)
+      .reprompt(reprompt)
       .withSimpleCard(languageService.dictionary[`appName`], message)
       .getResponse();
   }
