@@ -1,6 +1,8 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { LanguageService } from '../../language/languageService';
+import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
+
 /**
  *  This class handles the iteration through
  *  the array of recalls from the API. It also
@@ -30,6 +32,7 @@ export class NextRecallHandler implements RequestHandler {
     let promptAgain = `. ${languageService.dictionary['askAgain']}`;
     let rewelcome = `. ${languageService.dictionary['rewelcome']}`;
     const responseBuilder = handlerInput.responseBuilder;
+    let conversation = new RecentRecallsAllConversations();
     let counter: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
     ];
@@ -44,8 +47,10 @@ export class NextRecallHandler implements RequestHandler {
     ];
 
     let message: string = '';
+    let msg: string = '';
 
     if (recallList.length >= counter + 1) {
+      msg = conversation.Default(recallList[counter++]);
       message += languageService.dictionary['okNext'];
       message += `${recallList[counter++].title.replace(
         /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
@@ -74,7 +79,7 @@ export class NextRecallHandler implements RequestHandler {
     });
 
     return responseBuilder
-      .speak(message + promptAgain)
+      .speak(msg /*message + promptAgain*/)
       .reprompt(promptAgain)
       .withSimpleCard(languageService.dictionary['appName'], message)
       .getResponse();
