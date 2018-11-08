@@ -52,6 +52,10 @@ export class NextRecallHandler implements RequestHandler {
       )}`;
     } else {
       message += languageService.dictionary['resultsEnd'];
+      return responseBuilder
+        .speak(message + promptAgain)
+        .withSimpleCard(languageService.dictionary['appName'], message)
+        .getResponse();
     }
 
     handlerInput.attributesManager.setSessionAttributes({
