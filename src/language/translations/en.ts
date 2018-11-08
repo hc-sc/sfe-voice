@@ -8,7 +8,7 @@ export default {
   askNext: '. Do you want to hear the next recall?',
   nextRecall: 'Ok, the next recall is ',
   sure: 'Sure',
-  noProblem: 'No problem',
+  noProblem: 'No problem.',
   askHelp: 'What can I help you with?',
   askAgain: 'Would you like to hear the next recall?',
   askAnother: '. Do you want to hear another recall?',

@@ -20,7 +20,7 @@ export class NoIntentHandler implements RequestHandler {
     const reprompt = languageService.dictionary[`rewelcome`];
 
     return handlerInput.responseBuilder
-      .speak(message + reprompt)
+      .speak(`${message} ${reprompt}`)
       .reprompt(reprompt)
       .withSimpleCard(languageService.dictionary[`appName`], message)
       .getResponse();
