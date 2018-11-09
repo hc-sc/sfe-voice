@@ -11,6 +11,7 @@ import {
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
 import { IRecallSearchResult } from 'recall-alert-api/models/recall-search-results';
+import { LanguageService } from 'language/languageService';
 
 export class RecallSearch {
   app: DialogflowApp<
@@ -40,6 +41,9 @@ export class RecallSearch {
       let conversation = new RecentRecallsAllConversations();
       let options: RecallSearchOptions;
       let searchRecallResults: IRecallSearchResult;
+      const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+      const languageService = new LanguageService();
+      languageService.use(language);
 
       if (typeof SearchTerm === 'string') {
         options = RecallSearchOptions.Default(SearchTerm);
@@ -66,9 +70,7 @@ export class RecallSearch {
         return;
       }
 
-      conv.close(
-        'It seems something has gone wrong getting the recall information. Please try again later'
-      );
+      conv.close(languageService.dictionary[`seemsWrong`]);
       return;
     });
   }
