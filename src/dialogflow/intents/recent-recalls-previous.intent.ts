@@ -5,7 +5,7 @@ import {
 } from 'actions-on-google';
 import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-followup.context';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
-import { LanguageService } from 'language/languageService';
+import { LanguageService } from '../../language/languageService';
 
 export class RecentRecallPreviousIntent {
   app: DialogflowApp<

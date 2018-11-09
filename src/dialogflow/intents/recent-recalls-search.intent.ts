@@ -11,7 +11,7 @@ import {
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
 import { IRecallSearchResult } from 'recall-alert-api/models/recall-search-results';
-import { LanguageService } from 'language/languageService';
+import { LanguageService } from '../../language/languageService';
 
 export class RecallSearch {
   app: DialogflowApp<
