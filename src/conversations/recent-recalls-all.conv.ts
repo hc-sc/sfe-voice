@@ -31,9 +31,10 @@ export class RecentRecallsAllConversations {
   public Say(message: string, language: string): string {
     const languageService = new LanguageService();
     languageService.use(language);
-    const ssmlDoc = new ssml();
-    ssmlDoc.say(languageService.dictionary[message]);
+    //const ssmlDoc = new ssml();
+    //ssmlDoc.say(languageService.dictionary[message]);
 
-    return ssmlDoc.toString();
+    return languageService.dictionary[message];
+    // return ssmlDoc.toString();
   }
 }
