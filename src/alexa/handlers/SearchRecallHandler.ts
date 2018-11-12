@@ -1,11 +1,11 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
-import { LanguageService } from '../../language/languageService';
 import {
   RecallSearchOptions,
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
+import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 export class SearchRecallHandler implements RequestHandler {
   private readonly RecallMethod: string = 'RecallMethod';
@@ -31,8 +31,7 @@ export class SearchRecallHandler implements RequestHandler {
         ? intent.slots.Search.value
         : 'SR';
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-    const languageService = new LanguageService();
-    languageService.use(language);
+    const conversation = new RecentRecallsAllConversations();
     let searchType: string = 'SearchRecalls';
 
     const repository = new RecallRepository();
@@ -54,12 +53,12 @@ export class SearchRecallHandler implements RequestHandler {
 
     const result = await repository.SearchRecalls(options);
     let counter: number = 0;
-    const askAgain: string = languageService.dictionary[`askAgain`];
+    const askAgain: string = conversation.Say('askAgain', language);
 
     if (!result) {
-      message += languageService.dictionary[`smthWrong`];
+      message += conversation.Say('smthWrong', language);
     } else {
-      message += `${result.results[counter++].title} .`;
+      message += conversation.SayRecall(result.results[counter++], language);
     }
 
     handlerInput.attributesManager.setSessionAttributes({
@@ -72,7 +71,7 @@ export class SearchRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + askAgain)
       .reprompt(askAgain)
-      .withSimpleCard(languageService.dictionary[`appName`], message)
+      .withSimpleCard(conversation.Say('appName', language), message)
       .getResponse();
   }
 }

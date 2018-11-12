@@ -1,11 +1,12 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
-import { LanguageService } from '../../language/languageService';
 import {
   RecallSearchOptions,
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
+import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
+
 /**
  *  This class handles all requests to Alexa
  *  regarding the most recent recalls in
@@ -31,9 +32,8 @@ export class RecentRecallHandler implements RequestHandler {
     const responseBuilder = handlerInput.responseBuilder;
     const request = handlerInput.requestEnvelope.request as IntentRequest;
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-    const languageService = new LanguageService();
-    languageService.use(language);
-    const askAgain: string = languageService.dictionary['askAgain'];
+    const conversation = new RecentRecallsAllConversations();
+    const askAgain: string = conversation.Say('askAgain', language);
 
     let options = new RecallSearchOptions(
       '',
@@ -50,14 +50,12 @@ export class RecentRecallHandler implements RequestHandler {
     let counter: number = 0;
 
     if (!result) {
-      message += languageService.dictionary['smthWrong'];
+      message += conversation.Say('smthWrong', language);
     } else {
-      message += `${
-        languageService.dictionary['mostRecent']
-      } ${result.results.ALL[counter++].title.replace(
-        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-        ''
-      )}.`;
+      message += `${conversation.Say(
+        'mostRecent',
+        language
+      )} ${conversation.SayRecall(result.results.ALL[counter++], language)}.`;
 
       handlerInput.attributesManager.setSessionAttributes({
         [this.RecallMethod]: searchType,
@@ -69,7 +67,7 @@ export class RecentRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + askAgain)
       .reprompt(askAgain)
-      .withSimpleCard(languageService.dictionary['appName'], message)
+      .withSimpleCard(conversation.Say('appName', language), message)
       .getResponse();
   }
 }

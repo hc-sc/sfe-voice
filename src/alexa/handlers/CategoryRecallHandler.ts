@@ -6,8 +6,8 @@ import {
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
-import { LanguageService } from '../../language/languageService';
 import { IRecallSearchResult } from '../../recall-alert-api/models/recall-search-results';
+import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 export class CategoryRecallHandler implements RequestHandler {
   private readonly categoryType: string = 'CategoryType';
@@ -26,9 +26,9 @@ export class CategoryRecallHandler implements RequestHandler {
   public async handle(handlerInput: HandlerInput): Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-    const languageService = new LanguageService();
-    languageService.use(language);
-    let promptAgain = `. ${languageService.dictionary['askAgain']}`;
+    const conversation = new RecentRecallsAllConversations();
+
+    let promptAgain = `. ${conversation.Say('askAgain', language)}`;
     const responseBuilder = handlerInput.responseBuilder;
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
@@ -60,12 +60,8 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `${
-          languageService.dictionary['foodLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+        message += `${conversation.Say('foodLatest', language)} 
+          ${conversation.SayRecall(recalls.results[counter], language)}`;
         counter++;
         break;
       }
@@ -78,12 +74,8 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `${
-          languageService.dictionary['vehicleLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+        message += `${conversation.Say('vehicleLatest', language)} 
+          ${conversation.SayRecall(recalls.results[counter], language)}`;
         counter++;
         break;
       }
@@ -96,9 +88,8 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `${languageService.dictionary['medicalLatest']} ${
-          recalls.results[counter].title
-        }`;
+        message += `${conversation.Say('medicalLatest', language)} 
+          ${conversation.SayRecall(recalls.results[counter], language)}`;
         counter++;
         break;
       }
@@ -111,20 +102,16 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `${
-          languageService.dictionary['consumerLatest']
-        } ${recalls.results[counter].title.replace(
-          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-          ''
-        )}`;
+        message += `${conversation.Say('consumerLatest', language)} 
+          ${conversation.SayRecall(recalls.results[counter], language)}`;
         counter++;
         break;
       }
       default: {
         return responseBuilder
-          .speak(languageService.dictionary['cannotUnderstand'])
-          .reprompt(languageService.dictionary['cannotUnderstand'])
-          .withSimpleCard(languageService.dictionary['appName'], message)
+          .speak(conversation.Say('cannotUnderstand', language))
+          .reprompt(conversation.Say('cannotUnderstand', language))
+          .withSimpleCard(conversation.Say('appName', language), message)
           .getResponse();
       }
     }
@@ -137,12 +124,12 @@ export class CategoryRecallHandler implements RequestHandler {
       [this.RecallList]: recalls.results,
     });
 
-    const askAgain: string = `. ${languageService.dictionary['askNext']}`;
+    const askAgain: string = `. ${conversation.Say('askNext', language)}`;
 
     return responseBuilder
       .speak(message + askAgain)
       .reprompt(askAgain)
-      .withSimpleCard(languageService.dictionary['appName'], message)
+      .withSimpleCard(conversation.Say('appName', language), message)
       .getResponse();
   }
 }

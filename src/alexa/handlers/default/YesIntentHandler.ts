@@ -1,11 +1,11 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
-import { LanguageService } from '../../../language/languageService';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../../recall-alert-api/recall-repository';
 import {
   RecallCategory,
   RecallSearchOptions,
 } from '../../../recall-alert-api/models/recall-search-options';
+import { RecentRecallsAllConversations } from '../../../conversations/recent-recalls-all.conv';
 
 export class YesIntentHandler implements RequestHandler {
   private readonly Counter: string = 'Counter';
@@ -24,11 +24,11 @@ export class YesIntentHandler implements RequestHandler {
   public async handle(handlerInput: HandlerInput): Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-    const languageService = new LanguageService();
-    languageService.use(language);
+    const conversation = new RecentRecallsAllConversations();
+
     const repository = new RecallRepository();
-    let message = `${languageService.dictionary[`nextRecall`]}`;
-    let promptAgain = `${languageService.dictionary[`askAnother`]}`;
+    let message = conversation.Say('nextRecall', language);
+    let promptAgain = conversation.Say('askAnother', language);
 
     let persist: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
@@ -57,12 +57,15 @@ export class YesIntentHandler implements RequestHandler {
       case 'SearchRecalls':
         {
           const result = await repository.SearchRecalls(options);
-          promptAgain += `${languageService.dictionary[`askAgain`]}`;
+          promptAgain += conversation.Say('askAnother', language);
 
           if (!result) {
-            message += `${languageService.dictionary[`smthWrong`]}`;
+            message += conversation.Say('smthWrong', language);
           } else {
-            message += `${result.results[persist++].title}`;
+            message += conversation.SayRecall(
+              result.results[persist++],
+              language
+            );
           }
         }
         break;
@@ -71,18 +74,21 @@ export class YesIntentHandler implements RequestHandler {
           if (!dataPersist) {
             const result = await repository.GetRecentRecalls(options);
             if (!result) {
-              message += `${languageService.dictionary[`smthWrong`]}`;
+              message += conversation.Say('smthWrong', language);
             } else {
               dataPersist = result.results.ALL;
-              message += ` ${dataPersist[persist++].title}`;
+              message += conversation.SayRecall(
+                dataPersist[persist++],
+                language
+              );
             }
           } else {
-            message += ` ${dataPersist[persist++].title} `;
+            message += conversation.SayRecall(dataPersist[persist++], language);
           }
         }
         break;
       default: {
-        message += `${languageService.dictionary[`smthWrong`]}`;
+        message += conversation.Say('smthWrong', language);
       }
     }
 
@@ -96,7 +102,7 @@ export class YesIntentHandler implements RequestHandler {
     return handlerInput.responseBuilder
       .speak(message + promptAgain)
       .reprompt(promptAgain)
-      .withSimpleCard(languageService.dictionary[`appName`], message)
+      .withSimpleCard(conversation.Say('appName', language), message)
       .getResponse();
   }
 }

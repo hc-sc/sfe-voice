@@ -5,7 +5,6 @@ import {
 } from 'actions-on-google';
 import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-followup.context';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
-import { LanguageService } from '../../language/languageService';
 
 /**
  * Deals with the recent recalls - all - yes intent.
@@ -40,17 +39,15 @@ export class RecentRecallYesIntent {
       const conversation = new RecentRecallsAllConversations();
       const context = RecentRecallsAllFollowupContext.Create(conv);
       const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-      const languageService = new LanguageService();
-      languageService.use(language);
 
       if (context != undefined) {
-        const utterance = conversation.Default(context.NextRecall);
+        const utterance = conversation.SayRecall(context.NextRecall, language);
         context.Save(conv);
         conv.ask(utterance);
         return;
       }
 
-      conv.close(languageService.dictionary[`smthWrong`]);
+      conv.close(conversation.Say('seemsWrong', language));
       return;
     });
   }
