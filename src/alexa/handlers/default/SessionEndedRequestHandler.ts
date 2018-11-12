@@ -18,9 +18,9 @@ export class SessionEndedRequestHandler implements RequestHandler {
     // tslint:disable-next-line
     console.log(
       `${conversation.Say('endReason', language)}` +
-      `${
-      (handlerInput.requestEnvelope.request as SessionEndedRequest).reason
-      }`
+        `${
+          (handlerInput.requestEnvelope.request as SessionEndedRequest).reason
+        }`
     );
     return handlerInput.responseBuilder.getResponse();
   }

@@ -70,7 +70,7 @@ export class RecentRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + askAgain)
       .reprompt(askAgain)
-      .withSimpleCard(conversation.Say('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }

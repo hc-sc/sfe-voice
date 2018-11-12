@@ -9,7 +9,7 @@ export class CancelAndStopIntentHandler implements RequestHandler {
       (handlerInput.requestEnvelope.request.intent.name ===
         'AMAZON.CancelIntent' ||
         handlerInput.requestEnvelope.request.intent.name ===
-        'AMAZON.StopIntent')
+          'AMAZON.StopIntent')
     );
   }
 
@@ -25,7 +25,7 @@ export class CancelAndStopIntentHandler implements RequestHandler {
 
     return handlerInput.responseBuilder
       .speak(message)
-      .withSimpleCard(conversation.Say('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }

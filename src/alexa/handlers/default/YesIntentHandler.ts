@@ -105,7 +105,7 @@ export class YesIntentHandler implements RequestHandler {
     return handlerInput.responseBuilder
       .speak(message + promptAgain)
       .reprompt(promptAgain)
-      .withSimpleCard(conversation.Say('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }

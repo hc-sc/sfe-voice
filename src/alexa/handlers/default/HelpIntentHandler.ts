@@ -22,7 +22,7 @@ export class HelpIntentHandler implements RequestHandler {
 
     return handlerInput.responseBuilder
       .speak(message)
-      .withSimpleCard(conversation.Say('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }

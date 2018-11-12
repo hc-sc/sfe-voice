@@ -62,7 +62,7 @@ export class NextRecallHandler implements RequestHandler {
       return responseBuilder
         .speak(message + rewelcome)
         .reprompt(rewelcome)
-        .withSimpleCard(conversation.Say('appName', language), message)
+        .withSimpleCard(conversation.Write('appName', language), message)
         .getResponse();
     }
 
@@ -76,7 +76,7 @@ export class NextRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + promptAgain)
       .reprompt(promptAgain)
-      .withSimpleCard(conversation.Say('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }

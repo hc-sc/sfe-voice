@@ -18,7 +18,7 @@ export class LaunchRequestHandler implements RequestHandler {
     return handlerInput.responseBuilder
       .speak(message)
       .reprompt(message)
-      .withSimpleCard(conversation.Say('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }

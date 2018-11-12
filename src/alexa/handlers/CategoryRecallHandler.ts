@@ -31,18 +31,17 @@ export class CategoryRecallHandler implements RequestHandler {
         : 'en';
     const conversation = new RecentRecallsAllConversations();
 
-    let promptAgain = `. ${conversation.Say('askAgain', language)}`;
     const responseBuilder = handlerInput.responseBuilder;
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
     const category = (intent &&
-      intent.slots &&
-      intent.slots.Category &&
-      intent.slots.Category.resolutions &&
-      intent.slots.Category.resolutions.resolutionsPerAuthority &&
-      intent.slots.Category.resolutions.resolutionsPerAuthority[0].values
+    intent.slots &&
+    intent.slots.Category &&
+    intent.slots.Category.resolutions &&
+    intent.slots.Category.resolutions.resolutionsPerAuthority &&
+    intent.slots.Category.resolutions.resolutionsPerAuthority[0].values
       ? intent.slots.Category.resolutions.resolutionsPerAuthority[0].values[0]
-        .value.id
+          .value.id
       : ''
     )
       .toString()
@@ -114,7 +113,7 @@ export class CategoryRecallHandler implements RequestHandler {
         return responseBuilder
           .speak(conversation.Say('cannotUnderstand', language))
           .reprompt(conversation.Say('cannotUnderstand', language))
-          .withSimpleCard(conversation.Say('appName', language), message)
+          .withSimpleCard(conversation.Write('appName', language), message)
           .getResponse();
       }
     }
@@ -132,7 +131,7 @@ export class CategoryRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + askAgain)
       .reprompt(askAgain)
-      .withSimpleCard(conversation.Say('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }

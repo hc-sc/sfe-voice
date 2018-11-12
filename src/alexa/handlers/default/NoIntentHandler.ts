@@ -24,7 +24,7 @@ export class NoIntentHandler implements RequestHandler {
     return handlerInput.responseBuilder
       .speak(`${message} ${reprompt}`)
       .reprompt(reprompt)
-      .withSimpleCard(conversation.Say('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }
