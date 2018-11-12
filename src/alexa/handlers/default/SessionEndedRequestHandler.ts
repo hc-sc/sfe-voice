@@ -9,15 +9,18 @@ export class SessionEndedRequestHandler implements RequestHandler {
 
   public handle(handlerInput: HandlerInput): Response | Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
-    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const language =
+      request && request.locale && request.locale.toLowerCase() === 'fr-ca'
+        ? 'fr'
+        : 'en';
     const conversation = new RecentRecallsAllConversations();
 
     // tslint:disable-next-line
     console.log(
       `${conversation.Say('endReason', language)}` +
-        `${
-          (handlerInput.requestEnvelope.request as SessionEndedRequest).reason
-        }`
+      `${
+      (handlerInput.requestEnvelope.request as SessionEndedRequest).reason
+      }`
     );
     return handlerInput.responseBuilder.getResponse();
   }

@@ -14,7 +14,10 @@ export class CustomErrorHandler implements ErrorHandler {
     error: Error
   ): Response | Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
-    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const language =
+      request && request.locale && request.locale.toLowerCase() === 'fr-ca'
+        ? 'fr'
+        : 'en';
     const conversation = new RecentRecallsAllConversations();
 
     const message = conversation.Say('cannotUnderstand', language);

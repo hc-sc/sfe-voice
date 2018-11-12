@@ -25,7 +25,10 @@ export class NextRecallHandler implements RequestHandler {
 
   public async handle(handlerInput: HandlerInput): Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
-    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const language =
+      request && request.locale && request.locale.toLowerCase() === 'fr-ca'
+        ? 'fr'
+        : 'en';
     const conversation = new RecentRecallsAllConversations();
     let promptAgain = `. ${conversation.Say('askAgain', language)}`;
     let rewelcome = `. ${conversation.Say('rewelcome', language)}`;

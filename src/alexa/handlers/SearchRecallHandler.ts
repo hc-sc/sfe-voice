@@ -30,7 +30,10 @@ export class SearchRecallHandler implements RequestHandler {
       intent && intent.slots && intent.slots.Search && intent.slots.Search.value
         ? intent.slots.Search.value
         : 'SR';
-    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const language =
+      request && request.locale && request.locale.toLowerCase() === 'fr-ca'
+        ? 'fr'
+        : 'en';
     const conversation = new RecentRecallsAllConversations();
     let searchType: string = 'SearchRecalls';
 

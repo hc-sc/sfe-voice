@@ -9,13 +9,16 @@ export class CancelAndStopIntentHandler implements RequestHandler {
       (handlerInput.requestEnvelope.request.intent.name ===
         'AMAZON.CancelIntent' ||
         handlerInput.requestEnvelope.request.intent.name ===
-          'AMAZON.StopIntent')
+        'AMAZON.StopIntent')
     );
   }
 
   public handle(handlerInput: HandlerInput): Response | Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
-    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const language =
+      request && request.locale && request.locale.toLowerCase() === 'fr-ca'
+        ? 'fr'
+        : 'en';
     const conversation = new RecentRecallsAllConversations();
 
     const message = conversation.Say('goodbye', language);

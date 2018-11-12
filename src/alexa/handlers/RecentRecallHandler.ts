@@ -31,7 +31,10 @@ export class RecentRecallHandler implements RequestHandler {
     const searchType: string = 'RecentRecalls';
     const responseBuilder = handlerInput.responseBuilder;
     const request = handlerInput.requestEnvelope.request as IntentRequest;
-    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const language =
+      request && request.locale && request.locale.toLowerCase() === 'fr-ca'
+        ? 'fr'
+        : 'en';
     const conversation = new RecentRecallsAllConversations();
     const askAgain: string = conversation.Say('askAgain', language);
 

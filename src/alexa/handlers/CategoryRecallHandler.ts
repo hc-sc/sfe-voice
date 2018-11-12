@@ -25,7 +25,10 @@ export class CategoryRecallHandler implements RequestHandler {
 
   public async handle(handlerInput: HandlerInput): Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
-    const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    const language =
+      request && request.locale && request.locale.toLowerCase() === 'fr-ca'
+        ? 'fr'
+        : 'en';
     const conversation = new RecentRecallsAllConversations();
 
     let promptAgain = `. ${conversation.Say('askAgain', language)}`;
@@ -33,13 +36,13 @@ export class CategoryRecallHandler implements RequestHandler {
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
     const category = (intent &&
-    intent.slots &&
-    intent.slots.Category &&
-    intent.slots.Category.resolutions &&
-    intent.slots.Category.resolutions.resolutionsPerAuthority &&
-    intent.slots.Category.resolutions.resolutionsPerAuthority[0].values
+      intent.slots &&
+      intent.slots.Category &&
+      intent.slots.Category.resolutions &&
+      intent.slots.Category.resolutions.resolutionsPerAuthority &&
+      intent.slots.Category.resolutions.resolutionsPerAuthority[0].values
       ? intent.slots.Category.resolutions.resolutionsPerAuthority[0].values[0]
-          .value.id
+        .value.id
       : ''
     )
       .toString()
