@@ -35,13 +35,13 @@ export class CategoryRecallHandler implements RequestHandler {
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
     const category = (intent &&
-    intent.slots &&
-    intent.slots.Category &&
-    intent.slots.Category.resolutions &&
-    intent.slots.Category.resolutions.resolutionsPerAuthority &&
-    intent.slots.Category.resolutions.resolutionsPerAuthority[0].values
+      intent.slots &&
+      intent.slots.Category &&
+      intent.slots.Category.resolutions &&
+      intent.slots.Category.resolutions.resolutionsPerAuthority &&
+      intent.slots.Category.resolutions.resolutionsPerAuthority[0].values
       ? intent.slots.Category.resolutions.resolutionsPerAuthority[0].values[0]
-          .value.id
+        .value.id
       : ''
     )
       .toString()
@@ -129,7 +129,7 @@ export class CategoryRecallHandler implements RequestHandler {
     const askAgain: string = `. ${conversation.Write('askNext', language)}`;
 
     return responseBuilder
-      .speak(message + askAgain)
+      .speak(message)
       .reprompt(askAgain)
       .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();

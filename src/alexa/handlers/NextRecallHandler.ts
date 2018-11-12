@@ -74,7 +74,7 @@ export class NextRecallHandler implements RequestHandler {
     });
 
     return responseBuilder
-      .speak(message + promptAgain)
+      .speak(message)
       .reprompt(promptAgain)
       .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();

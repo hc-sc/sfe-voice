@@ -72,7 +72,7 @@ export class SearchRecallHandler implements RequestHandler {
     });
 
     return responseBuilder
-      .speak(message + askAgain)
+      .speak(message)
       .reprompt(askAgain)
       .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
