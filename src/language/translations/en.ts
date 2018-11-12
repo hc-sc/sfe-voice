@@ -26,8 +26,8 @@ export default {
   consumerLatest: 'Sure, Here is the latest Consumer Product related recall.',
   foodLatest: 'Sure, Here is the latest Food related recall.',
   endReason: 'Session ended with reason',
-  thanksGdbye:
-    'Thanks for using our Recall App, for more information on any recalls please visit www.healthycanadians.gc.ca, goodbye',
   seemsWrong:
     'It seems something has gone wrong getting the recall information. Please try again later',
+  thanksGdbye:
+    'Thanks for using our Recall App, for more information on any recalls please visit www.healthycanadians.gc.ca, goodbye'
 };
