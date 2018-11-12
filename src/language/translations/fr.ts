@@ -5,6 +5,7 @@ export default {
     "D'accord, voulez-vous de l'information au sujet des rappels recents? Cherchez-vous de l'info au sujet des rappels recents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. Ou par categorie en disant: medecine, vehicule, produit de consommation ou aliment. ",
   appName: 'Sample Recall Test',
   goodbye: 'Aurevoir',
+  recallPublished: 'FR There was a recall published on',
   askNext: '. Voulez-vous savoir les prochains rappel?',
   nextRecall: 'Ok, le prochain rappel est ',
   sure: "D'accord",

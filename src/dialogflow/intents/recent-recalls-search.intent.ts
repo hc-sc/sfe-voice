@@ -11,7 +11,6 @@ import {
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
 import { IRecallSearchResult } from 'recall-alert-api/models/recall-search-results';
-import { LanguageService } from '../../language/languageService';
 
 export class RecallSearch {
   app: DialogflowApp<
@@ -42,11 +41,15 @@ export class RecallSearch {
       let options: RecallSearchOptions;
       let searchRecallResults: IRecallSearchResult;
       const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-      const languageService = new LanguageService();
-      languageService.use(language);
 
       if (typeof SearchTerm === 'string') {
-        options = RecallSearchOptions.Default(SearchTerm);
+        options = new RecallSearchOptions(
+          SearchTerm,
+          RecallCategory.None,
+          0,
+          0,
+          language
+        );
         searchRecallResults = await repository.SearchRecalls(options);
       } else {
         searchRecallResults = {
@@ -66,11 +69,11 @@ export class RecallSearch {
         conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(
           context
         ));
-        conv.ask(conversation.Default(recall));
+        conv.ask(conversation.SayRecall(recall, language));
         return;
       }
 
-      conv.close(languageService.dictionary[`seemsWrong`]);
+      conv.close(conversation.Say('seemsWrong', language));
       return;
     });
   }

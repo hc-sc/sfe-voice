@@ -1,6 +1,5 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
-import { LanguageService } from '../../language/languageService';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 /**
@@ -27,12 +26,10 @@ export class NextRecallHandler implements RequestHandler {
   public async handle(handlerInput: HandlerInput): Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-    const languageService = new LanguageService();
-    languageService.use(language);
-    let promptAgain = `. ${languageService.dictionary['askAgain']}`;
-    let rewelcome = `. ${languageService.dictionary['rewelcome']}`;
+    const conversation = new RecentRecallsAllConversations();
+    let promptAgain = `. ${conversation.Say('askAgain', language)}`;
+    let rewelcome = `. ${conversation.Say('rewelcome', language)}`;
     const responseBuilder = handlerInput.responseBuilder;
-    let conversation = new RecentRecallsAllConversations();
     let counter: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
     ];
@@ -47,17 +44,12 @@ export class NextRecallHandler implements RequestHandler {
     ];
 
     let message: string = '';
-    // let msg: string = '';
 
     if (recallList.length >= counter + 1) {
-      // msg = conversation.Default(recallList[counter++]);
-      message += languageService.dictionary['okNext'];
-      message += `${recallList[counter++].title.replace(
-        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-        ''
-      )}`;
+      message += conversation.Say('okNext', language);
+      message += conversation.SayRecall(recallList[counter++], language);
     } else {
-      message += languageService.dictionary['resultsEnd'];
+      message += conversation.Say('resultsEnd', language);
       handlerInput.attributesManager.setSessionAttributes({
         [this.Counter]: counter,
         [this.RecallList]: recallList,
@@ -67,7 +59,7 @@ export class NextRecallHandler implements RequestHandler {
       return responseBuilder
         .speak(message + rewelcome)
         .reprompt(rewelcome)
-        .withSimpleCard(languageService.dictionary['appName'], message)
+        .withSimpleCard(conversation.Say('appName', language), message)
         .getResponse();
     }
 
@@ -81,7 +73,7 @@ export class NextRecallHandler implements RequestHandler {
     return responseBuilder
       .speak(message + promptAgain)
       .reprompt(promptAgain)
-      .withSimpleCard(languageService.dictionary['appName'], message)
+      .withSimpleCard(conversation.Say('appName', language), message)
       .getResponse();
   }
 }

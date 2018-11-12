@@ -1,6 +1,6 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
-import { LanguageService } from '../../../language/languageService';
+import { RecentRecallsAllConversations } from '../../../conversations/recent-recalls-all.conv';
 
 /**
  *  This class handles requests to repeat the
@@ -26,10 +26,9 @@ export class RepeatIntentHandler implements RequestHandler {
   public async handle(handlerInput: HandlerInput): Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-    const languageService = new LanguageService();
-    languageService.use(language);
+    const conversation = new RecentRecallsAllConversations();
 
-    const promptAgain = `${languageService.dictionary[`askNext`]}`;
+    const promptAgain = conversation.Say('askNext', language);
 
     const responseBuilder = handlerInput.responseBuilder;
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
@@ -48,11 +47,8 @@ export class RepeatIntentHandler implements RequestHandler {
     ];
 
     let message: string = '';
-    message += `${languageService.dictionary[`noProblem`]}`;
-    message += `${recallList[counter - 1].title.replace(
-      /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g,
-      ''
-    )}`;
+    message += conversation.Say('noProblem', language);
+    message += conversation.SayRecall(recallList[counter - 1], language);
 
     handlerInput.attributesManager.setSessionAttributes({
       [this.Counter]: counter,
@@ -64,7 +60,7 @@ export class RepeatIntentHandler implements RequestHandler {
     return responseBuilder
       .speak(message + promptAgain)
       .reprompt(promptAgain)
-      .withSimpleCard(languageService.dictionary[`appName`], message)
+      .withSimpleCard(conversation.Say('appName', language), message)
       .getResponse();
   }
 }

@@ -1,6 +1,6 @@
 import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response, SessionEndedRequest } from 'ask-sdk-model';
-import { LanguageService } from '../../../language/languageService';
+import { RecentRecallsAllConversations } from '../../../conversations/recent-recalls-all.conv';
 
 export class SessionEndedRequestHandler implements RequestHandler {
   public canHandle(handlerInput: HandlerInput): boolean | Promise<boolean> {
@@ -10,12 +10,11 @@ export class SessionEndedRequestHandler implements RequestHandler {
   public handle(handlerInput: HandlerInput): Response | Promise<Response> {
     const request = handlerInput.requestEnvelope.request as IntentRequest;
     const language = request.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-    const languageService = new LanguageService();
-    languageService.use(language);
+    const conversation = new RecentRecallsAllConversations();
 
     // tslint:disable-next-line
     console.log(
-      `${languageService.dictionary[`endReason`]}` +
+      `${conversation.Say('endReason', language)}` +
         `${
           (handlerInput.requestEnvelope.request as SessionEndedRequest).reason
         }`

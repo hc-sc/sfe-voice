@@ -58,7 +58,7 @@ class RecallSearchOptions {
   public static Default(
     searchTerm = '',
     recallCategory = RecallCategory.None,
-    limit = 15,
+    limit = 5,
     offset = 0,
     lang = Languages.English
   ): RecallSearchOptions {
