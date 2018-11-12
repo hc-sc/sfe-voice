@@ -13,12 +13,12 @@ export class LaunchRequestHandler implements RequestHandler {
         ? 'fr'
         : 'en';
     const conversation = new RecentRecallsAllConversations();
-    const message: string = conversation.Say('welcome', language);
+    const message: string = conversation.Write('welcome', language);
 
     return handlerInput.responseBuilder
       .speak(message)
       .reprompt(message)
-      .withSimpleCard(conversation.Write('appName', language), conversation.Write('appName', language))
+      .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
   }
 }
