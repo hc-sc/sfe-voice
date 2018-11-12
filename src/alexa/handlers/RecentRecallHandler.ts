@@ -58,7 +58,7 @@ export class RecentRecallHandler implements RequestHandler {
       message += `${conversation.Write(
         'mostRecent',
         language
-      )} ${conversation.WriteRecall(result.results.ALL[counter++], language)}.`;
+      )} ${conversation.WriteRecall(result.results.ALL[counter++], language)}`;
 
       handlerInput.attributesManager.setSessionAttributes({
         [this.RecallMethod]: searchType,
