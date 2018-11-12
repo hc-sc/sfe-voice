@@ -6,7 +6,6 @@ let ssml = require('ssml');
 let xmlescape = require('xml-escape');
 
 export class RecentRecallsAllConversations {
-
   public SayRecall(recall: IRecentRecall, language: string): string {
     const languageService = new LanguageService();
     languageService.use(language);

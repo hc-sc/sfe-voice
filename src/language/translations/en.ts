@@ -30,5 +30,5 @@ export default {
   seemsWrong:
     'It seems something has gone wrong getting the recall information. Please try again later',
   thanksGdbye:
-    'Thanks for using our Recall App, for more information on any recalls please visit www.healthycanadians.gc.ca, goodbye'
+    'Thanks for using our Recall App, for more information on any recalls please visit www.healthycanadians.gc.ca, goodbye',
 };
