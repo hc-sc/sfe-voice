@@ -30,8 +30,8 @@ export class YesIntentHandler implements RequestHandler {
     const conversation = new RecentRecallsAllConversations();
 
     const repository = new RecallRepository();
-    let message = conversation.Say('nextRecall', language);
-    let promptAgain = conversation.Say('askAnother', language);
+    let message = conversation.Write('nextRecall', language);
+    let promptAgain = conversation.Write('askAnother', language);
 
     let persist: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
@@ -60,12 +60,12 @@ export class YesIntentHandler implements RequestHandler {
       case 'SearchRecalls':
         {
           const result = await repository.SearchRecalls(options);
-          promptAgain += conversation.Say('askAnother', language);
+          promptAgain += conversation.Write('askAnother', language);
 
           if (!result) {
-            message += conversation.Say('smthWrong', language);
+            message += conversation.Write('smthWrong', language);
           } else {
-            message += conversation.SayRecall(
+            message += conversation.WriteRecall(
               result.results[persist++],
               language
             );
@@ -77,21 +77,24 @@ export class YesIntentHandler implements RequestHandler {
           if (!dataPersist) {
             const result = await repository.GetRecentRecalls(options);
             if (!result) {
-              message += conversation.Say('smthWrong', language);
+              message += conversation.Write('smthWrong', language);
             } else {
               dataPersist = result.results.ALL;
-              message += conversation.SayRecall(
+              message += conversation.WriteRecall(
                 dataPersist[persist++],
                 language
               );
             }
           } else {
-            message += conversation.SayRecall(dataPersist[persist++], language);
+            message += conversation.WriteRecall(
+              dataPersist[persist++],
+              language
+            );
           }
         }
         break;
       default: {
-        message += conversation.Say('smthWrong', language);
+        message += conversation.Write('smthWrong', language);
       }
     }
 

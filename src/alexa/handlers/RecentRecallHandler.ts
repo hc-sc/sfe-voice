@@ -36,7 +36,7 @@ export class RecentRecallHandler implements RequestHandler {
         ? 'fr'
         : 'en';
     const conversation = new RecentRecallsAllConversations();
-    const askAgain: string = conversation.Say('askAgain', language);
+    const askAgain: string = conversation.Write('askAgain', language);
 
     let options = new RecallSearchOptions(
       '',
@@ -53,12 +53,12 @@ export class RecentRecallHandler implements RequestHandler {
     let counter: number = 0;
 
     if (!result) {
-      message += conversation.Say('smthWrong', language);
+      message += conversation.Write('smthWrong', language);
     } else {
-      message += `${conversation.Say(
+      message += `${conversation.Write(
         'mostRecent',
         language
-      )} ${conversation.SayRecall(result.results.ALL[counter++], language)}.`;
+      )} ${conversation.WriteRecall(result.results.ALL[counter++], language)}.`;
 
       handlerInput.attributesManager.setSessionAttributes({
         [this.RecallMethod]: searchType,

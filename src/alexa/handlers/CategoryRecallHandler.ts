@@ -62,8 +62,8 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `${conversation.Say('foodLatest', language)} 
-          ${conversation.SayRecall(recalls.results[counter], language)}`;
+        message += `${conversation.Write('foodLatest', language)} 
+          ${conversation.WriteRecall(recalls.results[counter], language)}`;
         counter++;
         break;
       }
@@ -76,8 +76,8 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `${conversation.Say('vehicleLatest', language)} 
-          ${conversation.SayRecall(recalls.results[counter], language)}`;
+        message += `${conversation.Write('vehicleLatest', language)} 
+          ${conversation.WriteRecall(recalls.results[counter], language)}`;
         counter++;
         break;
       }
@@ -90,8 +90,8 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `${conversation.Say('medicalLatest', language)} 
-          ${conversation.SayRecall(recalls.results[counter], language)}`;
+        message += `${conversation.Write('medicalLatest', language)} 
+          ${conversation.WriteRecall(recalls.results[counter], language)}`;
         counter++;
         break;
       }
@@ -104,15 +104,15 @@ export class CategoryRecallHandler implements RequestHandler {
           language
         );
         recalls = await repository.SearchRecalls(options);
-        message += `${conversation.Say('consumerLatest', language)} 
-          ${conversation.SayRecall(recalls.results[counter], language)}`;
+        message += `${conversation.Write('consumerLatest', language)} 
+          ${conversation.WriteRecall(recalls.results[counter], language)}`;
         counter++;
         break;
       }
       default: {
         return responseBuilder
-          .speak(conversation.Say('cannotUnderstand', language))
-          .reprompt(conversation.Say('cannotUnderstand', language))
+          .speak(conversation.Write('cannotUnderstand', language))
+          .reprompt(conversation.Write('cannotUnderstand', language))
           .withSimpleCard(conversation.Write('appName', language), message)
           .getResponse();
       }
@@ -126,7 +126,7 @@ export class CategoryRecallHandler implements RequestHandler {
       [this.RecallList]: recalls.results,
     });
 
-    const askAgain: string = `. ${conversation.Say('askNext', language)}`;
+    const askAgain: string = `. ${conversation.Write('askNext', language)}`;
 
     return responseBuilder
       .speak(message + askAgain)

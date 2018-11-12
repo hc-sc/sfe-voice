@@ -56,12 +56,12 @@ export class SearchRecallHandler implements RequestHandler {
 
     const result = await repository.SearchRecalls(options);
     let counter: number = 0;
-    const askAgain: string = conversation.Say('askAgain', language);
+    const askAgain: string = conversation.Write('askAgain', language);
 
     if (!result) {
-      message += conversation.Say('smthWrong', language);
+      message += conversation.Write('smthWrong', language);
     } else {
-      message += conversation.SayRecall(result.results[counter++], language);
+      message += conversation.WriteRecall(result.results[counter++], language);
     }
 
     handlerInput.attributesManager.setSessionAttributes({

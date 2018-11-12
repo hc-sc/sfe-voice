@@ -18,8 +18,8 @@ export class NoIntentHandler implements RequestHandler {
         : 'en';
     const conversation = new RecentRecallsAllConversations();
 
-    const message = conversation.Say('noProblem', language);
-    const reprompt = conversation.Say('rewelcome', language);
+    const message = conversation.Write('noProblem', language);
+    const reprompt = conversation.Write('rewelcome', language);
 
     return handlerInput.responseBuilder
       .speak(`${message} ${reprompt}`)

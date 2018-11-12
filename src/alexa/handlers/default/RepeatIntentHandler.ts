@@ -31,7 +31,7 @@ export class RepeatIntentHandler implements RequestHandler {
         : 'en';
     const conversation = new RecentRecallsAllConversations();
 
-    const promptAgain = conversation.Say('askNext', language);
+    const promptAgain = conversation.Write('askNext', language);
 
     const responseBuilder = handlerInput.responseBuilder;
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
@@ -50,8 +50,8 @@ export class RepeatIntentHandler implements RequestHandler {
     ];
 
     let message: string = '';
-    message += conversation.Say('noProblem', language);
-    message += conversation.SayRecall(recallList[counter - 1], language);
+    message += conversation.Write('noProblem', language);
+    message += conversation.WriteRecall(recallList[counter - 1], language);
 
     handlerInput.attributesManager.setSessionAttributes({
       [this.Counter]: counter,

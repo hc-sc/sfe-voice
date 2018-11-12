@@ -18,7 +18,7 @@ export class HelpIntentHandler implements RequestHandler {
         : 'en';
     const conversation = new RecentRecallsAllConversations();
 
-    const message = conversation.Say('canAsk', language);
+    const message = conversation.Write('canAsk', language);
 
     return handlerInput.responseBuilder
       .speak(message)

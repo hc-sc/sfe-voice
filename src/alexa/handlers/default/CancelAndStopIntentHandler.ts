@@ -21,7 +21,7 @@ export class CancelAndStopIntentHandler implements RequestHandler {
         : 'en';
     const conversation = new RecentRecallsAllConversations();
 
-    const message = conversation.Say('goodbye', language);
+    const message = conversation.Write('goodbye', language);
 
     return handlerInput.responseBuilder
       .speak(message)

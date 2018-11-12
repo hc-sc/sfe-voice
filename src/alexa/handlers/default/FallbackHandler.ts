@@ -18,8 +18,8 @@ export class FallbackHandler implements RequestHandler {
         : 'en';
     const conversation = new RecentRecallsAllConversations();
 
-    const reprompt = conversation.Say('askHelp', language);
-    const message = conversation.Say('fallBack', language);
+    const reprompt = conversation.Write('askHelp', language);
+    const message = conversation.Write('fallBack', language);
     return handlerInput.responseBuilder
       .speak(message)
       .reprompt(reprompt)

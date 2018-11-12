@@ -28,6 +28,21 @@ export class RecentRecallsAllConversations {
     return ssmlDoc.toString();
   }
 
+  public WriteRecall(recall: IRecentRecall, language: string): string {
+    const languageService = new LanguageService();
+    languageService.use(language);
+
+    var date = new Date(recall.date_published * 1000);
+    recall.title = xmlescape(recall.title);
+
+    const message = `${languageService.dictionary['recallPublished']} 
+        ${moment.utc(date).format('MM/DD/YYYY')} 
+        ${recall.title} 
+        ${languageService.dictionary['askNext']}`;
+
+    return message;
+  }
+
   public Say(message: string, language: string): string {
     const languageService = new LanguageService();
     languageService.use(language);

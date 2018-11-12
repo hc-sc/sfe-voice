@@ -20,7 +20,7 @@ export class CustomErrorHandler implements ErrorHandler {
         : 'en';
     const conversation = new RecentRecallsAllConversations();
 
-    const message = conversation.Say('cannotUnderstand', language);
+    const message = conversation.Write('cannotUnderstand', language);
 
     // tslint:disable-next-line
     console.log(`Error handled: ${error.message}`);
