@@ -12,23 +12,23 @@ export default {
   noProblem: 'No problem.',
   askHelp: 'What can I help you with?',
   askAgain: 'Would you like to hear the next recall?',
-  askAnother: '. Would you like to hear another recall?',
+  askAnother: 'Would you like to hear another recall?',
   canAsk: 'you can ask about current recalls in Canada!',
   fallBack:
     'Recall Canada test cannot help you with that. It can tell you about current Canadian Recalls.',
   cannotUnderstand: 'Sorry, I cannot understand the command. Please say again.',
-  smthWrong: 'Something went wrong',
+  smthWrong: 'Something went wrong.',
   mostRecent: 'Sure, These are the most recent recalls.',
   okNext: 'Ok, the next recall is ',
   resultsEnd:
-    'End of recalls, no more results. For more information on any recalls, please visit www.healthycanadians.gc.ca',
+    'End of recalls, no more results. For more information on any recalls, please visit www.healthycanadians.gc.ca.',
   vehicleLatest: 'Sure, Here is the latest Vehicle related recall.',
   medicalLatest: 'Sure, Here is the latest Medical related recall.',
   consumerLatest: 'Sure, Here is the latest Consumer Product related recall.',
   foodLatest: 'Sure, Here is the latest Food related recall.',
-  endReason: 'Session ended with reason',
+  endReason: 'Session ended with reason.',
   seemsWrong:
-    'It seems something has gone wrong getting the recall information. Please try again later',
+    'It seems something has gone wrong getting the recall information. Please try again later.',
   thanksGdbye:
-    'Thanks for using our Recall App, for more information on any recalls please visit www.healthycanadians.gc.ca, goodbye',
+    'Thanks for using our Recall App, for more information on any recalls please visit www.healthycanadians.gc.ca, goodbye.',
 };
