@@ -22,6 +22,8 @@
           "name": "RecentResponseIntent",
           "slots": [],
           "samples": [
+            "rappels recents",
+            "rappel recent",
             "newest recalls",
             "recent recalls"
           ]
@@ -33,6 +35,10 @@
             "type": "RecallCategories"
           }],
           "samples": [
+            "Dites-moi s'il y a des rappels sur {Category}",
+            "en {Category}",
+            "J'aimerais en savoir sur {Category}",
+            "Je cherche {Category}",
             "any {Category} results",
             "can you find {Category} results",
             "get me {Category} recalls",
@@ -59,9 +65,8 @@
             "type": "AMAZON.SearchQuery"
           }],
           "samples": [
-            "searching for {Search}",
-            "search for {Search}",
-            "search {Search}"
+            "cherche {Search}",
+            "je cherche pour {Search}"
           ]
         },
         {
@@ -71,6 +76,9 @@
             "type": "yesType"
           }],
           "samples": [
+            "ok",
+            "d'accord",
+            "oui",
             "yes",
             "{yesType}",
             "sure",
@@ -91,6 +99,10 @@
               "name": {
                 "value": "Food",
                 "synonyms": [
+                  "aliment",
+                  "aliments",
+                  "bouffe",
+                  "nourriture",
                   "foods",
                   "meats",
                   "Consumables",
@@ -105,6 +117,8 @@
               "name": {
                 "value": "Medical",
                 "synonyms": [
+                  "medical",
+                  "medecine",
                   "meds",
                   "medicals",
                   "drugs",
@@ -119,6 +133,7 @@
               "name": {
                 "value": "Consumer Products",
                 "synonyms": [
+                  "produits de consommation",
                   "consumer product",
                   "products ",
                   "consumers ",
@@ -132,6 +147,8 @@
               "name": {
                 "value": "Vehicle",
                 "synonyms": [
+                  "auto",
+                  "vehicule",
                   "van",
                   "truck",
                   "car",
@@ -161,27 +178,13 @@
           }]
         },
         {
-          "name": "Search",
-          "values": [{
-            "id": "SR",
-            "name": {
-              "value": "Search",
-              "synonyms": [
-                "chercher",
-                "cherche",
-                "je cherche pour",
-                "scan",
-                "lookup"
-              ]
-            }
-          }]
-        },
-        {
           "name": "yesType",
           "values": [{
             "name": {
               "value": "yes",
               "synonyms": [
+                "ok",
+                "d'accord",
                 "oui",
                 "you know it",
                 "yes please",

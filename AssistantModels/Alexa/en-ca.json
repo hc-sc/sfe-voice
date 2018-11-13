@@ -8,7 +8,10 @@
         },
         {
           "name": "AMAZON.CancelIntent",
-          "samples": []
+          "samples": [
+            "bye",
+            "cancel"
+          ]
         },
         {
           "name": "AMAZON.HelpIntent",
@@ -16,7 +19,14 @@
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": []
+          "samples": [
+            "shutdown",
+            "close",
+            "close the app",
+            "good bye",
+            "goodbye",
+            "exit"
+          ]
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
@@ -34,7 +44,7 @@
           "name": "CategoryResponseIntent",
           "slots": [{
             "name": "Category",
-            "type": "RecallCategories"
+            "type": "Category"
           }],
           "samples": [
             "any {Category} results",
@@ -54,7 +64,12 @@
         },
         {
           "name": "AMAZON.NoIntent",
-          "samples": []
+          "samples": [
+            "Cancel",
+            "No thanks",
+            "Nope",
+            "No"
+          ]
         },
         {
           "name": "SearchResponseIntent",
@@ -89,7 +104,7 @@
         }
       ],
       "types": [{
-          "name": "RecallCategories",
+          "name": "Category",
           "values": [{
               "id": "FD",
               "name": {
@@ -183,6 +198,7 @@
             "name": {
               "value": "yes",
               "synonyms": [
+                "yea",
                 "you know it",
                 "yes please",
                 "I do",
