@@ -18,7 +18,7 @@ export class RecentRecallCategoryIntent {
     any,
     Contexts,
     DialogflowConversation<any, any, Contexts>
-  >;
+    >;
 
   /**
    *
@@ -29,7 +29,7 @@ export class RecentRecallCategoryIntent {
       any,
       Contexts,
       DialogflowConversation<any, any, Contexts>
-    >
+      >
   ) {
     this.app = app;
   }
@@ -64,28 +64,28 @@ export class RecentRecallCategoryIntent {
               context = new RecentRecallsAllFollowupContext(
                 recentRecallResults.results.FOOD
               );
-              message = conversation.Write('foodLatest', language);
+              message = conversation.Say('foodLatest', language);
               break;
             }
             case 'Medical': {
               context = new RecentRecallsAllFollowupContext(
                 recentRecallResults.results.HEALTH
               );
-              message = conversation.Write('medicalLatest', language);
+              message = conversation.Say('medicalLatest', language);
               break;
             }
             case 'Vehicle': {
               context = new RecentRecallsAllFollowupContext(
                 recentRecallResults.results.VEHICLE
               );
-              message = conversation.Write('vehicleLatest', language);
+              message = conversation.Say('vehicleLatest', language);
               break;
             }
             case 'CPS': {
               context = new RecentRecallsAllFollowupContext(
                 recentRecallResults.results.CPS
               );
-              message = conversation.Write('consumerLatest', language);
+              message = conversation.Say('consumerLatest', language);
               break;
             }
             default: {
@@ -104,8 +104,8 @@ export class RecentRecallCategoryIntent {
           const recall = context.CurrentRecall;
           conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <
             any
-          >context);
-          conv.ask(`${message} ${conversation.SayRecall(recall, language)}`);
+            >context);
+          conv.ask(`${message} ${conversation.SayRecall(recall, language)}`).ask();
           return;
         }
 
