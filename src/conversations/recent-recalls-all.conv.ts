@@ -35,9 +35,9 @@ export class RecentRecallsAllConversations {
     var date = new Date(recall.date_published * 1000);
     recall.title = xmlescape(recall.title);
 
-    const message = `${languageService.dictionary['recallPublished']} 
-        ${moment.utc(date).format('MM/DD/YYYY')} 
-        ${recall.title} 
+    const message = `${languageService.dictionary['recallPublished']}
+        ${moment.utc(date).format('MM/DD/YYYY')}
+        ${recall.title}.
         ${languageService.dictionary['askNext']}`;
 
     return message;
