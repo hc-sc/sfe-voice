@@ -32,6 +32,9 @@ export class NextRecallHandler implements RequestHandler {
     const conversation = new RecentRecallsAllConversations();
     let promptAgain = `. ${conversation.Write('askAgain', language)}`;
     let rewelcome = `. ${conversation.Write('rewelcome', language)}`;
+    let smthWrong = conversation.Write('smthWrong', language);
+    let message: string = '';
+
     const responseBuilder = handlerInput.responseBuilder;
     let counter: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
@@ -46,10 +49,7 @@ export class NextRecallHandler implements RequestHandler {
       this.SearchTerm
     ];
 
-    let message: string = '';
-
     if (recallList.length >= counter + 1) {
-      message += conversation.Write('okNext', language);
       message += conversation.WriteRecall(recallList[counter++], language);
     } else {
       message += conversation.Write('resultsEnd', language);
@@ -60,7 +60,7 @@ export class NextRecallHandler implements RequestHandler {
         [this.SearchTerm]: searchtermPersist,
       });
       return responseBuilder
-        .speak(message + rewelcome)
+        .speak(rewelcome)
         .reprompt(rewelcome)
         .withSimpleCard(conversation.Write('appName', language), message)
         .getResponse();
@@ -74,9 +74,9 @@ export class NextRecallHandler implements RequestHandler {
     });
 
     return responseBuilder
-      .speak(message)
+      .speak(smthWrong)
       .reprompt(promptAgain)
-      .withSimpleCard(conversation.Write('appName', language), message)
+      .withSimpleCard(conversation.Write('appName', language), smthWrong)
       .getResponse();
   }
 }
