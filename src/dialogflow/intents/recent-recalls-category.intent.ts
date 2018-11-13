@@ -42,6 +42,7 @@ export class RecentRecallCategoryIntent {
         let conversation = new RecentRecallsAllConversations();
         const language =
           conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+        let message = '';
 
         let options = new RecallSearchOptions(
           '',
@@ -63,24 +64,28 @@ export class RecentRecallCategoryIntent {
               context = new RecentRecallsAllFollowupContext(
                 recentRecallResults.results.FOOD
               );
+              message = conversation.Write('foodLatest', language);
               break;
             }
             case 'Medical': {
               context = new RecentRecallsAllFollowupContext(
                 recentRecallResults.results.HEALTH
               );
+              message = conversation.Write('medicalLatest', language);
               break;
             }
             case 'Vehicle': {
               context = new RecentRecallsAllFollowupContext(
                 recentRecallResults.results.VEHICLE
               );
+              message = conversation.Write('vehicleLatest', language);
               break;
             }
             case 'CPS': {
               context = new RecentRecallsAllFollowupContext(
                 recentRecallResults.results.CPS
               );
+              message = conversation.Write('consumerLatest', language);
               break;
             }
             default: {
@@ -100,7 +105,7 @@ export class RecentRecallCategoryIntent {
           conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <
             any
           >context);
-          conv.ask(conversation.SayRecall(recall, language));
+          conv.ask(`${message} ${conversation.SayRecall(recall, language)}`);
           return;
         }
 
