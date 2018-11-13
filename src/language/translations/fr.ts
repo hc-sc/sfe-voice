@@ -1,6 +1,5 @@
 export default {
-  welcome:
-    `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.`,
+  welcome: `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.`,
   rewelcome:
     "D'accord, voulez-vous de l'information au sujet des rappels récents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.",
   appName: 'Sample Recall Test',
@@ -16,8 +15,7 @@ export default {
   canAsk: 'Vous pouvez vous interroger au sujet des rappels actuels au Canada.',
   fallBack:
     'Test Rappel Canada ne peut pas vous aider. Je peux vous informer au sujet des rappel canadiens actuels ',
-  cannotUnderstand:
-    `Pardon, je n'ai pas compris. Veuillez-essayer encore.`,
+  cannotUnderstand: `Pardon, je n'ai pas compris. Veuillez-essayer encore.`,
   smthWrong: 'Il y a eu une erreur.',
   mostRecent: "D'accord, voici les rappels les plus récents. ",
   okNext: 'Ok, le prochain rappel est... ',

@@ -13,6 +13,7 @@ import { RecentRecallCategoryIntent } from './intents/recent-recalls-category.in
 import { RecallSearch } from './intents/recent-recalls-search.intent';
 import { DefaultWelcome } from './intents/recent-recalls-welcome-intent';
 import { DefaultFallback } from './intents/recent-recalls-fallback-intent';
+import { RecentRecallRepeatIntent } from './intents/recent-recalls-repeat.intent';
 
 export class ActionFactory {
   app: DialogflowApp<
@@ -44,6 +45,8 @@ export class ActionFactory {
     recentRecallsCategory.ApplyIntent();
     const recentRecallsAllYes = new RecentRecallYesIntent(this.app);
     recentRecallsAllYes.ApplyIntent();
+    const recentRecallRepeatIntent = new RecentRecallRepeatIntent(this.app);
+    recentRecallRepeatIntent.ApplyIntent();
     const recentRecallsAllPrevious = new RecentRecallPreviousIntent(this.app);
     recentRecallsAllPrevious.ApplyIntent();
     const recentRecallsAllNoYes = new RecentRecallAllNoYes(this.app);

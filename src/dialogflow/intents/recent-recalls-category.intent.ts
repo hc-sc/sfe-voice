@@ -18,7 +18,7 @@ export class RecentRecallCategoryIntent {
     any,
     Contexts,
     DialogflowConversation<any, any, Contexts>
-    >;
+  >;
 
   /**
    *
@@ -29,7 +29,7 @@ export class RecentRecallCategoryIntent {
       any,
       Contexts,
       DialogflowConversation<any, any, Contexts>
-      >
+    >
   ) {
     this.app = app;
   }
@@ -104,7 +104,7 @@ export class RecentRecallCategoryIntent {
           const recall = context.CurrentRecall;
           conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <
             any
-            >context);
+          >context);
           conv.ask(message).ask(conversation.SayRecall(recall, language));
           return;
         }
