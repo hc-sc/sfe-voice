@@ -105,7 +105,7 @@ export class RecentRecallCategoryIntent {
           conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <
             any
             >context);
-          conv.ask(`${message} ${conversation.SayRecall(recall, language)}`).ask();
+          conv.ask(message).ask(conversation.SayRecall(recall, language));
           return;
         }
 
