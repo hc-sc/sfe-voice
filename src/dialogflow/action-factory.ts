@@ -12,6 +12,7 @@ import { RecentRecallAllNoYes } from './intents/recent recalls-all-no-yes.intent
 import { RecentRecallCategoryIntent } from './intents/recent-recalls-category.intent';
 import { RecallSearch } from './intents/recent-recalls-search.intent';
 import { DefaultWelcome } from './intents/recent-recalls-welcome-intent';
+import { DefaultFallback } from './intents/recent-recalls-fallback-intent';
 
 export class ActionFactory {
   app: DialogflowApp<
@@ -33,6 +34,8 @@ export class ActionFactory {
   public Create(): OmniHandler {
     const defaultWelcome = new DefaultWelcome(this.app);
     defaultWelcome.ApplyIntent();
+    const defaultFallback = new DefaultFallback(this.app);
+    defaultFallback.ApplyIntent();
     const recallSearch = new RecallSearch(this.app);
     recallSearch.ApplyIntent();
     const recentRecallsAll = new RecentRecallAllIntent(this.app);
