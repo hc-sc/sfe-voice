@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "sample recalls",
+      "invocationName": "rappels canada",
       "intents": [{
           "name": "AMAZON.CancelIntent",
           "samples": []
