@@ -11,7 +11,7 @@ const jsonParser = bodyParser.json();
 const PORT = process.env.PORT || 3000;
 
 Express()
-  .all('/', jsonParser, googleAssistant)
+  .all('/google', jsonParser, googleAssistant)
   .all('/alexa', jsonParser, (req, res) => {
     alexa.invoke(req.body).then(responseBody => res.json(responseBody));
   })
