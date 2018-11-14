@@ -17,6 +17,7 @@ export default {
   fallBack:
     'Recall Canada test cannot help you with that. It can tell you about current Canadian Recalls.',
   cannotUnderstand: 'Sorry, I cannot understand the command. Please say again.',
+  recallFallback: "I'm sorry I didn't understand. Would you like to hear the next recall?",
   smthWrong: 'Something went wrong.',
   mostRecent: 'Sure, These are the most recent recalls.',
   okNext: 'Ok, the next recall is ',
