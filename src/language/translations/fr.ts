@@ -17,7 +17,7 @@ export default {
     'Test Rappel Canada ne peut pas vous aider. Je peux vous informer au sujet des rappel canadiens actuels ',
   cannotUnderstand: `Pardon, je n'ai pas compris. Veuillez-essayer encore.`,
   recallFallback:
-    "FR I'm sorry I didn't understand. Would you like to hear the next recall?",
+    'Pardon, je ne comprends pas votre consiqne. Voulez-vous entendre le prochain rappel?',
   smthWrong: 'Il y a eu une erreur.',
   mostRecent: "D'accord, voici les rappels les plus récents. ",
   okNext: 'Ok, le prochain rappel est... ',

@@ -33,4 +33,5 @@ export default {
     'It seems something has gone wrong getting the recall information. Please try again later.',
   thanksGdbye:
     'Thanks for using our Recall App, for more information on any recalls please visit www.healthycanadians.gc.ca, goodbye.',
+  recentOptions: `Alright, You can hear about recent recalls in a specific category, or hear the latest recall. Say Latest, Medical, Food, Automotive, or Consumer Product.`,
 };
