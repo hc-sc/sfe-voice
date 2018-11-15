@@ -15,7 +15,7 @@ export class RecentRecallFallbackIntent {
     any,
     Contexts,
     DialogflowConversation<any, any, Contexts>
-    >;
+  >;
 
   /**
    * Default Constructor
@@ -26,7 +26,7 @@ export class RecentRecallFallbackIntent {
       any,
       Contexts,
       DialogflowConversation<any, any, Contexts>
-      >
+    >
   ) {
     this.app = app;
   }
@@ -38,7 +38,12 @@ export class RecentRecallFallbackIntent {
     this.app.intent('recent recalls - all - fallback', async conv => {
       const conversation = new RecentRecallsAllConversations();
       const context = RecentRecallsAllFollowupContext.Create(conv);
-      const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+      const language =
+        conv.user &&
+        conv.user.locale &&
+        conv.user.locale.substring(0, 2).toLowerCase() === 'fr'
+          ? 'fr'
+          : 'en';
 
       if (context != undefined) {
         const utterance = conversation.Say('recallFallback', language);

@@ -22,7 +22,7 @@ export class ActionFactory {
     any,
     Contexts,
     DialogflowConversation<any, any, Contexts>
-    > &
+  > &
     OmniHandler;
 
   /**

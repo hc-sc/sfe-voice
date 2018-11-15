@@ -40,7 +40,12 @@ export class RecallSearch {
       let conversation = new RecentRecallsAllConversations();
       let options: RecallSearchOptions;
       let searchRecallResults: IRecallSearchResult;
-      const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+      const language =
+        conv.user &&
+        conv.user.locale &&
+        conv.user.locale.substring(0, 2).toLowerCase() === 'fr'
+          ? 'fr'
+          : 'en';
 
       if (typeof SearchTerm === 'string') {
         options = new RecallSearchOptions(

@@ -38,8 +38,12 @@ export class RecentRecallAllIntent {
     this.app.intent('recent recalls - all', async conv => {
       let repository = new RecallRepository();
       let conversation = new RecentRecallsAllConversations();
-      const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
-
+      const language =
+        conv.user &&
+        conv.user.locale &&
+        conv.user.locale.substring(0, 2).toLowerCase() === 'fr'
+          ? 'fr'
+          : 'en';
       let options = new RecallSearchOptions(
         '',
         RecallCategory.None,

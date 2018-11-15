@@ -30,7 +30,12 @@ export class DefaultFallback {
   public async ApplyIntent() {
     this.app.intent('Default Fallback Intent', async conv => {
       let conversation = new RecentRecallsAllConversations();
-      const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+      const language =
+        conv.user &&
+        conv.user.locale &&
+        conv.user.locale.substring(0, 2).toLowerCase() === 'fr'
+          ? 'fr'
+          : 'en';
 
       conv.ask(conversation.Say('cannotUnderstand', language));
       return;
