@@ -30,9 +30,9 @@ export class DefaultWelcome {
     public async ApplyIntent() {
         this.app.intent('Default Welcome Intent', async conv => {
             let conversation = new RecentRecallsAllConversations();
-            const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+            const language = conv.user.locale.substring(0, 2).toLowerCase() === 'fr' ? 'fr' : 'en';
 
-            conv.ask(conv.user.locale.toLowerCase()).ask(conversation.Say('welcome', language));
+            conv.ask(conv.user.locale.substring(0, 2).toLowerCase()).ask(conversation.Say('welcome', language));
             return;
         });
     }
