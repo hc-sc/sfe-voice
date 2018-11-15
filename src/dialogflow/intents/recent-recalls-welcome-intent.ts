@@ -1,39 +1,39 @@
 import {
-  DialogflowApp,
-  Contexts,
-  DialogflowConversation,
+    DialogflowApp,
+    Contexts,
+    DialogflowConversation,
 } from 'actions-on-google';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 export class DefaultWelcome {
-  app: DialogflowApp<
-    any,
-    any,
-    Contexts,
-    DialogflowConversation<any, any, Contexts>
-  >;
-
-  /**
-   *
-   */
-  constructor(
     app: DialogflowApp<
-      any,
-      any,
-      Contexts,
-      DialogflowConversation<any, any, Contexts>
-    >
-  ) {
-    this.app = app;
-  }
+        any,
+        any,
+        Contexts,
+        DialogflowConversation<any, any, Contexts>
+        >;
 
-  public async ApplyIntent() {
-    this.app.intent('Default Welcome Intent', async conv => {
-      let conversation = new RecentRecallsAllConversations();
-      const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+    /**
+     *
+     */
+    constructor(
+        app: DialogflowApp<
+            any,
+            any,
+            Contexts,
+            DialogflowConversation<any, any, Contexts>
+            >
+    ) {
+        this.app = app;
+    }
 
-      conv.ask(conversation.Say('welcome', language));
-      return;
-    });
-  }
+    public async ApplyIntent() {
+        this.app.intent('Default Welcome Intent', async conv => {
+            let conversation = new RecentRecallsAllConversations();
+            const language = conv.user.locale.toLowerCase() === 'fr-ca' ? 'fr' : 'en';
+
+            conv.ask(conv.user.locale.toLowerCase()).ask(conversation.Say('welcome', language));
+            return;
+        });
+    }
 }
