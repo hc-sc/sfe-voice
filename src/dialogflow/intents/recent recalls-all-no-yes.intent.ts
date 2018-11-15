@@ -3,6 +3,7 @@ import {
   Contexts,
   DialogflowConversation,
 } from 'actions-on-google';
+import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 export class RecentRecallAllNoYes {
   app: DialogflowApp<
@@ -28,7 +29,14 @@ export class RecentRecallAllNoYes {
 
   public async ApplyIntent() {
     this.app.intent('recent recalls - all - no - yes', async conv => {
-      conv.followup('start-again');
+      let conversation = new RecentRecallsAllConversations();
+      const language =
+        conv.user &&
+        conv.user.locale &&
+        conv.user.locale.substring(0, 2).toLowerCase() === 'fr'
+          ? 'fr'
+          : 'en';
+      conv.ask(conversation.Say('googleReWelcome', language));
     });
   }
 }

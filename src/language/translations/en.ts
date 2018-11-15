@@ -5,6 +5,8 @@ export default {
     'What do you want to do now? Would you like to hear about recent recalls? Or search for a specific recall by saying "Search for" and the item you are looking for, or by category by saying Medical, Vehicle, Consumer Products or Food.',
   googleWelcome:
     'Welcome to your portal for Recalls Canada. The recall data presented is from the recalls and safety alerts provided from Healthy Canadians. Would you like to hear about recent recalls, by category? Or search for a specific recall by saying "Search for" and the item you are looking for.',
+  googleReWelcome:
+    'What do you want to do now? Would you like to hear about recent recalls, by category? Or search for a specific recall by saying "Search for" and the item you are looking for.',
   appName: 'Sample Recall Test',
   goodbye: 'Goodbye!',
   recallPublished: 'There was a recall published on',
