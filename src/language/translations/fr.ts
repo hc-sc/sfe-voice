@@ -2,6 +2,7 @@ export default {
   welcome: `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.`,
   rewelcome:
     "D'accord, voulez-vous de l'information au sujet des rappels récents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.",
+  googleWelcome: `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents, par catégorie? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez.`,
   appName: 'Sample Recall Test',
   goodbye: 'Aurevoir',
   recallPublished: 'Un rappel a été publié le',

@@ -37,7 +37,7 @@ export class DefaultWelcome {
           ? 'fr'
           : 'en';
 
-      conv.ask(conversation.Say('welcome', language));
+      conv.ask(conversation.Say('googleWelcome', language));
       return;
     });
   }
