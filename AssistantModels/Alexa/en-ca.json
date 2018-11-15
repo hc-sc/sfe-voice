@@ -2,16 +2,14 @@
   "interactionModel": {
     "languageModel": {
       "invocationName": "canada recalls",
-      "intents": [{
+      "intents": [
+        {
           "name": "AMAZON.FallbackIntent",
           "samples": []
         },
         {
           "name": "AMAZON.CancelIntent",
-          "samples": [
-            "bye",
-            "cancel"
-          ]
+          "samples": ["bye", "cancel"]
         },
         {
           "name": "AMAZON.HelpIntent",
@@ -36,16 +34,19 @@
           "name": "RecentResponseIntent",
           "slots": [],
           "samples": [
+            "Tell me about recent recalls",
             "newest recalls",
             "recent recalls"
           ]
         },
         {
           "name": "CategoryResponseIntent",
-          "slots": [{
-            "name": "Category",
-            "type": "Category"
-          }],
+          "slots": [
+            {
+              "name": "Category",
+              "type": "Category"
+            }
+          ],
           "samples": [
             "any {Category} results",
             "can you find {Category} results",
@@ -58,25 +59,20 @@
         },
         {
           "name": "AMAZON.YesIntent",
-          "samples": [
-            "Yes"
-          ]
+          "samples": ["Yes"]
         },
         {
           "name": "AMAZON.NoIntent",
-          "samples": [
-            "Cancel",
-            "No thanks",
-            "Nope",
-            "No"
-          ]
+          "samples": ["Cancel", "No thanks", "Nope", "No"]
         },
         {
           "name": "SearchResponseIntent",
-          "slots": [{
-            "name": "Search",
-            "type": "AMAZON.SearchQuery"
-          }],
+          "slots": [
+            {
+              "name": "Search",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
           "samples": [
             "searching for {Search}",
             "search for {Search}",
@@ -85,10 +81,12 @@
         },
         {
           "name": "NextResponseIntent",
-          "slots": [{
-            "name": "yesType",
-            "type": "yesType"
-          }],
+          "slots": [
+            {
+              "name": "yesType",
+              "type": "yesType"
+            }
+          ],
           "samples": [
             "yes",
             "{yesType}",
@@ -103,13 +101,18 @@
           "samples": []
         }
       ],
-      "types": [{
+      "types": [
+        {
           "name": "Category",
-          "values": [{
+          "values": [
+            {
               "id": "FD",
               "name": {
                 "value": "Food",
                 "synonyms": [
+                  "aliments",
+                  "aliment",
+                  "nourriture",
                   "foods",
                   "meats",
                   "Consumables",
@@ -124,6 +127,8 @@
               "name": {
                 "value": "Medical",
                 "synonyms": [
+                  "medecine",
+                  "médecine",
                   "meds",
                   "medicals",
                   "drugs",
@@ -138,6 +143,8 @@
               "name": {
                 "value": "Consumer Products",
                 "synonyms": [
+                  "produits",
+                  "produits de consommation",
                   "consumer product",
                   "products ",
                   "consumers ",
@@ -151,6 +158,8 @@
               "name": {
                 "value": "Vehicle",
                 "synonyms": [
+                  "vehicule",
+                  "véhicule",
                   "van",
                   "truck",
                   "car",
@@ -168,45 +177,45 @@
         },
         {
           "name": "NextRecall",
-          "values": [{
-            "id": "NX",
-            "name": {
-              "value": "Next",
-              "synonyms": [
-                "next",
-                "following"
-              ]
+          "values": [
+            {
+              "id": "NX",
+              "name": {
+                "value": "Next",
+                "synonyms": ["next", "following"]
+              }
             }
-          }]
+          ]
         },
         {
           "name": "Search",
-          "values": [{
-            "id": "SR",
-            "name": {
-              "value": "Search",
-              "synonyms": [
-                "scan",
-                "lookup"
-              ]
+          "values": [
+            {
+              "id": "SR",
+              "name": {
+                "value": "Search",
+                "synonyms": ["scan", "lookup"]
+              }
             }
-          }]
+          ]
         },
         {
           "name": "yesType",
-          "values": [{
-            "name": {
-              "value": "yes",
-              "synonyms": [
-                "yea",
-                "you know it",
-                "yes please",
-                "I do",
-                "yeah",
-                "yep"
-              ]
+          "values": [
+            {
+              "name": {
+                "value": "yes",
+                "synonyms": [
+                  "yea",
+                  "you know it",
+                  "yes please",
+                  "I do",
+                  "yeah",
+                  "yep"
+                ]
+              }
             }
-          }]
+          ]
         }
       ]
     }

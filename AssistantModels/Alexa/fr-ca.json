@@ -2,7 +2,8 @@
   "interactionModel": {
     "languageModel": {
       "invocationName": "rappels canada",
-      "intents": [{
+      "intents": [
+        {
           "name": "AMAZON.CancelIntent",
           "samples": []
         },
@@ -22,18 +23,23 @@
           "name": "RecentResponseIntent",
           "slots": [],
           "samples": [
-            "rappels recents",
-            "rappel recent",
-            "newest recalls",
+            "rappels recent",
+            "recents",
+            "recent",
+            "Parlez-moi des rappels récents ",
+            "rappels récents",
+            "rappel récent",
             "recent recalls"
           ]
         },
         {
           "name": "CategoryResponseIntent",
-          "slots": [{
-            "name": "Category",
-            "type": "RecallCategories"
-          }],
+          "slots": [
+            {
+              "name": "Category",
+              "type": "RecallCategories"
+            }
+          ],
           "samples": [
             "Dites-moi s'il y a des rappels sur {Category}",
             "en {Category}",
@@ -50,9 +56,7 @@
         },
         {
           "name": "AMAZON.YesIntent",
-          "samples": [
-            "Yes"
-          ]
+          "samples": ["Yes"]
         },
         {
           "name": "AMAZON.NoIntent",
@@ -60,21 +64,22 @@
         },
         {
           "name": "SearchResponseIntent",
-          "slots": [{
-            "name": "Search",
-            "type": "AMAZON.SearchQuery"
-          }],
-          "samples": [
-            "cherche {Search}",
-            "je cherche pour {Search}"
-          ]
+          "slots": [
+            {
+              "name": "Search",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": ["cherche {Search}", "je cherche pour {Search}"]
         },
         {
           "name": "NextResponseIntent",
-          "slots": [{
-            "name": "yesType",
-            "type": "yesType"
-          }],
+          "slots": [
+            {
+              "name": "yesType",
+              "type": "yesType"
+            }
+          ],
           "samples": [
             "ok",
             "d'accord",
@@ -92,9 +97,11 @@
           "samples": []
         }
       ],
-      "types": [{
+      "types": [
+        {
           "name": "RecallCategories",
-          "values": [{
+          "values": [
+            {
               "id": "FD",
               "name": {
                 "value": "Food",
@@ -166,34 +173,35 @@
         },
         {
           "name": "NextRecall",
-          "values": [{
-            "id": "NX",
-            "name": {
-              "value": "Next",
-              "synonyms": [
-                "next",
-                "following"
-              ]
+          "values": [
+            {
+              "id": "NX",
+              "name": {
+                "value": "Next",
+                "synonyms": ["next", "following"]
+              }
             }
-          }]
+          ]
         },
         {
           "name": "yesType",
-          "values": [{
-            "name": {
-              "value": "yes",
-              "synonyms": [
-                "ok",
-                "d'accord",
-                "oui",
-                "you know it",
-                "yes please",
-                "I do",
-                "yeah",
-                "yep"
-              ]
+          "values": [
+            {
+              "name": {
+                "value": "yes",
+                "synonyms": [
+                  "ok",
+                  "d'accord",
+                  "oui",
+                  "you know it",
+                  "yes please",
+                  "I do",
+                  "yeah",
+                  "yep"
+                ]
+              }
             }
-          }]
+          ]
         }
       ]
     }
