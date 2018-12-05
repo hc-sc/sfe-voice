@@ -7,7 +7,7 @@ export default {
     'Welcome to your portal for Recalls Canada. The recall data presented is from the recalls and safety alerts provided from Healthy Canadians. Would you like to hear about recent recalls, by category? Or search for a specific recall by saying "Search for" and the item you are looking for.',
   googleReWelcome:
     'What do you want to do now? Would you like to hear about recent recalls, by category? Or search for a specific recall by saying "Search for" and the item you are looking for.',
-  appName: 'Sample Recall Test',
+  appName: 'Sample Recall',
   goodbye: 'Goodbye!',
   recallPublished: 'There was a recall published on',
   askNext: 'Would you like to hear the next recall?',
@@ -19,7 +19,7 @@ export default {
   askAnother: 'Would you like to hear another recall?',
   canAsk: 'you can ask about current recalls in Canada!',
   fallBack:
-    'Recall Canada test cannot help you with that. It can tell you about current Canadian Recalls.',
+    'Recall Canada cannot help you with that. It can tell you about current Canadian Recalls.',
   cannotUnderstand: 'Sorry, I cannot understand the command. Please say again.',
   recallFallback:
     "I'm sorry I didn't understand. Would you like to hear the next recall?",

@@ -4,7 +4,7 @@ export default {
     "D'accord, voulez-vous de l'information au sujet des rappels récents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.",
   googleWelcome: `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents, par catégorie? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez.`,
   googleReWelcome: `D'accord, voulez-vous de l'information au sujet des rappels les plus récents, par catégorie? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez.`,
-  appName: 'Sample Recall Test',
+  appName: 'Sample Recall',
   goodbye: 'Aurevoir',
   recallPublished: 'Un rappel a été publié le',
   askNext: '. Vous voulez entendre le prochain rappel?',
@@ -16,7 +16,7 @@ export default {
   askAnother: '. Vous voulez entendre le prochain rappel?',
   canAsk: 'Vous pouvez vous interroger au sujet des rappels actuels au Canada.',
   fallBack:
-    'Test Rappel Canada ne peut pas vous aider. Je peux vous informer au sujet des rappel canadiens actuels ',
+    'Rappel Canada ne peut pas vous aider. Je peux vous informer au sujet des rappel canadiens actuels ',
   cannotUnderstand: `Pardon, je n'ai pas compris. Veuillez-essayer encore.`,
   recallFallback:
     'Pardon, je ne comprends pas votre consiqne. Voulez-vous entendre le prochain rappel?',
