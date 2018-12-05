@@ -17,9 +17,9 @@ export class DemoIntentHandler implements RequestHandler {
         const responseBuilder = handlerInput.responseBuilder;
         const intent = (handlerInput.requestEnvelope.request as IntentRequest)
             .intent;
-        const category = (intent &&
+        const searchItem = (intent &&
             intent.slots &&
-            intent.slots.Category &&
+            intent.slots.searchItem &&
             intent.slots.searchItem.resolutions &&
             intent.slots.searchItem.resolutions.resolutionsPerAuthority &&
             intent.slots.searchItem.resolutions.resolutionsPerAuthority[0].values
@@ -32,8 +32,8 @@ export class DemoIntentHandler implements RequestHandler {
 
         let message: string = '';
 
-        switch (category) {
-            case 'tn': {
+        switch (searchItem) {
+            case 'tr': {
                 message += `There was a recall published on November 26, 2018. Acme train sets include lead-based paint and may pose health risks. Would you like to hear the next recall?`;
                 break;
             }
