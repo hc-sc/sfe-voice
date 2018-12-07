@@ -39,19 +39,19 @@ export class DemoIntentHandler implements RequestHandler {
         switch (searchItem) {
             case 'tr': {
                 if (language === 'en') {
-                    message += `There was a recall published on November 26, 2018. Acme train sets include lead-based paint and may pose health risks. Would you like to hear the next recall?`;
+                    message += `There was a recall published on Nov 29, 2018 Acme train sets. Would you like to hear the next recall?`;
                 }
                 else {
-                    message += `FR There was a recall published on November 26, 2018. Acme train sets include lead-based paint and may pose health risks. Would you like to hear the next recall?`;
+                    message += `FR There was a recall published on Nov 29, 2018 Acme train sets. Would you like to hear the next recall?`;
                 }
                 break;
             }
             case 'ty': {
                 if (language === 'en') {
-                    message += `There was a recall published on November 26, 2018. The bath toy can break apart exposing small parts, posing a choking hazard for young children Would you like to hear the next recall?`;
+                    message += `There was a recall published on Nov 15, 2018 Acme recalls Active Baby Carriers. Would you like to hear the next recall?`;
                 }
                 else {
-                    message += `FR There was a recall published on November 26, 2018. The bath toy can break apart exposing small parts, posing a choking hazard for young children Would you like to hear the next recall?`;
+                    message += `FR There was a recall published on Nov 15, 2018 Acme recalls Active Baby Carriers. Would you like to hear the next recall?`;
                 }
                 break;
             }
