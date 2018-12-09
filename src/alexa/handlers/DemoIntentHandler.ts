@@ -42,7 +42,7 @@ export class DemoIntentHandler implements RequestHandler {
                     message += `There was a recall published on Nov 29, 2018 Acme train sets. Would you like to hear the next recall?`;
                 }
                 else {
-                    message += `FR There was a recall published on Nov 29, 2018 Acme train sets. Would you like to hear the next recall?`;
+                    message += `Un rappel a été publié le 29 novembre 2018 sur les ensembles de train Acme. Souhaitez-vous connaître le prochain rappel sur la liste?`;
                 }
                 break;
             }
@@ -51,7 +51,7 @@ export class DemoIntentHandler implements RequestHandler {
                     message += `There was a recall published on Nov 15, 2018 Acme recalls Active Baby Carriers. Would you like to hear the next recall?`;
                 }
                 else {
-                    message += `FR There was a recall published on Nov 15, 2018 Acme recalls Active Baby Carriers. Would you like to hear the next recall?`;
+                    message += `Un rappel a été publié le 15 novembre 2018 sur les porte bébé Acme. Souhaitez vous connaître le prochain rappel sur la liste`;
                 }
                 break;
             }
@@ -61,7 +61,7 @@ export class DemoIntentHandler implements RequestHandler {
                     message += `I found no recalls for Acme toothpaste.`;
                 }
                 else {
-                    message += `FR I found no recalls for Acme toothpaste.`;
+                    message += `Aucun rappel trouvé concernant le dentifrice Acme.`;
                 }
                 break;
             }
