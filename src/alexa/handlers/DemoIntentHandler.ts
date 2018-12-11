@@ -51,7 +51,7 @@ export class DemoIntentHandler implements RequestHandler {
                     message += `There was a recall published on Nov 15, 2018 Acme recalls Active Baby Carriers. Would you like to hear the next recall?`;
                 }
                 else {
-                    message += `Un rappel a été publié le 15 novembre 2018 sur les porte bébé Acme. Souhaitez vous connaître le prochain rappel sur la liste`;
+                    message += `Un rappel a été publié le 15 novembre 2018 sur les porte bébé Acme. Souhaitez vous connaître le prochain rappel sur la liste?`;
                 }
                 break;
             }
