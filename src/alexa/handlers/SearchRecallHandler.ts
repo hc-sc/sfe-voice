@@ -61,7 +61,7 @@ export class SearchRecallHandler implements RequestHandler {
     if (!result) {
       message += conversation.Write('smthWrong', language);
     } else {
-      message += searchName; // conversation.WriteRecall(result.results[counter++], language);
+      message += conversation.WriteRecall(result.results[counter++], language);
     }
 
     handlerInput.attributesManager.setSessionAttributes({
