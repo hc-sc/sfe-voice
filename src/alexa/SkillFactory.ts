@@ -11,7 +11,6 @@ import { SearchRecallHandler } from './handlers/SearchRecallHandler';
 import { CategoryRecallHandler } from './handlers/CategoryRecallHandler';
 import { NextRecallHandler } from './handlers/NextRecallHandler';
 import { RepeatIntentHandler } from './handlers/default/RepeatIntentHandler';
-import { DemoIntentHandler } from './handlers/DemoIntentHandler';
 
 export class SkillFactory {
   // tslint:disable-next-line:variable-name
@@ -29,8 +28,7 @@ export class SkillFactory {
         new NoIntentHandler(),
         new SearchRecallHandler(),
         new CategoryRecallHandler(),
-        new RepeatIntentHandler(),
-        new DemoIntentHandler()
+        new RepeatIntentHandler()
       )
       .addErrorHandlers(new CustomErrorHandler())
       .create();
