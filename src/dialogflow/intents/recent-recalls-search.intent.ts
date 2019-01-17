@@ -81,6 +81,7 @@ export class RecallSearch {
         searchRecallResults.results.length == 0
       ) {
         conv.ask(conversation.Say('noResults', language));
+        return;
       }
 
       conv.ask(conversation.Say('seemsWrong', language));
