@@ -76,9 +76,14 @@ export class RecallSearch {
         ));
         conv.ask(conversation.SayRecall(recall, language));
         return;
+      } else if (
+        searchRecallResults != null &&
+        searchRecallResults.results.length == 0
+      ) {
+        conv.ask(conversation.Say('noResults', language));
       }
 
-      conv.close(conversation.Say('seemsWrong', language));
+      conv.ask(conversation.Say('seemsWrong', language));
       return;
     });
   }

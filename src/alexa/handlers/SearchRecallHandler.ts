@@ -60,6 +60,8 @@ export class SearchRecallHandler implements RequestHandler {
 
     if (!result) {
       message += conversation.Write('smthWrong', language);
+    } else if (result.results.length == 0) {
+      message += conversation.Write('noResults', language);
     } else {
       message += conversation.WriteRecall(result.results[counter++], language);
     }

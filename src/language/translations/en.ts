@@ -26,6 +26,7 @@ export default {
   smthWrong: 'Something went wrong.',
   mostRecent: 'Sure, These are the most recent recalls.',
   okNext: 'Ok, the next recall is ',
+  noResults: 'There are no results, do you want to try another search?',
   resultsEnd:
     'End of recalls, no more results. For more information on any recalls, please visit www.healthycanadians.gc.ca.',
   vehicleLatest: 'Sure, Here is the latest Vehicle related recall.',

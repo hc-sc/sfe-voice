@@ -23,6 +23,7 @@ export default {
   smthWrong: 'Il y a eu une erreur.',
   mostRecent: "D'accord, voici les rappels les plus récents. ",
   okNext: 'Ok, le prochain rappel est... ',
+  noResults: 'FR There are no results, do you want to try another search?',
   resultsEnd:
     "C'est la fin des rappels. Il n'y a pas d'autres résultats. Veuillez visiter www.healthycanadians.gc.ca",
   vehicleLatest: "D'accord, voici le rappel de véhicule le plus récent",
