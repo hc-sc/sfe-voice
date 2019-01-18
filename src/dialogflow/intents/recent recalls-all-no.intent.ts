@@ -5,7 +5,7 @@ import {
 } from 'actions-on-google';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
-export class RecentRecallAllNoYes {
+export class RecentRecallAllNo {
   app: DialogflowApp<
     any,
     any,
