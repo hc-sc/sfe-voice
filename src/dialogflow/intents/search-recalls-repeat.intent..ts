@@ -6,7 +6,7 @@ import {
 import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-followup.context';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
-export class RecentRecallPreviousIntent {
+export class SearchRecallRepeatIntent {
   app: DialogflowApp<
     any,
     any,
@@ -29,7 +29,7 @@ export class RecentRecallPreviousIntent {
   }
 
   public async ApplyIntent() {
-    this.app.intent('recent recalls - all - previous', async conv => {
+    this.app.intent('recall - search - repeat', async conv => {
       const conversation = new RecentRecallsAllConversations();
       const context = RecentRecallsAllFollowupContext.Create(conv);
       const language =
@@ -41,11 +41,11 @@ export class RecentRecallPreviousIntent {
 
       if (context != undefined) {
         const utterance = conversation.SayRecall(
-          context.PreviousRecall,
+          context.CurrentRecall,
           language
         );
         context.Save(conv);
-        conv.ask(utterance);
+        conv.ask(conversation.Say('noProblem', language)).ask(utterance);
         return;
       }
 
