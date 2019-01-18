@@ -9,10 +9,9 @@ import { RecentRecallAllIntent } from './intents/recent-recalls-all.intent';
 import { RecentRecallYesIntent } from './intents/recent-recalls-yes.intent';
 import { RecentRecallPreviousIntent } from './intents/recent-recalls-previous.intent';
 import { RecentRecallAllNoYes } from './intents/recent recalls-all-no-yes.intent';
-import { RecentRecallCategoryIntent } from './intents/recent-recalls-category.intent';
 import { RecallSearch } from './intents/recent-recalls-search.intent';
 import { DefaultWelcome } from './intents/recent-recalls-welcome-intent';
-import { DefaultFallback } from './intents/recent-recalls-fallback-intent';
+import { DefaultFallback } from './intents/recent-recalls-default-fallback-intent';
 import { RecentRecallRepeatIntent } from './intents/recent-recalls-repeat.intent';
 import { RecentRecallFallbackIntent } from './intents/recent-recalls-fallback.intent';
 
@@ -42,8 +41,6 @@ export class ActionFactory {
     recallSearch.ApplyIntent();
     const recentRecallsAll = new RecentRecallAllIntent(this.app);
     recentRecallsAll.ApplyIntent();
-    const recentRecallsCategory = new RecentRecallCategoryIntent(this.app);
-    recentRecallsCategory.ApplyIntent();
     const recentRecallsAllYes = new RecentRecallYesIntent(this.app);
     recentRecallsAllYes.ApplyIntent();
     const recentRecallRepeatIntent = new RecentRecallRepeatIntent(this.app);

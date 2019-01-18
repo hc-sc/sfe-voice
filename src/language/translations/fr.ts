@@ -2,10 +2,8 @@ export default {
   welcome: `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.`,
   rewelcome:
     "D'accord, voulez-vous de l'information au sujet des rappels récents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.",
-  googleWelcome: `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents, par catégorie? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez.`,
-  googleReWelcome: `D'accord, voulez-vous de l'information au sujet des rappels les plus récents, par catégorie? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez.`,
-  appName: 'Sample Recall',
-  goodbye: 'Aurevoir',
+  appName: 'Rappels Du Canada',
+  goodbye: `Merci d'utiliser Rappels Canada, au revoir!`,
   recallPublished: 'Un rappel a été publié le',
   askNext: '. Vous voulez entendre le prochain rappel?',
   nextRecall: 'Ok, le prochain rappel est ',
@@ -23,14 +21,10 @@ export default {
   smthWrong: 'Il y a eu une erreur.',
   mostRecent: "D'accord, voici les rappels les plus récents. ",
   okNext: 'Ok, le prochain rappel est... ',
+  otherRecalls: `Aimeriez-vous entendre d'autres rappels?`,
   noResults: 'FR There are no results, do you want to try another search?',
   resultsEnd:
     "C'est la fin des rappels. Il n'y a pas d'autres résultats. Veuillez visiter www.healthycanadians.gc.ca",
-  vehicleLatest: "D'accord, voici le rappel de véhicule le plus récent",
-  medicalLatest: "D'accord, voici le rappel de médecine le plus récent",
-  consumerLatest:
-    "D'accord, voici le rappel de produits de consommation le plus récent",
-  foodLatest: "D'accord, voici le rappel d'aliments le plus récent.",
   endReason: "La session s'est terminé pour une raison quelconque.",
   thanksGdbye:
     "Merci d'utiliser notre app Rappel. Pour plus d'informations, veuillez visiter www.healthycanadians.gc.ca. A tantôt.",

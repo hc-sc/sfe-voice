@@ -8,7 +8,6 @@ import { SessionEndedRequestHandler } from './handlers/default/SessionEndedReque
 import { RecentRecallHandler } from './handlers/RecentRecallHandler';
 import { NoIntentHandler } from './handlers/default/NoIntentHandler';
 import { SearchRecallHandler } from './handlers/SearchRecallHandler';
-import { CategoryRecallHandler } from './handlers/CategoryRecallHandler';
 import { NextRecallHandler } from './handlers/NextRecallHandler';
 import { RepeatIntentHandler } from './handlers/default/RepeatIntentHandler';
 
@@ -27,7 +26,6 @@ export class SkillFactory {
         new CancelAndStopIntentHandler(),
         new NoIntentHandler(),
         new SearchRecallHandler(),
-        new CategoryRecallHandler(),
         new RepeatIntentHandler()
       )
       .addErrorHandlers(new CustomErrorHandler())
