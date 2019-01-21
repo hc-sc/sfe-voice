@@ -36,7 +36,7 @@ export class RecentRecallAllNoYes {
         conv.user.locale.substring(0, 2).toLowerCase() === 'fr'
           ? 'fr'
           : 'en';
-      conv.ask(conversation.Say('reWelcome', language));
+      conv.ask(conversation.Say('resetConversation', language));
     });
   }
 }

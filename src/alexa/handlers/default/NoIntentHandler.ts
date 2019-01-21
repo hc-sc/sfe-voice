@@ -18,11 +18,11 @@ export class NoIntentHandler implements RequestHandler {
         : 'en';
     const conversation = new RecentRecallsAllConversations();
 
-    const message = conversation.Write('noProblem', language);
+    const message = conversation.Write('resetConversation', language);
     const reprompt = conversation.Write('rewelcome', language);
 
     return handlerInput.responseBuilder
-      .speak(`${message} ${reprompt}`)
+      .speak(message)
       .reprompt(reprompt)
       .withSimpleCard(conversation.Write('appName', language), message)
       .getResponse();
