@@ -64,14 +64,13 @@ export class SearchRecallHandler implements RequestHandler {
       message = conversation.Write('noResults', language);
     } else {
       message += conversation.WriteRecall(result.results[counter++], language);
+      handlerInput.attributesManager.setSessionAttributes({
+        [this.RecallMethod]: searchType,
+        [this.SearchTerm]: search.toString(),
+        [this.Counter]: counter,
+        [this.RecallList]: result.results,
+      });
     }
-
-    handlerInput.attributesManager.setSessionAttributes({
-      [this.RecallMethod]: searchType,
-      [this.SearchTerm]: search.toString(),
-      [this.Counter]: counter,
-      [this.RecallList]: result.results,
-    });
 
     return responseBuilder
       .speak(message)
