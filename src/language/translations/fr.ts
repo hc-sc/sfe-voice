@@ -22,7 +22,7 @@ export default {
   mostRecent: "D'accord, voici les rappels les plus récents. ",
   okNext: 'Ok, le prochain rappel est... ',
   otherRecalls: `Aimeriez-vous entendre d'autres rappels?`,
-  noResults: 'FR There are no results, do you want to try another search?',
+  noResults: 'FR There are no results, What do you want to do now?',
   resultsEnd:
     "C'est la fin des rappels. Il n'y a pas d'autres résultats. Veuillez visiter www.healthycanadians.gc.ca",
   endReason: "La session s'est terminé pour une raison quelconque.",

@@ -22,7 +22,7 @@ export default {
   mostRecent: 'Sure, These are the most recent recalls.',
   okNext: 'Ok, the next recall is ',
   otherRecalls: `Are you interested in any other recalls?`,
-  noResults: 'There are no results, do you want to try another search?',
+  noResults: 'There are no results, What do you want to do now?',
   resultsEnd:
     'End of recalls, no more results. For more information on any recalls, please visit www.healthycanadians.gc.ca.',
   endReason: 'Session ended with reason.',
