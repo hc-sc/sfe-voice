@@ -51,7 +51,8 @@ export class RepeatIntentHandler implements RequestHandler {
 
     let message: string = '';
     message += conversation.Write('noProblem', language);
-    message += ' '+ conversation.WriteRecall(recallList[counter - 1], language);
+    message +=
+      ' ' + conversation.WriteRecall(recallList[counter - 1], language);
 
     handlerInput.attributesManager.setSessionAttributes({
       [this.Counter]: counter,

@@ -7,7 +7,7 @@ import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-fo
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 /**
- * Deals with the recent recalls - all - yes intent.
+ * Deals with the recent recalls - all - fallback intent.
  */
 export class RecentRecallFallbackIntent {
   app: DialogflowApp<

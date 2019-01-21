@@ -7,7 +7,7 @@ import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-fo
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 /**
- * Deals with the recent recalls - all - yes intent.
+ * Deals with the next recall - all - yes intent.
  */
 export class RecentRecallYesIntent {
   app: DialogflowApp<
@@ -35,7 +35,7 @@ export class RecentRecallYesIntent {
    * Applies the google action intent logic to the conversation
    */
   public async ApplyIntent() {
-    this.app.intent('recent recalls - all - yes', async conv => {
+    this.app.intent('next recall - all - yes', async conv => {
       const conversation = new RecentRecallsAllConversations();
       const context = RecentRecallsAllFollowupContext.Create(conv);
       const language =
