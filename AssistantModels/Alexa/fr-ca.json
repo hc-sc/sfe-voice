@@ -1,209 +1,170 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "rappels canada",
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NavigateHomeIntent",
-          "samples": []
-        },
-        {
-          "name": "RecentResponseIntent",
-          "slots": [],
-          "samples": [
-            "rappels recent",
-            "recents",
-            "recent",
-            "Parlez-moi des rappels récents ",
-            "rappels récents",
-            "rappel récent",
-            "recent recalls"
-          ]
-        },
-        {
-          "name": "CategoryResponseIntent",
-          "slots": [
-            {
-              "name": "Category",
-              "type": "RecallCategories"
-            }
-          ],
-          "samples": [
-            "Dites-moi s'il y a des rappels sur {Category}",
-            "en {Category}",
-            "J'aimerais en savoir sur {Category}",
-            "Je cherche {Category}",
-            "any {Category} results",
-            "can you find {Category} results",
-            "get me {Category} recalls",
-            "Any {Category} recalls",
-            "Find {Category} recalls",
-            "Search for {Category}",
-            "{Category}"
-          ]
-        },
-        {
-          "name": "AMAZON.YesIntent",
-          "samples": ["Yes"]
-        },
-        {
-          "name": "AMAZON.NoIntent",
-          "samples": []
-        },
-        {
-          "name": "SearchResponseIntent",
-          "slots": [
-            {
-              "name": "Search",
-              "type": "AMAZON.SearchQuery"
-            }
-          ],
-          "samples": ["cherche {Search}", "je cherche pour {Search}"]
-        },
-        {
-          "name": "NextResponseIntent",
-          "slots": [
-            {
-              "name": "yesType",
-              "type": "yesType"
-            }
-          ],
-          "samples": [
-            "ok",
-            "d'accord",
-            "oui",
-            "yes",
-            "{yesType}",
-            "sure",
-            "next recall",
-            "next",
-            "next one"
-          ]
-        },
-        {
-          "name": "AMAZON.RepeatIntent",
-          "samples": []
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "rappels du canada",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RecentResponseIntent",
+                    "slots": [],
+                    "samples": [
+                        "rappels recent",
+                        "recents",
+                        "recent",
+                        "Parlez-moi des rappels récents ",
+                        "rappels récents",
+                        "rappel récent",
+                        "recent recalls"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "Yes"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SearchResponseIntent",
+                    "slots": [
+                        {
+                            "name": "Search",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "cherche {Search} ",
+                        "je cherche pour {Search}"
+                    ]
+                },
+                {
+                    "name": "NextResponseIntent",
+                    "slots": [
+                        {
+                            "name": "yesType",
+                            "type": "yesType"
+                        }
+                    ],
+                    "samples": [
+                        "ok",
+                        "d'accord",
+                        "oui",
+                        "yes",
+                        "{yesType}",
+                        "sure",
+                        "next recall",
+                        "next",
+                        "next one"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GoodbyeResponseIntent",
+                    "slots": [],
+                    "samples": [
+                        "sortie",
+                        "Au revoir"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "NextRecall",
+                    "values": [
+                        {
+                            "id": "NX",
+                            "name": {
+                                "value": "Next",
+                                "synonyms": [
+                                    "next",
+                                    "following"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "yesType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "yes",
+                                "synonyms": [
+                                    "ok",
+                                    "d'accord",
+                                    "oui",
+                                    "you know it",
+                                    "yes please",
+                                    "I do",
+                                    "yeah",
+                                    "yep"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SearchItem",
+                  "values": [
+                    {
+                      "id": "TY",
+                      "name": {
+                        "value": "toy",
+                        "synonyms": [
+                          "les porte bébé Acme",
+                          "les porte bébé \t",
+                          "bébé ",
+                          "porte bébé "
+                        ]
+                      }
+                    },
+                    {
+                      "id": "TR",
+                      "name": {
+                        "value": "train",
+                        "synonyms": [
+                          "les ensembles de train Acme",
+                          "les ensembles ",
+                          "trains",
+                          "les ensembles de train"
+                        ]
+                      }
+                    },
+                    {
+                      "id": "TP",
+                      "name": {
+                        "value": "dentifrice ",
+                        "synonyms": [
+                          "le dentifrice Acme",
+                          "toothpaste",
+                          "dentifrice "
+                        ]
+                      }
+                    }
+                  ]
+                }
+            ]
         }
-      ],
-      "types": [
-        {
-          "name": "RecallCategories",
-          "values": [
-            {
-              "id": "FD",
-              "name": {
-                "value": "Food",
-                "synonyms": [
-                  "aliment",
-                  "aliments",
-                  "bouffe",
-                  "nourriture",
-                  "foods",
-                  "meats",
-                  "Consumables",
-                  "Vegetables",
-                  "Fruits",
-                  "Produce"
-                ]
-              }
-            },
-            {
-              "id": "MD",
-              "name": {
-                "value": "Medical",
-                "synonyms": [
-                  "medical",
-                  "medecine",
-                  "meds",
-                  "medicals",
-                  "drugs",
-                  "pharmaceutical",
-                  "pharma",
-                  "Medicinal"
-                ]
-              }
-            },
-            {
-              "id": "CP",
-              "name": {
-                "value": "Consumer Products",
-                "synonyms": [
-                  "produits de consommation",
-                  "consumer product",
-                  "products ",
-                  "consumers ",
-                  "Things",
-                  "Products"
-                ]
-              }
-            },
-            {
-              "id": "VH",
-              "name": {
-                "value": "Vehicle",
-                "synonyms": [
-                  "auto",
-                  "vehicule",
-                  "van",
-                  "truck",
-                  "car",
-                  "van",
-                  "motorcycles",
-                  "Automobiles",
-                  "Autos",
-                  "Vans",
-                  "Trucks",
-                  "Cars"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "NextRecall",
-          "values": [
-            {
-              "id": "NX",
-              "name": {
-                "value": "Next",
-                "synonyms": ["next", "following"]
-              }
-            }
-          ]
-        },
-        {
-          "name": "yesType",
-          "values": [
-            {
-              "name": {
-                "value": "yes",
-                "synonyms": [
-                  "ok",
-                  "d'accord",
-                  "oui",
-                  "you know it",
-                  "yes please",
-                  "I do",
-                  "yeah",
-                  "yep"
-                ]
-              }
-            }
-          ]
-        }
-      ]
     }
-  }
 }
