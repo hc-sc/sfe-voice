@@ -15,6 +15,7 @@ import { RecentRecallRepeatIntent } from './intents/recent-recalls-repeat.intent
 import { RecentRecallFallbackIntent } from './intents/recent-recalls-fallback.intent';
 import { RecentRecallAllNo } from './intents/recent recalls-all-no.intent';
 import { SearchRecallRepeatIntent } from './intents/search-recalls-repeat.intent.';
+import { SearchRecallNoIntent } from './intents/search recalls-no.intent';
 
 export class ActionFactory {
   app: DialogflowApp<
@@ -40,6 +41,8 @@ export class ActionFactory {
     defaultFallback.ApplyIntent();
     const searchRecallRepeatIntent = new SearchRecallRepeatIntent(this.app);
     searchRecallRepeatIntent.ApplyIntent();
+    const searchRecallNoIntent = new SearchRecallNoIntent(this.app);
+    searchRecallNoIntent.ApplyIntent();
     const recallSearch = new RecallSearch(this.app);
     recallSearch.ApplyIntent();
     const recentRecallsAll = new RecentRecallAllIntent(this.app);
