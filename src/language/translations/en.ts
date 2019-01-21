@@ -3,7 +3,7 @@ export default {
     'Welcome to your portal for Recalls Canada. The recall data presented is from the recalls and safety alerts provided from Healthy Canadians. Would you like to hear about recent recalls? Or search for a specific recall by saying "Search for" and the item you are looking for?',
   rewelcome: 'What do you want to do now?',
   resetConversation:
-    'No problem, What do you want to do now? Do you want to search for a specific recall or hear all recent recalls?',
+    'No problem, What do you want to do now? Do you want hear about recent recalls, or do want to search for a specific recall?',
   appName: 'Canada Recall',
   goodbye: 'Thanks for using Canada Recalls, goodbye!',
   recallPublished: 'There was a recall published on',

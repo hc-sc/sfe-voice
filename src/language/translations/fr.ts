@@ -2,6 +2,8 @@ export default {
   welcome: `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.`,
   rewelcome:
     "D'accord, voulez-vous de l'information au sujet des rappels récents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.",
+  resetConversation:
+    'FR No problem, What do you want to do now? Do you want hear about recent recalls, or do want to search for a specific recall?',
   appName: 'Rappels Du Canada',
   goodbye: `Merci d'utiliser Rappels Canada, au revoir!`,
   recallPublished: 'Un rappel a été publié le',
