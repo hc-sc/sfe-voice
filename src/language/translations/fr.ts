@@ -1,9 +1,8 @@
 export default {
   welcome: `Salut! Voici le portail de rappel au Canada. Vous vous intéressez aux rappels les plus récents? Ou rechercher un rappel spécifique en disant "Je cherche..." et le sujet que vous recherchez. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.`,
-  rewelcome:
-    "D'accord, voulez-vous de l'information au sujet des rappels récents? Ou rechercher un rappel specifique en disant 'Je cherche pour...' et le sujet que vous chercher. Ou par catégorie en disant: médecine, véhicule, produit de consommation ou aliments.",
+  rewelcome: 'Quoi tu voulez-vous faire maintenant?',
   resetConversation:
-    'FR No problem, What do you want to do now? Do you want hear about recent recalls, or do want to search for a specific recall?',
+    'Pas de problème, quoi tu voulez-vous faire maintenant? Vous vous intéressez aux rappels les plus récents? Ou rechercher un rappel spécifique?',
   appName: 'Rappels Du Canada',
   goodbye: `Merci d'utiliser Rappels Canada, au revoir!`,
   recallPublished: 'Un rappel a été publié le',
@@ -24,11 +23,11 @@ export default {
   mostRecent: "D'accord, voici les rappels les plus récents. ",
   okNext: 'Ok, le prochain rappel est... ',
   otherRecalls: `Aimeriez-vous entendre d'autres rappels?`,
-  noResults: 'FR There are no results, What do you want to do now?',
+  noResults: "Il n'y a pas d'autres résultats. Quoi tu voulez-vous faire maintenant?",
   resultsEnd:
     "C'est la fin des rappels. Il n'y a pas d'autres résultats. Veuillez visiter www.healthycanadians.gc.ca",
   endReason: "La session s'est terminé pour une raison quelconque.",
   thanksGdbye:
     "Merci d'utiliser notre app Rappel. Pour plus d'informations, veuillez visiter www.healthycanadians.gc.ca. A tantôt.",
-  seemsWrong: `Quelque chose s'est mal passé. Veuillez réessayer plus tard.`,
+  seemsWrong: `Quelque chose s'est mal passé. Veuillez réessayer plus tard.`
 };
