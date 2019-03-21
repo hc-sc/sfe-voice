@@ -126,43 +126,43 @@
                 },
                 {
                     "name": "SearchItem",
-                  "values": [
-                    {
-                      "id": "TY",
-                      "name": {
-                        "value": "toy",
-                        "synonyms": [
-                          "les porte bébé Acme",
-                          "les porte bébé \t",
-                          "bébé ",
-                          "porte bébé "
-                        ]
-                      }
-                    },
-                    {
-                      "id": "TR",
-                      "name": {
-                        "value": "train",
-                        "synonyms": [
-                          "les ensembles de train Acme",
-                          "les ensembles ",
-                          "trains",
-                          "les ensembles de train"
-                        ]
-                      }
-                    },
-                    {
-                      "id": "TP",
-                      "name": {
-                        "value": "dentifrice ",
-                        "synonyms": [
-                          "le dentifrice Acme",
-                          "toothpaste",
-                          "dentifrice "
-                        ]
-                      }
-                    }
-                  ]
+                    "values": [
+                        {
+                            "id": "TY",
+                            "name": {
+                                "value": "toy",
+                                "synonyms": [
+                                    "les porte bébé Acme",
+                                    "les porte bébé \t",
+                                    "bébé ",
+                                    "porte bébé "
+                                ]
+                            }
+                        },
+                        {
+                            "id": "TR",
+                            "name": {
+                                "value": "train",
+                                "synonyms": [
+                                    "les ensembles de train Acme",
+                                    "les ensembles ",
+                                    "trains",
+                                    "les ensembles de train"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "TP",
+                            "name": {
+                                "value": "dentifrice ",
+                                "synonyms": [
+                                    "le dentifrice Acme",
+                                    "toothpaste",
+                                    "dentifrice "
+                                ]
+                            }
+                        }
+                    ]
                 }
             ]
         }

@@ -1,203 +1,203 @@
 {
-  "interactionModel": {
-      "languageModel": {
-          "invocationName": "canada recalls",
-          "intents": [
-              {
-                  "name": "AMAZON.FallbackIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.CancelIntent",
-                  "samples": [
-                      "bye",
-                      "cancel"
-                  ]
-              },
-              {
-                  "name": "AMAZON.HelpIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.StopIntent",
-                  "samples": [
-                      "shutdown",
-                      "close",
-                      "close the app",
-                      "good bye",
-                      "goodbye",
-                      "exit"
-                  ]
-              },
-              {
-                  "name": "AMAZON.NavigateHomeIntent",
-                  "samples": []
-              },
-              {
-                  "name": "RecentResponseIntent",
-                  "slots": [],
-                  "samples": [
-                      "Tell me about recent recalls",
-                      "newest recalls",
-                      "recent recalls"
-                  ]
-              },
-              {
-                  "name": "AMAZON.YesIntent",
-                  "samples": [
-                      "Yes"
-                  ]
-              },
-              {
-                  "name": "AMAZON.NoIntent",
-                  "samples": [
-                      "Cancel",
-                      "No thanks",
-                      "Nope",
-                      "No"
-                  ]
-              },
-              {
-                  "name": "SearchResponseIntent",
-                  "slots": [
-                      {
-                          "name": "Search",
-                          "type": "AMAZON.SearchQuery"
-                      }
-                  ],
-                  "samples": [
-                      "find {Search} recalls",
-                      "search {Search}",
-                      "search for {Search} ",
-                      "can you search for {Search}"
-                  ]
-              },
-              {
-                  "name": "NextResponseIntent",
-                  "slots": [
-                      {
-                          "name": "yesType",
-                          "type": "yesType"
-                      }
-                  ],
-                  "samples": [
-                      "yes",
-                      "{yesType}",
-                      "sure",
-                      "next recall",
-                      "next",
-                      "next one"
-                  ]
-              },
-              {
-                  "name": "AMAZON.RepeatIntent",
-                  "samples": []
-              },
-              {
-                  "name": "GoodbyeResponseIntent",
-                  "slots": [],
-                  "samples": [
-                      "Bye",
-                      "Cancel",
-                      "I am done",
-                      "Goodbye"
-                  ]
-              }
-          ],
-          "types": [
-              {
-                  "name": "NextRecall",
-                  "values": [
-                      {
-                          "id": "NX",
-                          "name": {
-                              "value": "Next",
-                              "synonyms": [
-                                  "next",
-                                  "following"
-                              ]
-                          }
-                      }
-                  ]
-              },
-              {
-                  "name": "Search",
-                  "values": [
-                      {
-                          "id": "SR",
-                          "name": {
-                              "value": "Search",
-                              "synonyms": [
-                                  "scan",
-                                  "lookup"
-                              ]
-                          }
-                      }
-                  ]
-              },
-              {
-                  "name": "yesType",
-                  "values": [
-                      {
-                          "name": {
-                              "value": "yes",
-                              "synonyms": [
-                                  "yea",
-                                  "you know it",
-                                  "yes please",
-                                  "I do",
-                                  "yeah",
-                                  "yep"
-                              ]
-                          }
-                      }
-                  ]
-              },
-              {
-                  "name": "SearchItem",
-                  "values": [
-                      {
-                          "id": "TP",
-                          "name": {
-                              "value": "Toothpaste",
-                              "synonyms": [
-                                  " Acme baby carriers",
-                                  "thoothpastes",
-                                  "tooth paste",
-                                  "Toothpaste"
-                              ]
-                          }
-                      },
-                      {
-                          "id": "TR",
-                          "name": {
-                              "value": "train",
-                              "synonyms": [
-                                  "Acme train sets",
-                                  "trains set",
-                                  "trains sets",
-                                  "train set",
-                                  "train sets",
-                                  "Trains"
-                              ]
-                          }
-                      },
-                      {
-                          "id": "TY",
-                          "name": {
-                              "value": "toy",
-                              "synonyms": [
-                                  "Acme baby carriers",
-                                  "babies carriers",
-                                  "baby carrier",
-                                  "baby carriers",
-                                  "toys"
-                              ]
-                          }
-                      }
-                  ]
-              }
-          ]
-      }
-  }
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "canada recalls",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "bye",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "shutdown",
+                        "close",
+                        "close the app",
+                        "good bye",
+                        "goodbye",
+                        "exit"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RecentResponseIntent",
+                    "slots": [],
+                    "samples": [
+                        "Tell me about recent recalls",
+                        "newest recalls",
+                        "recent recalls"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "Yes"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "Cancel",
+                        "No thanks",
+                        "Nope",
+                        "No"
+                    ]
+                },
+                {
+                    "name": "SearchResponseIntent",
+                    "slots": [
+                        {
+                            "name": "Search",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "find {Search} recalls",
+                        "search {Search}",
+                        "search for {Search} ",
+                        "can you search for {Search}"
+                    ]
+                },
+                {
+                    "name": "NextResponseIntent",
+                    "slots": [
+                        {
+                            "name": "yesType",
+                            "type": "yesType"
+                        }
+                    ],
+                    "samples": [
+                        "yes",
+                        "{yesType}",
+                        "sure",
+                        "next recall",
+                        "next",
+                        "next one"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GoodbyeResponseIntent",
+                    "slots": [],
+                    "samples": [
+                        "Bye",
+                        "Cancel",
+                        "I am done",
+                        "Goodbye"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "NextRecall",
+                    "values": [
+                        {
+                            "id": "NX",
+                            "name": {
+                                "value": "Next",
+                                "synonyms": [
+                                    "next",
+                                    "following"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Search",
+                    "values": [
+                        {
+                            "id": "SR",
+                            "name": {
+                                "value": "Search",
+                                "synonyms": [
+                                    "scan",
+                                    "lookup"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "yesType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "yes",
+                                "synonyms": [
+                                    "yea",
+                                    "you know it",
+                                    "yes please",
+                                    "I do",
+                                    "yeah",
+                                    "yep"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SearchItem",
+                    "values": [
+                        {
+                            "id": "TP",
+                            "name": {
+                                "value": "Toothpaste",
+                                "synonyms": [
+                                    " Acme baby carriers",
+                                    "thoothpastes",
+                                    "tooth paste",
+                                    "Toothpaste"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "TR",
+                            "name": {
+                                "value": "train",
+                                "synonyms": [
+                                    "Acme train sets",
+                                    "trains set",
+                                    "trains sets",
+                                    "train set",
+                                    "train sets",
+                                    "Trains"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "TY",
+                            "name": {
+                                "value": "toy",
+                                "synonyms": [
+                                    "Acme baby carriers",
+                                    "babies carriers",
+                                    "baby carrier",
+                                    "baby carriers",
+                                    "toys"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
 }
