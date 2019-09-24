@@ -3,7 +3,7 @@ FROM node:latest as build-dev
 WORKDIR /app
 
 # Install app dependencies
-COPY package*.json /apop/
+COPY package*.json /app/
 
 # Download and install packages
 RUN npm install
