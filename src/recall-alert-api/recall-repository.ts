@@ -20,7 +20,7 @@ export class RecallRepository {
   ): Promise<IAllRecentRecalls | null> {
     const httpc = new HttpClient('food-recall');
     const baseUrl =
-      'http://healthycanadians.gc.ca/recall-alert-rappel-avis/api/recent';
+      'https://healthycanadians.gc.ca/recall-alert-rappel-avis/api/recent';
     const url = `${baseUrl}/${options.Language}`;
     const res = await httpc.get(url);
     const body = await res.readBody();
@@ -34,7 +34,7 @@ export class RecallRepository {
   ): Promise<IRecallSearchResult> {
     const httpc = new HttpClient('food-recall');
     const baseUrl =
-      'http://healthycanadians.gc.ca/recall-alert-rappel-avis/api';
+      'https://healthycanadians.gc.ca/recall-alert-rappel-avis/api';
     const url = `${baseUrl}/search?search=${options.Search}&lim=${
       options.Limit
     }&off=${options.Offset}&cat=${options.Category}&lang=${options.Language}`;
