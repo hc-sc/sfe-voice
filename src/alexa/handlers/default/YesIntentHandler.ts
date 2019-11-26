@@ -40,10 +40,10 @@ export class YesIntentHandler implements RequestHandler {
     let dataPersist = handlerInput.attributesManager.getSessionAttributes()[
       this.Data
     ];
-    let recallnamePersist = handlerInput.attributesManager.getSessionAttributes()[
+    const recallnamePersist = handlerInput.attributesManager.getSessionAttributes()[
       this.RecallMethod
     ];
-    let searchtermPersist = handlerInput.attributesManager.getSessionAttributes()[
+    const searchtermPersist = handlerInput.attributesManager.getSessionAttributes()[
       this.SearchTerm
     ];
 

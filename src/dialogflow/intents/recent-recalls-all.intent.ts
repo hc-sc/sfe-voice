@@ -13,7 +13,7 @@ import {
 import { userInfo } from 'os';
 
 export class RecentRecallAllIntent {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,
@@ -36,37 +36,38 @@ export class RecentRecallAllIntent {
 
   public async ApplyIntent() {
     this.app.intent('recent recalls - all', async conv => {
-      let repository = new RecallRepository();
-      let conversation = new RecentRecallsAllConversations();
-      const language =
-        conv.user &&
-        conv.user.locale &&
-        conv.user.locale.substring(0, 2).toLowerCase() === 'fr'
-          ? 'fr'
-          : 'en';
-      let options = new RecallSearchOptions(
-        '',
-        RecallCategory.None,
-        0,
-        0,
-        language
-      );
-
-      let recentRecallResults = await repository.GetRecentRecalls(options);
+      const repository = new RecallRepository(),
+        conversation = new RecentRecallsAllConversations(),
+        language =
+          conv.user &&
+          conv.user.locale &&
+          conv.user.locale.substring(0, 2).toLowerCase() === 'fr'
+            ? 'fr'
+            : 'en',
+        options = new RecallSearchOptions(
+          '',
+          RecallCategory.None,
+          0,
+          0,
+          language
+        ),
+        recentRecallResults = await repository.GetRecentRecalls(options);
 
       if (
-        recentRecallResults != null &&
+        recentRecallResults !== null &&
         recentRecallResults.results.ALL.length > 0
       ) {
-        let context = new RecentRecallsAllFollowupContext(
+        const context = new RecentRecallsAllFollowupContext(
           recentRecallResults.results.ALL
         );
         const recall = context.CurrentRecall;
-        conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(
-          context
-        ));
+        conv.contexts.set(
+          RecentRecallsAllFollowupContext.ContextName,
+          2,
+          context as any
+        );
         conv.ask(conversation.SayRecall(recall, language));
-        conv.contexts;
+        // conv.contexts;
         return;
       }
 

@@ -6,7 +6,7 @@ import {
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 export class SearchRecallNoIntent {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,
@@ -29,7 +29,7 @@ export class SearchRecallNoIntent {
 
   public async ApplyIntent() {
     this.app.intent('recall - search - no', async conv => {
-      let conversation = new RecentRecallsAllConversations();
+      const conversation = new RecentRecallsAllConversations();
       const language =
         conv.user &&
         conv.user.locale &&

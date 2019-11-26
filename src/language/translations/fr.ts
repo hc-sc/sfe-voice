@@ -23,11 +23,12 @@ export default {
   mostRecent: "D'accord, voici les rappels les plus récents. ",
   okNext: 'Ok, le prochain rappel est... ',
   otherRecalls: `Aimeriez-vous entendre d'autres rappels?`,
-  noResults: "Il n'y a pas d'autres résultats. Quoi tu voulez-vous faire maintenant?",
+  noResults:
+    "Il n'y a pas d'autres résultats. Quoi tu voulez-vous faire maintenant?",
   resultsEnd:
     "C'est la fin des rappels. Il n'y a pas d'autres résultats. Veuillez visiter www.healthycanadians.gc.ca",
   endReason: "La session s'est terminé pour une raison quelconque.",
   thanksGdbye:
     "Merci d'utiliser notre app Rappel. Pour plus d'informations, veuillez visiter www.healthycanadians.gc.ca. A tantôt.",
-  seemsWrong: `Quelque chose s'est mal passé. Veuillez réessayer plus tard.`
+  seemsWrong: `Quelque chose s'est mal passé. Veuillez réessayer plus tard.`,
 };

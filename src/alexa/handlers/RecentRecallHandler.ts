@@ -2,8 +2,8 @@ import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
 import {
-  RecallSearchOptions,
   RecallCategory,
+  RecallSearchOptions,
 } from '../../recall-alert-api/models/recall-search-options';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
@@ -38,7 +38,7 @@ export class RecentRecallHandler implements RequestHandler {
     const conversation = new RecentRecallsAllConversations();
     const askAgain: string = conversation.Write('askAgain', language);
 
-    let options = new RecallSearchOptions(
+    const options = new RecallSearchOptions(
       '',
       RecallCategory.None,
       5,

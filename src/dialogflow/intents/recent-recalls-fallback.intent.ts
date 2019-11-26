@@ -10,7 +10,7 @@ import { RecentRecallsAllConversations } from '../../conversations/recent-recall
  * Deals with the recent recalls - all - fallback intent.
  */
 export class RecentRecallFallbackIntent {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,
@@ -45,7 +45,7 @@ export class RecentRecallFallbackIntent {
           ? 'fr'
           : 'en';
 
-      if (context != undefined) {
+      if (context !== undefined) {
         const utterance = conversation.Say('recallFallback', language);
         context.Save(conv);
         conv.ask(utterance);

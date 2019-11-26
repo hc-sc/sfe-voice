@@ -1,4 +1,4 @@
-import { IRecentRecall } from 'recall-alert-api/models/recent-recall';
+import { IRecentRecall } from '../../../recall-alert-api/models/recent-recall';
 import { ContextName } from './recall-context-names';
 import { DialogflowConversation, Contexts } from 'actions-on-google';
 
@@ -9,6 +9,34 @@ import { DialogflowConversation, Contexts } from 'actions-on-google';
  * context from a conversation
  */
 export class RecentRecallsAllFollowupContext {
+  public static Create(
+    conv: DialogflowConversation<any, any, Contexts>
+  ): RecentRecallsAllFollowupContext | undefined {
+    const context = conv.contexts.get(
+      RecentRecallsAllFollowupContext.ContextName
+    );
+
+    if (context !== undefined) {
+      // tslint:disable-next-line
+      console.log(
+        `********* NEXT CONTEXT PARAMETERS *********\n${JSON.stringify(
+          context.parameters
+        )}`
+      );
+
+      const recalls = context.parameters._recalls as IRecentRecall[],
+        counter = context.parameters._counter as number;
+
+      return new RecentRecallsAllFollowupContext(recalls, counter);
+    }
+
+    return undefined;
+  }
+
+  public static get ContextName(): string {
+    return ContextName.RecentRecallsAllFollowup;
+  }
+
   private _recalls: IRecentRecall[];
   private _counter: number;
 
@@ -48,32 +76,10 @@ export class RecentRecallsAllFollowupContext {
   }
 
   public Save(conv: DialogflowConversation<any, any, Contexts>) {
-    conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(
-      this
-    ));
-  }
-
-  public static Create(
-    conv: DialogflowConversation<any, any, Contexts>
-  ): RecentRecallsAllFollowupContext | undefined {
-    let context = conv.contexts.get(
-      RecentRecallsAllFollowupContext.ContextName
+    conv.contexts.set(
+      RecentRecallsAllFollowupContext.ContextName,
+      2,
+      this as any
     );
-
-    if (context != undefined) {
-      console.log('********* NEXT CONTEXT PARAMETERS *********');
-      console.log(JSON.stringify(context.parameters));
-
-      let recalls = <IRecentRecall[]>context.parameters._recalls;
-      let counter = <number>context.parameters._counter;
-
-      return new RecentRecallsAllFollowupContext(recalls, counter);
-    }
-
-    return undefined;
-  }
-
-  public static get ContextName(): string {
-    return ContextName.RecentRecallsAllFollowup;
   }
 }

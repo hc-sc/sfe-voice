@@ -36,16 +36,16 @@ export class RepeatIntentHandler implements RequestHandler {
     const responseBuilder = handlerInput.responseBuilder;
     const intent = (handlerInput.requestEnvelope.request as IntentRequest)
       .intent;
-    let counter: number = handlerInput.attributesManager.getSessionAttributes()[
+    const counter: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
     ];
-    let recallList = handlerInput.attributesManager.getSessionAttributes()[
+    const recallList = handlerInput.attributesManager.getSessionAttributes()[
       this.RecallList
     ];
-    let recallnamePersist = handlerInput.attributesManager.getSessionAttributes()[
+    const recallnamePersist = handlerInput.attributesManager.getSessionAttributes()[
       this.RecallMethod
     ];
-    let searchtermPersist = handlerInput.attributesManager.getSessionAttributes()[
+    const searchtermPersist = handlerInput.attributesManager.getSessionAttributes()[
       this.SearchTerm
     ];
 

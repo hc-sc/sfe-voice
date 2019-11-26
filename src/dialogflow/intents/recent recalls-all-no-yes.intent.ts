@@ -6,7 +6,7 @@ import {
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 export class RecentRecallAllNoYes {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,
@@ -29,7 +29,7 @@ export class RecentRecallAllNoYes {
 
   public async ApplyIntent() {
     this.app.intent('recent recalls - all - no - yes', async conv => {
-      let conversation = new RecentRecallsAllConversations();
+      const conversation = new RecentRecallsAllConversations();
       const language =
         conv.user &&
         conv.user.locale &&

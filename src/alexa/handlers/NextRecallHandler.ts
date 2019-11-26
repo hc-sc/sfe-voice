@@ -30,19 +30,19 @@ export class NextRecallHandler implements RequestHandler {
         ? 'fr'
         : 'en';
     const conversation = new RecentRecallsAllConversations();
-    let promptAgain = `. ${conversation.Write('askAgain', language)}`;
-    let rewelcome = `. ${conversation.Write('rewelcome', language)}`;
+    const promptAgain = `. ${conversation.Write('askAgain', language)}`;
+    const rewelcome = `. ${conversation.Write('rewelcome', language)}`;
     const responseBuilder = handlerInput.responseBuilder;
     let counter: number = handlerInput.attributesManager.getSessionAttributes()[
       this.Counter
     ];
-    let recallList = handlerInput.attributesManager.getSessionAttributes()[
+    const recallList = handlerInput.attributesManager.getSessionAttributes()[
       this.RecallList
     ];
-    let recallnamePersist = handlerInput.attributesManager.getSessionAttributes()[
+    const recallnamePersist = handlerInput.attributesManager.getSessionAttributes()[
       this.RecallMethod
     ];
-    let searchtermPersist = handlerInput.attributesManager.getSessionAttributes()[
+    const searchtermPersist = handlerInput.attributesManager.getSessionAttributes()[
       this.SearchTerm
     ];
 

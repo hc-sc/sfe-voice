@@ -10,7 +10,7 @@ import { RecentRecallsAllConversations } from '../../conversations/recent-recall
  * Deals with the next recall - all - yes intent.
  */
 export class RecentRecallYesIntent {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,
@@ -45,7 +45,7 @@ export class RecentRecallYesIntent {
           ? 'fr'
           : 'en';
 
-      if (context != undefined) {
+      if (context !== undefined) {
         const utterance = conversation.SayRecall(context.NextRecall, language);
         context.Save(conv);
         conv.ask(utterance);

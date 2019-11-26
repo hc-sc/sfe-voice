@@ -19,7 +19,7 @@ import { SearchRecallNoIntent } from './intents/search recalls-no.intent';
 import { GoodbyeIntent } from './intents/goodbye.intent';
 
 export class ActionFactory {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,

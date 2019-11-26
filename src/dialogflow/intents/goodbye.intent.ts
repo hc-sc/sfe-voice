@@ -13,7 +13,7 @@ import {
 import { userInfo } from 'os';
 
 export class GoodbyeIntent {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,
@@ -36,7 +36,7 @@ export class GoodbyeIntent {
 
   public async ApplyIntent() {
     this.app.intent('goodbye -  all intent', async conv => {
-      let conversation = new RecentRecallsAllConversations();
+      const conversation = new RecentRecallsAllConversations();
       const language =
         conv.user &&
         conv.user.locale &&

@@ -2,8 +2,8 @@ import { HandlerInput, RequestHandler } from 'ask-sdk';
 import { IntentRequest, Response } from 'ask-sdk-model';
 import { RecallRepository } from '../../recall-alert-api/recall-repository';
 import {
-  RecallSearchOptions,
   RecallCategory,
+  RecallSearchOptions,
 } from '../../recall-alert-api/models/recall-search-options';
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
@@ -35,7 +35,7 @@ export class SearchRecallHandler implements RequestHandler {
         ? 'fr'
         : 'en';
     const conversation = new RecentRecallsAllConversations();
-    let searchType: string = 'SearchRecalls';
+    const searchType: string = 'SearchRecalls';
 
     const repository = new RecallRepository();
     let message: string = '';
@@ -44,7 +44,7 @@ export class SearchRecallHandler implements RequestHandler {
 
     message += `Sure, `;
 
-    let searchName = search;
+    const searchName = search;
 
     const options = new RecallSearchOptions(
       searchName,
@@ -60,7 +60,7 @@ export class SearchRecallHandler implements RequestHandler {
 
     if (!result) {
       message = conversation.Write('smthWrong', language);
-    } else if (result.results.length == 0) {
+    } else if (result.results.length === 0) {
       message = conversation.Write('noResults', language);
     } else {
       message += conversation.WriteRecall(result.results[counter++], language);

@@ -7,7 +7,7 @@ import { RecentRecallsAllFollowupContext } from './contexts/recentrecalls-all-fo
 import { RecentRecallsAllConversations } from '../../conversations/recent-recalls-all.conv';
 
 export class SearchRecallRepeatIntent {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,
@@ -39,7 +39,7 @@ export class SearchRecallRepeatIntent {
           ? 'fr'
           : 'en';
 
-      if (context != undefined) {
+      if (context !== undefined) {
         const utterance = conversation.SayRecall(
           context.CurrentRecall,
           language

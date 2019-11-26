@@ -10,10 +10,10 @@ import {
   RecallSearchOptions,
   RecallCategory,
 } from '../../recall-alert-api/models/recall-search-options';
-import { IRecallSearchResult } from 'recall-alert-api/models/recall-search-results';
+import { IRecallSearchResult } from '../../recall-alert-api/models/recall-search-results';
 
 export class RecallSearch {
-  app: DialogflowApp<
+  protected app: DialogflowApp<
     any,
     any,
     Contexts,
@@ -36,8 +36,8 @@ export class RecallSearch {
 
   public async ApplyIntent() {
     this.app.intent('recall - search', async (conv, { SearchTerm }) => {
-      let repository = new RecallRepository();
-      let conversation = new RecentRecallsAllConversations();
+      const repository = new RecallRepository();
+      const conversation = new RecentRecallsAllConversations();
       let options: RecallSearchOptions;
       let searchRecallResults: IRecallSearchResult;
       const language =
@@ -64,21 +64,23 @@ export class RecallSearch {
       }
 
       if (
-        searchRecallResults != null &&
+        searchRecallResults !== null &&
         searchRecallResults.results.length > 0
       ) {
-        let context = new RecentRecallsAllFollowupContext(
+        const context = new RecentRecallsAllFollowupContext(
           searchRecallResults.results
         );
         const recall = context.CurrentRecall;
-        conv.contexts.set(RecentRecallsAllFollowupContext.ContextName, 2, <any>(
-          context
-        ));
+        conv.contexts.set(
+          RecentRecallsAllFollowupContext.ContextName,
+          2,
+          context as any
+        );
         conv.ask(conversation.SayRecall(recall, language));
         return;
       } else if (
-        searchRecallResults != null &&
-        searchRecallResults.results.length == 0
+        searchRecallResults !== null &&
+        searchRecallResults.results.length === 0
       ) {
         conv.ask(conversation.Say('noResults', language));
         return;

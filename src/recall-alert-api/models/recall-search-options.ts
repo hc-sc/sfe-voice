@@ -13,6 +13,22 @@ enum Languages {
 }
 
 class RecallSearchOptions {
+  public static Default(
+    searchTerm = '',
+    recallCategory = RecallCategory.None,
+    limit = 5,
+    offset = 0,
+    lang = Languages.English
+  ): RecallSearchOptions {
+    return new RecallSearchOptions(
+      searchTerm,
+      recallCategory,
+      limit,
+      offset,
+      lang
+    );
+  }
+
   private readonly search: string;
   private readonly category: RecallCategory;
   private readonly limit: number;
@@ -53,22 +69,6 @@ class RecallSearchOptions {
 
   get Language(): string {
     return this.lang;
-  }
-
-  public static Default(
-    searchTerm = '',
-    recallCategory = RecallCategory.None,
-    limit = 5,
-    offset = 0,
-    lang = Languages.English
-  ): RecallSearchOptions {
-    return new RecallSearchOptions(
-      searchTerm,
-      recallCategory,
-      limit,
-      offset,
-      lang
-    );
   }
 }
 
