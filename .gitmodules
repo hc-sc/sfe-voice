@@ -1,0 +1,9 @@
+
+[submodule "src/app/static/theme/GCWeb"]
+	path = src/app/static/theme/GCWeb
+	url = https://github.com/wet-boew/themes-cdn
+  branch = GCWeb
+[submodule "src/app/static/theme/wet-boew"]
+	path = src/app/static/theme/wet-boew
+	url = https://github.com/wet-boew/wet-boew-cdn
+  branch = v4.0-dist

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "food-recall",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/hc-sc/sfe-voice",
   "author": {
     "name": "Daniel McCrady",
     "email": "dan.mccrady@focisolutions.com",
@@ -25,36 +25,42 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "clean": "rimraf lib && rimraf coverage",
-    "format": "prettier --write \"{src,tests}/**/*.ts\" --single-quote --trailing-comma es5",
-    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
-    "prepublishOnly": "npm run build",
-    "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
-    "build": "tsc --pretty",
     "start": "node lib/app/server.js",
-    "postinstall": "npm run build",
+    "clean": "rimraf lib && rimraf coverage",
+    "cpystatic": "mkdir ./lib/app/static && rsync -r ./src/app/static/ ./lib/app/static",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
     "test": "jest",
-    "coverage": "jest --coverage",
-    "watch": "npm run build && nodemon lib/app/server.js",
-    "//watch": "npm run build -- --watch",
-    "watch:test": "jest --watch"
+    "posttest": "jest --coverage",
+    "predev": "npm run clean && npm run lint && npm run test && echo Using TypeScript && tsc --version",
+    "dev": "tsc --pretty -p tsconfig.json && npm run cpystatic",
+    "build": "tsc -p tsconfig.json && npm run cpystatic",
+    "prewatch": "npm run dev",
+    "watch": "nodemon lib/app/server.js",
+    "watch:test": "jest --watch",
+    "docker:build": "docker build . -t sfe/voice:0.0.1",
+    "docker:run": "docker run -p 8080:8080 -d --network=net-sfe-dev --name sfe-voice -m \"1G\" sfe/voice:0.0.1",
+    "docker:down": "docker stop sfe-voice; docker rm sfe-voice",
+    "docker:refresh": "npm run docker:down; npm run docker:build && npm run docker:run"
   },
   "dependencies": {
     "@types/express": "^4.16.0",
+    "@types/helmet": "0.0.45",
+    "@types/node": "^8.0.0",
     "actions-on-google": "^2.12.0",
     "ask-sdk": "^2.2.0",
     "ask-sdk-core": "^2.2.0",
     "ask-sdk-model": "^1.8.0",
     "body-parser": "^1.19.0",
     "express": "^4.16.3",
+    "helmet": "^3.21.2",
     "moment": "^2.22.2",
     "ssml": "0.0.4",
     "typed-rest-client": "^1.5.0",
+    "typescript": "^3.6.3",
     "xml-escape": "^1.1.0"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
-    "@types/node": "^8.0.0",
     "@types/yargs": "^12.0.1",
     "jest": "^24.9.0",
     "nodemon": "^2.0.1",
@@ -63,8 +69,7 @@
     "ts-jest": "^24.2.0",
     "ts-node": "^3.2.0",
     "tslint": "^5.20.1",
-    "tslint-config-prettier": "^1.1.0",
-    "typescript": "^2.3.0"
+    "tslint-config-prettier": "^1.1.0"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -89,10 +94,10 @@
     "watch": [
       "src/"
     ],
-    "ext": "html, js, ts",
+    "ext": "html, css, js, ts",
     "delay": "5",
     "events": {
-      "restart": "npm run build"
+      "restart": "tsc --pretty && rsync -r ./src/app/static/ ./lib/app/static"
     }
   }
 }

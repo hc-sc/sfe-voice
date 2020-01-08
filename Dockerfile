@@ -1,18 +1,47 @@
-FROM node:latest as build-dev
-# Create app directory
-WORKDIR /app
+###
+# Base
+###
 
-# Install app dependencies
-COPY package*.json /app/
+# Build base from node 8 image
+FROM node:8 as base
 
-# Download and install packages
-RUN npm install
-COPY ./ /app/
-ARG env=prod
-RUN npm run build -- --prod
+# Install rsync
+RUN apt-get -yqq update
+RUN apt-get -yqq install rsync
 
-# Bundle app source
+# Install dependencies in temp folder (forces caching until change in package)
+COPY package*.json /tmp/
+RUN cd /tmp && npm install --only=production
+
+# Create app directory and transfer dependencies
+WORKDIR /home/apps/sfe-voice
+RUN mv /tmp/node_modules ./
+
+###
+# Application
+###
+
+FROM base as application
+
+# Copy and build source
 COPY . .
+RUN npm run build
 
+# Give node user permission to serve static assets
+RUN chown -Rv node /home/apps/sfe-voice/lib/app/static/assets
+
+###
+# Run
+###
+
+FROM application as run
+
+# Set and export port value
+ENV PORT=8080
 EXPOSE 8080
-CMD [ "npm", "start" ]
+
+# Change from root to node
+USER node
+
+# Start application
+CMD [ "node", "lib/app/server.js" ]

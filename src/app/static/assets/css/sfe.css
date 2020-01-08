@@ -1,0 +1,12 @@
+.sfe-bg {
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+}
+
+.sfe-hb {
+  margin-top: 50px;
+}
+
+.sfe-hb .sp-bx {
+  background-color: white;
+}

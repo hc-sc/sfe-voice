@@ -21,7 +21,6 @@ export class RecallRepository {
     const url = `${baseUrl}/${options.Language}`;
     const res = await httpc.get(url);
     const body = await res.readBody();
-    // console.log(body);
     const recall: IAllRecentRecalls = JSON.parse(body);
     return recall;
   }
@@ -36,7 +35,6 @@ export class RecallRepository {
 
     const res = await httpc.get(url);
     const body = await res.readBody();
-    // console.log(body);
     const recall: IRecallSearchResult = JSON.parse(body);
     return recall;
   }
