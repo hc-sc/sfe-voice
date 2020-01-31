@@ -37,10 +37,12 @@
     "prewatch": "npm run dev",
     "watch": "nodemon lib/app/server.js",
     "watch:test": "jest --watch",
-    "docker:build": "docker build . -t sfe/voice:0.0.1",
-    "docker:run": "docker run -p 8080:8080 -d --network=net-sfe-dev --name sfe-voice -m \"1G\" sfe/voice:0.0.1",
-    "docker:down": "docker stop sfe-voice; docker rm sfe-voice",
-    "docker:refresh": "npm run docker:down; npm run docker:build && npm run docker:run"
+    "predocker": "docker-compose down && docker-compose rm",
+    "predocker:fresh": "npm run predocker",
+    "docker": "docker-compose build",
+    "docker:fresh": "docker-compose build --no-cache",
+    "postdocker": "docker-compose up -d",
+    "postdocker:fresh": "docker-compose up -d --force-recreate"
   },
   "dependencies": {
     "@types/express": "^4.16.0",

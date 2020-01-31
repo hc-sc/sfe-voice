@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+
+  gateway:
+    image: sfe/voice:0.0.1
+    container_name: sfe-voice
+    networks: 
+      - net-sfe-dev
+    ports:
+      - "8080:8080"
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    restart: always
+
+networks:
+  net-sfe-dev:
+    external: true
