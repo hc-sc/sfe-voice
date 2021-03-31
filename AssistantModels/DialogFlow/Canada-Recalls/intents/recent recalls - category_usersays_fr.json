@@ -1,0 +1,128 @@
+[
+  {
+    "id": "b8566a49-17c5-4895-8045-313bf36874bf",
+    "data": [
+      {
+        "text": "aliment",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  },
+  {
+    "id": "5aea6f21-4540-440a-8713-0937cbc9e28f",
+    "data": [
+      {
+        "text": "véhicule",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  },
+  {
+    "id": "52998b3d-fe15-4d69-8847-51c327a57674",
+    "data": [
+      {
+        "text": "médecine",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  },
+  {
+    "id": "89481b58-dde4-49cd-ac29-b5c3bfe42b0e",
+    "data": [
+      {
+        "text": "auto",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  },
+  {
+    "id": "ffc9c9b6-a58b-41e7-bd74-481d8e20e62f",
+    "data": [
+      {
+        "text": "produits",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  },
+  {
+    "id": "70933b0a-0635-4a74-93e8-9fc8b61f03e9",
+    "data": [
+      {
+        "text": "produits de consommation",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  },
+  {
+    "id": "56451f1a-cb3e-4b2d-b534-81f7b8c6fbfa",
+    "data": [
+      {
+        "text": "vehicule",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  },
+  {
+    "id": "2c6f8461-bebf-4380-ac09-ad10e6e10ae3",
+    "data": [
+      {
+        "text": "medecines",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  },
+  {
+    "id": "09057771-ad17-455d-b762-867c5d528033",
+    "data": [
+      {
+        "text": "aliments",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542298184
+  }
+]

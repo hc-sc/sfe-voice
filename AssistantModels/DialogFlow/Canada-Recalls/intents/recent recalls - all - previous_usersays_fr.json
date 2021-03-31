@@ -1,0 +1,122 @@
+[
+  {
+    "id": "279698d5-a906-4455-909d-1b6495386181",
+    "data": [
+      {
+        "text": "retour",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1539284847
+  },
+  {
+    "id": "6b215d15-2878-4229-aade-bcc3ba7f4867",
+    "data": [
+      {
+        "text": "va à la page précédente",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539284847
+  },
+  {
+    "id": "6c113927-0706-45a7-b958-224a42d12019",
+    "data": [
+      {
+        "text": "résultats précédents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1539284847
+  },
+  {
+    "id": "b5e2f45a-f3b0-4a0e-9108-ad358c1b67fd",
+    "data": [
+      {
+        "text": "revenir en arrière",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539284847
+  },
+  {
+    "id": "f645708e-6c28-4e3d-9b9b-8ef7b3c23ea3",
+    "data": [
+      {
+        "text": "précédent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 1539284847
+  },
+  {
+    "id": "d85377c3-cf7f-44fc-a1c8-58adc085621f",
+    "data": [
+      {
+        "text": "reviens à la page précédente",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539284847
+  },
+  {
+    "id": "57dca1d4-8dc0-425e-bb26-74e040194a51",
+    "data": [
+      {
+        "text": "reviens aux résultats précédents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539284847
+  },
+  {
+    "id": "656eb46f-9263-48d3-86db-84c1e0018676",
+    "data": [
+      {
+        "text": "lis-moi les résultats précédents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539284847
+  },
+  {
+    "id": "86c0f63c-9d0a-4bf3-9f22-2f75a423b838",
+    "data": [
+      {
+        "text": "page précédente",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1539284847
+  },
+  {
+    "id": "41bcec07-9877-475b-a5c4-0ff0b8371854",
+    "data": [
+      {
+        "text": "reviens en arrière",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1539284847
+  }
+]

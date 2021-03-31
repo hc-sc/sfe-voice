@@ -1,0 +1,32 @@
+[
+  {
+    "id": "73652770-68ed-43cc-9c45-713f1acb7bc8",
+    "data": [
+      {
+        "text": "je cherche pour ",
+        "userDefined": false
+      },
+      {
+        "text": "poulet",
+        "alias": "SearchTerm",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542219882
+  },
+  {
+    "id": "700fcd5e-de9a-41f1-a381-3132064f3085",
+    "data": [
+      {
+        "text": "cherche",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542219648
+  }
+]

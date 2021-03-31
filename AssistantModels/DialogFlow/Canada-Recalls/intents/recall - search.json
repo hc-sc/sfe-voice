@@ -1,0 +1,49 @@
+{
+  "id": "38d53c1b-91e1-492e-b1e1-7a12d7336539",
+  "name": "recall - search",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "recentrecalls-all-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "1604ca0f-3ffc-4b7a-bdab-364d6c17f612",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "SearchTerm",
+          "value": "$SearchTerm",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Can you tell me what you would like to search for?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1543865520,
+  "fallbackIntent": false,
+  "events": []
+}

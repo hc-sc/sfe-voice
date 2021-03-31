@@ -1,0 +1,41 @@
+[
+  {
+    "value": "Food",
+    "synonyms": [
+      "Food",
+      "nourriture",
+      "aliment",
+      "aliments"
+    ]
+  },
+  {
+    "value": "Vehicle",
+    "synonyms": [
+      "Vehicle",
+      "automotive",
+      "auto",
+      "véhicule",
+      "vehicule",
+      "vehicules"
+    ]
+  },
+  {
+    "value": "CPS",
+    "synonyms": [
+      "CPS",
+      "Consumer Products",
+      "produits de consommation",
+      "produit",
+      "produits"
+    ]
+  },
+  {
+    "value": "Medical",
+    "synonyms": [
+      "Medical",
+      "médecine",
+      "medecine",
+      "medecines"
+    ]
+  }
+]

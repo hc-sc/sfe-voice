@@ -1,0 +1,36 @@
+{
+  "id": "b030ffeb-7529-4af0-850f-f0de7c76fae3",
+  "name": "recent recalls - all - fallback",
+  "auto": false,
+  "contexts": [
+    "recentrecalls-all-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "recentrecalls.recentrecalls-custom.recentrecalls-all-fallback",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I\u0027m sorry I didn\u0027t understand. Would you like to hear the next recall?"
+        },
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": "Pardon. Je ne comprends pas votre consiqne. Vous voulez entendre le prochain rappel?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542227119,
+  "fallbackIntent": true,
+  "events": []
+}

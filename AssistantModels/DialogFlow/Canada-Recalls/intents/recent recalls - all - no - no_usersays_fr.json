@@ -1,0 +1,110 @@
+[
+  {
+    "id": "eb178087-783b-41e3-a67a-21c8a814f62d",
+    "data": [
+      {
+        "text": "pas vraiment",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539289019
+  },
+  {
+    "id": "8853e6e7-7eff-43d7-9cb4-f859fdeb48c6",
+    "data": [
+      {
+        "text": "je ne suis pas d\u0027accord",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1539289019
+  },
+  {
+    "id": "4fc0e88a-86f3-42ae-9f05-f2bf0b101085",
+    "data": [
+      {
+        "text": "je ne crois pas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 1539289019
+  },
+  {
+    "id": "112e7690-c1cb-4e45-83ef-63f5298ee436",
+    "data": [
+      {
+        "text": "sûrement pas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539289019
+  },
+  {
+    "id": "47790aec-96cd-40d3-a383-1befa4665a88",
+    "data": [
+      {
+        "text": "ne le fais pas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1539289019
+  },
+  {
+    "id": "a04373eb-40a9-4fe6-93de-860ece871f8d",
+    "data": [
+      {
+        "text": "non",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 3,
+    "updated": 1539289019
+  },
+  {
+    "id": "65cb6da0-f5b4-4272-98b8-06e761088d83",
+    "data": [
+      {
+        "text": "je n\u0027en veux pas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539289019
+  },
+  {
+    "id": "9ff4e164-9d04-4cb2-901f-1d70fee81069",
+    "data": [
+      {
+        "text": "ça ne m\u0027intéresse pas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539289019
+  },
+  {
+    "id": "0ff2c5bd-0600-4780-afa7-b37dccebe645",
+    "data": [
+      {
+        "text": "non merci",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 1539289019
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "df1af765-cf2a-4e21-8c0f-9d26d8a147b4",
+    "data": [
+      {
+        "text": "Medical",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539884115
+  },
+  {
+    "id": "41c334a1-1e48-4012-a90f-da76be6e3aae",
+    "data": [
+      {
+        "text": "Consumer products",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539884115
+  },
+  {
+    "id": "b9fa24cd-09ce-4fd4-b728-aa677388db02",
+    "data": [
+      {
+        "text": "Food",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539199054
+  },
+  {
+    "id": "d4025c4f-8f40-4f4a-8d28-fb18c582e5d0",
+    "data": [
+      {
+        "text": "Let me hear about ",
+        "userDefined": false
+      },
+      {
+        "text": "vehicles",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539199054
+  },
+  {
+    "id": "995ccd88-ec0e-457e-931d-9479c399e4b8",
+    "data": [
+      {
+        "text": "Can you provide the recalls for ",
+        "userDefined": false
+      },
+      {
+        "text": "food",
+        "alias": "RecallType",
+        "meta": "@RecallType",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1539199054
+  }
+]

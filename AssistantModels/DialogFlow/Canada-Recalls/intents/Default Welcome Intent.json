@@ -1,0 +1,47 @@
+{
+  "id": "5cb8ff61-2cc5-4a42-a171-530ffbc38712",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Welcome to your portal for recalls in Canada. Would you like to hear about recent recalls? Or search for a specific recall.",
+            "Greetings, this is the portal for recalls in Canada. Interested in hearing recent recalls? Or search for a specific recall?"
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": "Bienvenue au portail de Rappel Canada. Voulez-vous de l\u0027information au sujet des rappels recents? Cherchez-vous de l\u0027info au sujet des rappels recents? Ou rechercher un rappel specifique en disant \u0027Je cherche pour...\u0027 et le sujet que vous chercher. Ou par categorie en disant: medecine, vehicule, produit de consommation ou aliment."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542132384,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    },
+    {
+      "name": "start-again"
+    },
+    {
+      "name": "GOOGLE_ASSISTANT_WELCOME"
+    }
+  ]
+}

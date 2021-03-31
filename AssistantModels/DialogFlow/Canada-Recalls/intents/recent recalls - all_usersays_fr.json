@@ -1,0 +1,26 @@
+[
+  {
+    "id": "08b466d6-ff17-4174-8d81-489ae5bafb8b",
+    "data": [
+      {
+        "text": " rappels récents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542210987
+  },
+  {
+    "id": "5b023f09-f659-4bdd-9b7d-7aaee890ca69",
+    "data": [
+      {
+        "text": " rappels les plus récents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542210987
+  }
+]

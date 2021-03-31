@@ -1,0 +1,122 @@
+[
+  {
+    "id": "75f7582d-da87-473d-8819-32790f3aae73",
+    "data": [
+      {
+        "text": "categorie",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1542308737
+  },
+  {
+    "id": "c0631867-3431-45a1-a509-67c56b3bf10b",
+    "data": [
+      {
+        "text": "par categorie",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542308737
+  },
+  {
+    "id": "35130392-db13-497e-a006-e95fb8707e48",
+    "data": [
+      {
+        "text": "recent par categorie",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1542308737
+  },
+  {
+    "id": "c3961a1e-01ea-4469-919d-d509e1110df2",
+    "data": [
+      {
+        "text": "rappels les plus recent par categorie",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542308737
+  },
+  {
+    "id": "5d57fcb3-662d-48a1-b050-943eb4041580",
+    "data": [
+      {
+        "text": "rappels recent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 1542223414
+  },
+  {
+    "id": "1a8c08a0-0017-45c7-bbb1-fce5b6288c6d",
+    "data": [
+      {
+        "text": "rappels les plus recents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542223414
+  },
+  {
+    "id": "77ebce25-a5f3-4dbd-9fa1-5a14d6419d0b",
+    "data": [
+      {
+        "text": "rappels les plus recent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542223414
+  },
+  {
+    "id": "adb63109-85c2-42dc-8f7c-445b9fbdc71d",
+    "data": [
+      {
+        "text": "rappels recents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542223414
+  },
+  {
+    "id": "e6bf9206-5eca-472a-b237-b84a1ba831c1",
+    "data": [
+      {
+        "text": "rappels récents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542211082
+  },
+  {
+    "id": "95359e4f-4ba6-43af-91ce-18ababe8af39",
+    "data": [
+      {
+        "text": "rappels les plus récents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542211082
+  }
+]

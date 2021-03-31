@@ -1,0 +1,42 @@
+{
+  "id": "c170a6f5-f858-4e8b-b59d-91fb973dc308",
+  "name": "recent recalls",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "recentrecalls-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Alright, You can hear about recent recalls in a specific category, or hear the latest recall. Say Latest, Medical, Food, Automotive, or Consumer Product.",
+            "Sure, you can get recent recalls  by category, or hear the latest recalls. Say Latest, Medical, Food, Automotive, or Consumer Product"
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": "D\u0027accord, cherchez-vous de l’information au sujet des rappels récents, ou par catégorie, disant: médecine, véhicule, produit de consommation ou aliments."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542308788,
+  "fallbackIntent": false,
+  "events": []
+}

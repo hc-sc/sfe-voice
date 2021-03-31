@@ -1,0 +1,38 @@
+{
+  "id": "7ffe77d9-81bb-4158-9b48-236f18c24fa6",
+  "parentId": "c170a6f5-f858-4e8b-b59d-91fb973dc308",
+  "rootParentId": "c170a6f5-f858-4e8b-b59d-91fb973dc308",
+  "name": "recent recalls - fallback",
+  "auto": false,
+  "contexts": [
+    "recentrecalls-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "recentrecalls.recentrecalls-fallback",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I\u0027m not sure what you mean by that. You can say latest for the most recent recall or state the category that your are interested in. Such as Food, Automotive, Medical, Consumer product."
+        },
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1539269320,
+  "fallbackIntent": true,
+  "events": []
+}

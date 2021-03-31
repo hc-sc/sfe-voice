@@ -1,0 +1,38 @@
+{
+  "id": "962708ea-e465-4225-9fe4-d44e02be36d5",
+  "parentId": "8b1ca08b-d180-4862-a09b-df641a06bbd0",
+  "rootParentId": "c170a6f5-f858-4e8b-b59d-91fb973dc308",
+  "name": "recent recalls - all - no - no",
+  "auto": true,
+  "contexts": [
+    "recentrecalls-all-no-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "recentrecalls.recentrecalls-custom.recentrecalls-all-no.recentrecalls-all-no-no",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": "Merci d\u0027utiliser Rappels Canada, au revoir!"
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Thanks for using Canada Recalls, goodbye!"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542307800,
+  "fallbackIntent": false,
+  "events": []
+}

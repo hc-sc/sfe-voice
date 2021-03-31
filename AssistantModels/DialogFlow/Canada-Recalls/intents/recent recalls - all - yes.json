@@ -1,0 +1,42 @@
+{
+  "id": "ee9267cc-7ab1-4195-8e03-bfeb3516925f",
+  "name": "recent recalls - all - yes",
+  "auto": true,
+  "contexts": [
+    "recentrecalls-all-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "recentrecalls.recentrecalls-custom.recentrecalls-all-yes",
+      "affectedContexts": [
+        {
+          "name": "recentrecalls-all-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": []
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542307693,
+  "fallbackIntent": false,
+  "events": []
+}
