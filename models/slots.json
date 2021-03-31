@@ -1,0 +1,32 @@
+[
+  {
+    "name": "category",
+    "type": {
+      "dialogflow": "generic"
+    }
+  },
+  {
+    "name": "Recall Title",
+    "type": {
+      "dialogflow": "generic"
+    }
+  },
+  {
+    "name": "Date of Recall",
+    "type": {
+      "dialogflow": "generic"
+    }
+  },
+  {
+    "name": "Recall count",
+    "type": {
+      "dialogflow": "generic"
+    }
+  },
+  {
+    "name": "Keyword",
+    "type": {
+      "dialogflow": "generic"
+    }
+  }
+]

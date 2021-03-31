@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+
+  jovo:
+    image: sfe/voice:0.0.1-bsj
+    container_name: sfe-voice
+    env_file: 
+      - ./.env
+    networks: 
+      - net-sfe-dev
+    ports:
+      - "3000:3000"
+    volumes: 
+      - ./src:/app/src:rw
+      - ./models:/app/models:rw
+      - ./platforms:/app/platforms:rw
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    restart: on-failure:3
+
+  # TODO: database
+  # database:
+  #   image: mongo:3.4-xenial
+  #   container_name: sfe-voice-db
+  #   environment:
+  #     - MONGO_INITDB_ROOT_USERNAME="$MONGO_ROOT"
+  #     - MONGO_INITDB_ROOT_PASSWORD="$MONGO_PW"
+  #   depends_on:
+  #     - base
+  #   networks: 
+  #     - net-sfe-dev
+  #   ports:
+  #     - "27017:27017"
+  #   volumes: 
+  #     - /data/db/voice/mongo:/data/db
+  #   restart: always
+
+networks:
+  net-sfe-dev:
+    external: true

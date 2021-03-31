@@ -1,0 +1,2711 @@
+{
+  "deviceToExport": {
+    "id": "538975f5-16a2-436e-8f14-e83dce0ccfe0",
+    "createdAt": "2020-06-16T23:31:18.093Z",
+    "name": "Eleos",
+    "type": "deviceWithScreen",
+    "icon": {
+      "fontSet": "material-icons",
+      "iconName": "phone_iphone"
+    },
+    "hasVoice": false,
+    "isMessageBubbleShown": true,
+    "choicesPlayedBy": "touch",
+    "deleted": false,
+    "screenBorderSize": {
+      "bottom": 82,
+      "right": 25,
+      "top": 97,
+      "left": 25
+    },
+    "screenSize": {
+      "width": 288,
+      "height": 496
+    },
+    "background": null
+  },
+  "devices": [
+    {
+      "id": "538975f5-16a2-436e-8f14-e83dce0ccfe0",
+      "createdAt": "2020-06-16T23:31:18.093Z",
+      "name": "Eleos",
+      "type": "deviceWithScreen",
+      "icon": {
+        "fontSet": "material-icons",
+        "iconName": "phone_iphone"
+      },
+      "hasVoice": false,
+      "isMessageBubbleShown": true,
+      "choicesPlayedBy": "touch",
+      "deleted": false,
+      "screenBorderSize": {
+        "bottom": 82,
+        "right": 25,
+        "top": 97,
+        "left": 25
+      },
+      "screenSize": {
+        "width": 288,
+        "height": 496
+      },
+      "background": null
+    },
+    {
+      "id": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8",
+      "background": "https://s3.amazonaws.com/botsociety.prod.us/3a4602fc5b38de82_smartspeaker_genericdefault1png.png",
+      "choicesPlayedBy": "voice",
+      "createdAt": "2020-06-29T21:13:28.906Z",
+      "hasVoice": true,
+      "icon": {
+        "fontSet": "botsociety",
+        "iconName": "voice_only_icon"
+      },
+      "isMessageBubbleShown": true,
+      "name": "Generic Voice Device",
+      "screenBorderSize": {
+        "bottom": 10,
+        "right": 10,
+        "top": 10,
+        "left": 10
+      },
+      "screenSize": {
+        "height": 120,
+        "width": 180
+      },
+      "type": "deviceWithoutScreen"
+    },
+    {
+      "id": "46e2c367-c62f-43e9-bfb8-7e4412704908",
+      "background": "https://s3.amazonaws.com/botsociety.prod.us/139683a4a8c3844bda614404808380446_f822fd4b7c2a209c6d72dccded_d5a5dcba7cba5c5ff4ccd601baff6e0_b81639cddd6a5121bc9d_adlingo_desktop1pngpngpngpng.png",
+      "choicesPlayedBy": "touch",
+      "createdAt": "2020-09-11T22:22:44.269Z",
+      "hasVoice": false,
+      "icon": {
+        "fontSet": "material-icons",
+        "iconName": "tv"
+      },
+      "isMessageBubbleShown": true,
+      "name": "Desktop",
+      "screenBorderSize": {
+        "left": 316,
+        "top": 136,
+        "right": 66,
+        "bottom": 22
+      },
+      "screenSize": {
+        "width": 298,
+        "height": 520
+      },
+      "type": "deviceWithScreen"
+    }
+  ],
+  "intentsInfo": {
+    "5f0f031d973c40df18c00a6c": {
+      "parameters": [
+        {
+          "ai": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [],
+                  "ssmlPlainTexts": [],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f039f973c40477bc00ab0",
+                  "nextMessageIds": [
+                    "5f0f03fe973c401d2ac00b37",
+                    "5f3abea7f2243e7232554030"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f0f039f973c40477bc00ab0",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_b1f261f1.mp3",
+                              "ssmlText": "<speak>\n  <p>Hi, my name is Pen, and I'm your virtual assistant for Reecalls Canada. I can read you the latest reecalls, or help you look for a specific reecall or safety alert. How can I help you?</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f0500973c40e263c00be7",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          },
+          "user": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [
+                    "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                    "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                    "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                    "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                    "<speak>\n  <p>Latest recalls please</p>\n</speak>"
+                  ],
+                  "ssmlPlainTexts": [
+                    "Latest recalls please",
+                    "Latest recalls please",
+                    "Latest recalls please",
+                    "Latest recalls please",
+                    "Latest recalls please"
+                  ],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f03fe973c401d2ac00b37",
+                  "nextMessageIds": [
+                    "5f0f061e973c406881c00d60"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f0f03fe973c401d2ac00b37",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_376ac1ba.mp3"
+                            }
+                          ]
+                        },
+                        {
+                          "utteranceIndex": 1,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_238b3579.mp3"
+                            }
+                          ]
+                        },
+                        {
+                          "utteranceIndex": 2,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_3e458140.mp3"
+                            }
+                          ]
+                        },
+                        {
+                          "utteranceIndex": 3,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_1a3db58d.mp3"
+                            }
+                          ]
+                        },
+                        {
+                          "utteranceIndex": 4,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_5326ae7d.mp3"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f031d973c40a4b6c00a68",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ai": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [],
+                  "ssmlPlainTexts": [],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f061e973c406881c00d60",
+                  "nextMessageIds": [
+                    "5f0f062d973c40a248c00d83"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f0f061e973c406881c00d60",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_68260e7d.mp3",
+                              "ssmlText": "<speak>\n  <p>OK, I can read you the latest reecalls. Are you interested in all reecalls, or specifically food, health products or consumer products?</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f0500973c40e263c00be7",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          },
+          "user": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [
+                    "<speak>\n  <p>All</p>\n</speak>"
+                  ],
+                  "ssmlPlainTexts": [
+                    "All"
+                  ],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f062d973c40a248c00d83",
+                  "nextMessageIds": [
+                    "5f0f0659973c40bfaac00d90"
+                  ]
+                },
+                "variables": [
+                  "5f0f1d58973c402d44c021e0"
+                ],
+                "message": {
+                  "id": "5f0f062d973c40a248c00d83",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>All</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_133f1ab8.mp3"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f031d973c40a4b6c00a68",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ai": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [],
+                  "ssmlPlainTexts": [],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f0659973c40bfaac00d90",
+                  "nextMessageIds": [
+                    "5f0f072c973c402507c00dbd"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f0f0659973c40bfaac00d90",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_620e7773.mp3",
+                              "ssmlText": "<speak>\n  <p>OK, great. Pulling up the latest from all categories.</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f0500973c40e263c00be7",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              },
+              {
+                "messageInfo": {
+                  "ssmlTexts": [],
+                  "ssmlPlainTexts": [],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f072c973c402507c00dbd",
+                  "nextMessageIds": [
+                    "5f0f0761973c40706ec00e69",
+                    "5f3aa4f2f2243e524b552994"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f0f072c973c402507c00dbd",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_a06355f6.mp3",
+                              "ssmlText": "<speak>\n  <p>[Recall title] was posted on [Date]. If this is the reecall you were looking for I can send you the link for more information. If not I can read you the next reecall.Would you like me to send a link, or continue reading?</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f0500973c40e263c00be7",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          },
+          "user": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [
+                    "<speak>\n  <p>More information please</p>\n</speak>",
+                    "<speak>\n  <p>Send the link</p>\n</speak>"
+                  ],
+                  "ssmlPlainTexts": [
+                    "More information please",
+                    "Send the link"
+                  ],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f0761973c40706ec00e69",
+                  "nextMessageIds": [
+                    "5f0f08e2973c40aea6c00f4b"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f0f0761973c40706ec00e69",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_d623a7ca.mp3",
+                              "ssmlText": "<speak>\n  <p>More information please</p>\n</speak>"
+                            }
+                          ]
+                        },
+                        {
+                          "utteranceIndex": 1,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_21e0dbba.mp3",
+                              "ssmlText": "<speak>\n  <p>Send the link</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f031d973c40a4b6c00a68",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ai": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [],
+                  "ssmlPlainTexts": [],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f08e2973c40aea6c00f4b",
+                  "nextMessageIds": [
+                    "5f0f09a1973c40058ac00feb",
+                    "5f3aa4f2f2243e524b552994"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f0f08e2973c40aea6c00f4b",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_ef34ab26.mp3",
+                              "ssmlText": "<speak>\n  <p>Great, glad we found what you were looking for. I'm sending you the link now.Would you like to continue looking for more reecalls?</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f0500973c40e263c00be7",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          },
+          "user": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [
+                    "<speak>\n  <p>No, I'm good</p>\n</speak>"
+                  ],
+                  "ssmlPlainTexts": [
+                    "No, I'm good"
+                  ],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f0f09a1973c40058ac00feb",
+                  "nextMessageIds": [
+                    "5f0f0976973c402910c00fb6"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f0f09a1973c40058ac00feb",
+                  "pathId": "5f0f0386973c40a023c00aa3",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>No, I'm good</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_94c1c876.mp3"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f031d973c40a4b6c00a68",
+                  "intentId": "5f0f031d973c40df18c00a6c",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "nlp": [],
+      "responses": [
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f0f0659973c40bfaac00d90",
+            "nextMessageIds": [
+              "5f0f072c973c402507c00dbd"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f0f0659973c40bfaac00d90",
+            "pathId": "5f0f0386973c40a023c00aa3",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_620e7773.mp3",
+                        "ssmlText": "<speak>\n  <p>OK, great. Pulling up the latest from all categories.</p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f0f031d973c40df18c00a6c",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        },
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f0f072c973c402507c00dbd",
+            "nextMessageIds": [
+              "5f0f0761973c40706ec00e69",
+              "5f3aa4f2f2243e524b552994"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f0f072c973c402507c00dbd",
+            "pathId": "5f0f0386973c40a023c00aa3",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_a06355f6.mp3",
+                        "ssmlText": "<speak>\n  <p>[Recall title] was posted on [Date]. If this is the reecall you were looking for I can send you the link for more information. If not I can read you the next reecall.Would you like me to send a link, or continue reading?</p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f0f031d973c40df18c00a6c",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        },
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f0f08e2973c40aea6c00f4b",
+            "nextMessageIds": [
+              "5f0f09a1973c40058ac00feb",
+              "5f3aa4f2f2243e524b552994"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f0f08e2973c40aea6c00f4b",
+            "pathId": "5f0f0386973c40a023c00aa3",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_ef34ab26.mp3",
+                        "ssmlText": "<speak>\n  <p>Great, glad we found what you were looking for. I'm sending you the link now.Would you like to continue looking for more reecalls?</p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f0f031d973c40df18c00a6c",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        },
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f0f039f973c40477bc00ab0",
+            "nextMessageIds": [
+              "5f0f03fe973c401d2ac00b37",
+              "5f3abea7f2243e7232554030"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f0f039f973c40477bc00ab0",
+            "pathId": "5f0f0386973c40a023c00aa3",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_b1f261f1.mp3",
+                        "ssmlText": "<speak>\n  <p>Hi, my name is Pen, and I'm your virtual assistant for Reecalls Canada. I can read you the latest reecalls, or help you look for a specific reecall or safety alert. How can I help you?</p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f0f031d973c40df18c00a6c",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        }
+      ],
+      "info": {
+        "intentId": "5f0f031d973c40df18c00a6c",
+        "intentName": "latest-recalls-path",
+        "isFollowUp": false,
+        "isFallback": false,
+        "nextIntents": [
+          "latest-recalls-path",
+          "keyword-search"
+        ],
+        "aiMessagesVariables": [],
+        "nlpFromChips": []
+      }
+    },
+    "5f3aa4cbf2243ed46f552985": {
+      "parameters": [],
+      "nlp": [
+        {
+          "messageInfo": {
+            "ssmlTexts": [
+              "<speak>\n  <p>Continue</p>\n</speak>",
+              "<speak>\n  <p>More</p>\n</speak>",
+              "<speak>\n  <p>Next</p>\n</speak>",
+              "<speak>\n  <p>Another</p>\n</speak>"
+            ],
+            "ssmlPlainTexts": [
+              "Continue",
+              "More",
+              "Next",
+              "Another"
+            ],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f3aa4f2f2243e524b552994",
+            "nextMessageIds": [
+              "5f3aa569f2243e87c15529fc"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f3aa4f2f2243e524b552994",
+            "pathId": "5f3aa4cbf2243e6e90552984",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_bf571b28.mp3",
+                        "ssmlText": "<speak>\n  <p>Continue</p>\n</speak>"
+                      }
+                    ]
+                  },
+                  {
+                    "utteranceIndex": 1,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_9bd43940.mp3",
+                        "ssmlText": "<speak>\n  <p>More</p>\n</speak>"
+                      }
+                    ]
+                  },
+                  {
+                    "utteranceIndex": 2,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_705656ea.mp3",
+                        "ssmlText": "<speak>\n  <p>Next</p>\n</speak>"
+                      }
+                    ]
+                  },
+                  {
+                    "utteranceIndex": 3,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_46dd8256.mp3",
+                        "ssmlText": "<speak>\n  <p>Another</p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f031d973c40a4b6c00a68",
+            "intentId": "5f3aa4cbf2243ed46f552985",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f3aa569f2243e87c15529fc",
+            "nextMessageIds": [
+              "5f468556860762a280e22d26"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f3aa569f2243e87c15529fc",
+            "pathId": "5f3aa4cbf2243e6e90552984",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_7fabd111.mp3",
+                        "ssmlText": "<speak>\n  <p>OK, here's the next reecall.</p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f3aa4cbf2243ed46f552985",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        },
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f468556860762a280e22d26",
+            "nextMessageIds": [
+              "5f4027d9f41ee0126be800ee",
+              "5f3ac68ef2243e5198554770"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f468556860762a280e22d26",
+            "pathId": "5f3aa4cbf2243e6e90552984",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "ssmlText": "<speak>\n  <p>[Recall title] was posted on [Date]. Would you like me to send a link, or continue reading?</p>\n</speak>",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_a9081e7a.mp3"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f3aa4cbf2243ed46f552985",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        }
+      ],
+      "info": {
+        "intentId": "5f3aa4cbf2243ed46f552985",
+        "intentName": "next-recall",
+        "isFollowUp": false,
+        "isFallback": false,
+        "nextIntents": [
+          "next-recall",
+          "found-the-recall"
+        ],
+        "aiMessagesVariables": [],
+        "nlpFromChips": []
+      }
+    },
+    "5f0f0386973c40d4d0c00aa4": {
+      "parameters": [
+        {
+          "ai": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [],
+                  "ssmlPlainTexts": [],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f3ac66cf2243e4d70554760",
+                  "nextMessageIds": [
+                    "5f3ac6b3f2243e063c554776",
+                    "5f3aa4f2f2243e524b552994"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f3ac66cf2243e4d70554760",
+                  "pathId": "5f3abc1af2243e06e7553ebd",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_83e068c0.mp3",
+                              "ssmlText": "<speak>\n  <p>Great, glad we found what you were looking for. I'm sending you the link now.Would you like to continue looking for more recalls?</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f0500973c40e263c00be7",
+                  "intentId": "5f0f0386973c40d4d0c00aa4",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          },
+          "user": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [
+                    "<speak>\n  <p>No, I'm good</p>\n</speak>"
+                  ],
+                  "ssmlPlainTexts": [
+                    "No, I'm good"
+                  ],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f3ac6b3f2243e063c554776",
+                  "nextMessageIds": [
+                    "5f0f0976973c402910c00fb6"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f3ac6b3f2243e063c554776",
+                  "pathId": "5f3abc1af2243e06e7553ebd",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>No, I'm good</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_c032db54.mp3"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f031d973c40a4b6c00a68",
+                  "intentId": "5f0f0386973c40d4d0c00aa4",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ai": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [],
+                  "ssmlPlainTexts": [],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f3ac477f2243e4114554532",
+                  "nextMessageIds": [
+                    "5f3ac68ef2243e5198554770",
+                    "5f3aa4f2f2243e524b552994"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f3ac477f2243e4114554532",
+                  "pathId": "5f3abc1af2243e06e7553ebd",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_e3565c61.mp3",
+                              "ssmlText": "<speak>\n  <p>[Recall title] was posted on [Date]. If this is the recall you were looking for I can send you the link for more information. If not I can read you the next recall.Would you like me to send a link, or continue reading?</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f0500973c40e263c00be7",
+                  "intentId": "5f0f0386973c40d4d0c00aa4",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          },
+          "user": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [
+                    "<speak>\n  <p>Send me the link</p>\n</speak>"
+                  ],
+                  "ssmlPlainTexts": [
+                    "Send me the link"
+                  ],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f3ac68ef2243e5198554770",
+                  "nextMessageIds": [
+                    "5f3ac66cf2243e4d70554760"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f3ac68ef2243e5198554770",
+                  "pathId": "5f3abc1af2243e06e7553ebd",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>Send me the link</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_0b123f9c.mp3"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f031d973c40a4b6c00a68",
+                  "intentId": "5f0f0386973c40d4d0c00aa4",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "nlp": [
+        {
+          "messageInfo": {
+            "ssmlTexts": [
+              "<speak>\n  <p>Send me the link</p>\n</speak>"
+            ],
+            "ssmlPlainTexts": [
+              "Send me the link"
+            ],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f3ac68ef2243e5198554770",
+            "nextMessageIds": [
+              "5f3ac66cf2243e4d70554760"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f3ac68ef2243e5198554770",
+            "pathId": "5f3abc1af2243e06e7553ebd",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "ssmlText": "<speak>\n  <p>Send me the link</p>\n</speak>",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_0b123f9c.mp3"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f031d973c40a4b6c00a68",
+            "intentId": "5f0f0386973c40d4d0c00aa4",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        },
+        {
+          "messageInfo": {
+            "ssmlTexts": [
+              "<speak>\n  <p>Read me the recall please</p>\n</speak>"
+            ],
+            "ssmlPlainTexts": [
+              "Read me the recall please"
+            ],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f3abc27f2243e4bfc553ec8",
+            "nextMessageIds": [
+              "5f3ac477f2243e4114554532"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f3abc27f2243e4bfc553ec8",
+            "pathId": "5f3abc1af2243e06e7553ebd",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "ssmlText": "<speak>\n  <p>Read me the recall please</p>\n</speak>",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_69eaf3a3.mp3"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f031d973c40a4b6c00a68",
+            "intentId": "5f0f0386973c40d4d0c00aa4",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        }
+      ],
+      "responses": [],
+      "info": {
+        "intentId": "5f0f0386973c40d4d0c00aa4",
+        "intentName": "found-the-recall",
+        "isFollowUp": false,
+        "isFallback": false,
+        "nextIntents": [],
+        "aiMessagesVariables": [],
+        "nlpFromChips": []
+      }
+    },
+    "5f0f093f973c408298c00f77": {
+      "parameters": [],
+      "nlp": [],
+      "responses": [
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f0f0976973c402910c00fb6",
+            "nextMessageIds": []
+          },
+          "variables": [],
+          "message": {
+            "id": "5f0f0976973c402910c00fb6",
+            "pathId": "5f0f093f973c407e37c00f76",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_42fc9180.mp3",
+                        "ssmlText": "<speak>\n  <p>No problem. Thanks for using Reecalls Canada. </p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f0f093f973c408298c00f77",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        }
+      ],
+      "info": {
+        "intentId": "5f0f093f973c408298c00f77",
+        "intentName": "close",
+        "isFollowUp": false,
+        "isFallback": false,
+        "nextIntents": [],
+        "aiMessagesVariables": [],
+        "nlpFromChips": []
+      }
+    },
+    "5f3ab766f2243eaa6255398e": {
+      "parameters": [
+        {
+          "ai": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [],
+                  "ssmlPlainTexts": [],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f3ab894f2243ec032553a6b",
+                  "nextMessageIds": [
+                    "5f3ab8b8f2243ee6a0553a6d"
+                  ]
+                },
+                "variables": [],
+                "message": {
+                  "id": "5f3ab894f2243ec032553a6b",
+                  "pathId": "5f3ab765f2243ea96655398d",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_9316b655.mp3",
+                              "ssmlText": "<speak>\n  <p>OK, lets search for a specific reecall. We have thousands of reecalls, so lets narrow it down. Often the best keywords are brand names, but we can also search by type of product. What keywords would you like to look for?</p>\n</speak>"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f0500973c40e263c00be7",
+                  "intentId": "5f3ab766f2243eaa6255398e",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          },
+          "user": {
+            "messages": [
+              {
+                "messageInfo": {
+                  "ssmlTexts": [
+                    "<speak>\n  <p>Lettuce</p>\n</speak>"
+                  ],
+                  "ssmlPlainTexts": [
+                    "Lettuce"
+                  ],
+                  "textComponents": [],
+                  "imageComponents": [],
+                  "chips": [],
+                  "cards": [],
+                  "id": "5f3ab8b8f2243ee6a0553a6d",
+                  "nextMessageIds": [
+                    "5f3ab97bf2243ef5d9553bf3"
+                  ]
+                },
+                "variables": [
+                  "5f3ac446f2243e8ee1554527"
+                ],
+                "message": {
+                  "id": "5f3ab8b8f2243ee6a0553a6d",
+                  "pathId": "5f3ab765f2243ea96655398d",
+                  "attachments": [
+                    {
+                      "utterances": [
+                        {
+                          "utteranceIndex": 0,
+                          "components": [
+                            {
+                              "type": "ssml",
+                              "ssmlText": "<speak>\n  <p>Lettuce</p>\n</speak>",
+                              "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_6a7c1684.mp3"
+                            }
+                          ]
+                        }
+                      ],
+                      "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+                    }
+                  ],
+                  "senderId": "5f0f031d973c40a4b6c00a68",
+                  "intentId": "5f3ab766f2243eaa6255398e",
+                  "designId": "5f0f031d973c401ccec00a66"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "nlp": [
+        {
+          "messageInfo": {
+            "ssmlTexts": [
+              "<speak>\n  <p>Specific recall</p>\n</speak>"
+            ],
+            "ssmlPlainTexts": [
+              "Specific recall"
+            ],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f3abea7f2243e7232554030",
+            "nextMessageIds": [
+              "5f3ab894f2243ec032553a6b"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f3abea7f2243e7232554030",
+            "pathId": "5f3ab765f2243ea96655398d",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "ssmlText": "<speak>\n  <p>Specific recall</p>\n</speak>",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_90c8a3f1.mp3"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f031d973c40a4b6c00a68",
+            "intentId": "5f3ab766f2243eaa6255398e",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        }
+      ],
+      "responses": [
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f3ab97bf2243ef5d9553bf3",
+            "nextMessageIds": [
+              "5f3aba46f2243e49bb553dc0"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f3ab97bf2243ef5d9553bf3",
+            "pathId": "5f3ab765f2243ea96655398d",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_e401b1f1.mp3",
+                        "ssmlText": "<speak>\n  <p>Lettuce related reecalls it is</p>\n</speak>"
+                      }
+                    ]
+                  },
+                  {
+                    "utteranceIndex": 1,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_2361b4d0.mp3",
+                        "ssmlText": "<speak>\n  <p>OK, lets look for lettuce</p>\n</speak>"
+                      }
+                    ]
+                  },
+                  {
+                    "utteranceIndex": 2,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_cb802fbe.mp3",
+                        "ssmlText": "<speak>\n  <p>Lettuce is it</p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f3ab766f2243eaa6255398e",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        },
+        {
+          "messageInfo": {
+            "ssmlTexts": [],
+            "ssmlPlainTexts": [],
+            "textComponents": [],
+            "imageComponents": [],
+            "chips": [],
+            "cards": [],
+            "id": "5f3aba46f2243e49bb553dc0",
+            "nextMessageIds": [
+              "5f3aba69f2243ed37e553e1b",
+              "5f3abc27f2243e4bfc553ec8"
+            ]
+          },
+          "variables": [],
+          "message": {
+            "id": "5f3aba46f2243e49bb553dc0",
+            "pathId": "5f3ab765f2243ea96655398d",
+            "attachments": [
+              {
+                "utterances": [
+                  {
+                    "utteranceIndex": 0,
+                    "components": [
+                      {
+                        "type": "ssml",
+                        "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_667f73a4.mp3",
+                        "ssmlText": "<speak>\n  <p>I've found 5 reecalls that match what you are looking for. If you like, I can read you the latest? Or we can try to narrow it down some more?</p>\n</speak>"
+                      }
+                    ]
+                  }
+                ],
+                "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+              }
+            ],
+            "senderId": "5f0f0500973c40e263c00be7",
+            "intentId": "5f3ab766f2243eaa6255398e",
+            "designId": "5f0f031d973c401ccec00a66"
+          }
+        }
+      ],
+      "info": {
+        "intentId": "5f3ab766f2243eaa6255398e",
+        "intentName": "keyword-search",
+        "isFollowUp": false,
+        "isFallback": false,
+        "nextIntents": [
+          "keyword-search",
+          "found-the-recall"
+        ],
+        "aiMessagesVariables": [],
+        "nlpFromChips": []
+      }
+    }
+  },
+  "variablesInfo": [
+    {
+      "_id": "5f0f1d58973c402d44c021e0",
+      "values": [
+        "food",
+        "health products",
+        "consumer products",
+        "all"
+      ],
+      "name": "category",
+      "vartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      }
+    },
+    {
+      "_id": "5f3a9feff2243eecdf5526bb",
+      "values": [
+        "Recall title"
+      ],
+      "name": "Recall Title",
+      "vartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      }
+    },
+    {
+      "_id": "5f3a9ff7f2243ee5bb5526bc",
+      "values": [
+        "Date"
+      ],
+      "name": "Date of Recall",
+      "vartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      }
+    },
+    {
+      "_id": "5f3abb23f2243e28db553e49",
+      "values": [
+        "##",
+        "5 recalls"
+      ],
+      "name": "Recall count",
+      "vartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      }
+    },
+    {
+      "_id": "5f3ac446f2243e8ee1554527",
+      "values": [
+        "Lettuce",
+        "Adam Bros"
+      ],
+      "name": "Keyword",
+      "vartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      }
+    }
+  ],
+  "designInfo": {
+    "_id": "5f0f031d973c401ccec00a66",
+    "updatedAt": "2021-01-20T15:39:11.103Z",
+    "createdAt": "2020-07-15T13:22:37.116Z",
+    "name": "RSAMS Test by David",
+    "deleted": false,
+    "lastActionDate": "2021-01-20T15:39:11.103Z",
+    "custom_id": "5f0f031d973c401ccec00a66",
+    "options": {
+      "tts_language": "en-US"
+    },
+    "channel": "nobrandvoice",
+    "designGlobalCssVariables": {
+      "isDarkModeEnabled": false,
+      "singleImageVariables": {},
+      "textVariables": {},
+      "imageVariables": {},
+      "colorVariables": ""
+    },
+    "integrations": {},
+    "preset": "eda7ea94-76ce-4988-9bd8-d5a763006232"
+  },
+  "persons": [
+    {
+      "_id": "5f0f031d973c40cc23c00a67",
+      "updatedAt": "2021-01-13T19:59:34.255Z",
+      "createdAt": "2020-07-15T13:22:37.126Z",
+      "picture": "",
+      "_conversation": "5f0f031d973c401ccec00a66",
+      "__v": 0,
+      "assistant": true,
+      "bot": false,
+      "voice": "en-US-Wavenet-F",
+      "name": "Generic"
+    },
+    {
+      "_id": "5f0f031d973c40a4b6c00a68",
+      "updatedAt": "2021-01-13T19:59:34.265Z",
+      "createdAt": "2020-07-15T13:22:37.126Z",
+      "picture": "",
+      "_conversation": "5f0f031d973c401ccec00a66",
+      "__v": 0,
+      "assistant": false,
+      "bot": false,
+      "voice": "en-US-Wavenet-B",
+      "name": "User"
+    },
+    {
+      "_id": "5f0f0500973c40e263c00be7",
+      "updatedAt": "2021-01-13T19:59:34.260Z",
+      "createdAt": "2020-07-15T13:30:40.996Z",
+      "_conversation": "5f0f031d973c401ccec00a66",
+      "__v": 0,
+      "assistant": false,
+      "bot": true,
+      "voice": "en-US-Wavenet-C",
+      "name": "Pen"
+    }
+  ],
+  "intents": [
+    {
+      "_id": "5f0f031d973c40df18c00a6c",
+      "updatedAt": "2020-08-17T15:53:40.550Z",
+      "createdAt": "2020-07-15T13:22:37.134Z",
+      "name": "latest-recalls-path",
+      "__v": 0
+    },
+    {
+      "_id": "5f0f0386973c40d4d0c00aa4",
+      "updatedAt": "2020-08-17T18:42:08.701Z",
+      "createdAt": "2020-07-15T13:24:22.614Z",
+      "name": "found-the-recall",
+      "__v": 0
+    },
+    {
+      "_id": "5f0f093f973c408298c00f77",
+      "updatedAt": "2020-08-17T16:02:20.912Z",
+      "createdAt": "2020-07-15T13:48:47.715Z",
+      "name": "close",
+      "__v": 0
+    },
+    {
+      "_id": "5f3aa4cbf2243ed46f552985",
+      "updatedAt": "2020-08-17T16:01:28.610Z",
+      "createdAt": "2020-08-17T15:39:55.683Z",
+      "name": "next-recall",
+      "__v": 0
+    },
+    {
+      "_id": "5f3ab766f2243eaa6255398e",
+      "updatedAt": "2020-08-17T17:06:29.470Z",
+      "createdAt": "2020-08-17T16:59:18.253Z",
+      "name": "keyword-search",
+      "__v": 0
+    },
+    {
+      "_id": "5f4027faf41ee0598de800f1",
+      "updatedAt": "2020-08-21T20:00:58.135Z",
+      "createdAt": "2020-08-21T20:00:58.135Z",
+      "name": "new-path-intent-0",
+      "__v": 0
+    },
+    {
+      "_id": "5f402978f41ee08613e801a8",
+      "updatedAt": "2020-08-21T20:07:20.045Z",
+      "createdAt": "2020-08-21T20:07:20.045Z",
+      "name": "new-path-intent-1",
+      "__v": 0
+    },
+    {
+      "_id": "5f4685708607621ee3e22d2b",
+      "updatedAt": "2020-08-26T15:53:20.107Z",
+      "createdAt": "2020-08-26T15:53:20.107Z",
+      "name": "new-path-intent-2",
+      "__v": 0
+    }
+  ],
+  "variables": [
+    {
+      "_id": "5f0f1d58973c402d44c021e0",
+      "updatedAt": "2020-08-17T15:18:47.670Z",
+      "createdAt": "2020-07-15T15:14:32.485Z",
+      "__v": 0,
+      "values": [
+        "food",
+        "health products",
+        "consumer products",
+        "all"
+      ],
+      "defaultVartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      },
+      "name": "category"
+    },
+    {
+      "_id": "5f3a9feff2243eecdf5526bb",
+      "updatedAt": "2020-08-17T15:19:11.347Z",
+      "createdAt": "2020-08-17T15:19:11.347Z",
+      "__v": 0,
+      "values": [
+        "Recall title"
+      ],
+      "defaultVartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      },
+      "name": "Recall Title"
+    },
+    {
+      "_id": "5f3a9ff7f2243ee5bb5526bc",
+      "updatedAt": "2020-08-17T15:19:19.883Z",
+      "createdAt": "2020-08-17T15:19:19.883Z",
+      "__v": 0,
+      "values": [
+        "Date"
+      ],
+      "defaultVartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      },
+      "name": "Date of Recall"
+    },
+    {
+      "_id": "5f3abb23f2243e28db553e49",
+      "updatedAt": "2020-08-17T17:16:06.941Z",
+      "createdAt": "2020-08-17T17:15:15.209Z",
+      "__v": 0,
+      "values": [
+        "##",
+        "5 recalls"
+      ],
+      "defaultVartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      },
+      "name": "Recall count"
+    },
+    {
+      "_id": "5f3ac446f2243e8ee1554527",
+      "updatedAt": "2020-08-17T17:54:30.549Z",
+      "createdAt": "2020-08-17T17:54:14.576Z",
+      "__v": 0,
+      "values": [
+        "Lettuce",
+        "Adam Bros"
+      ],
+      "defaultVartypes": {
+        "Dialogflow": "generic",
+        "Rasa": "rasa_core.slots.TextSlot",
+        "MicrosoftBotFramework": "generic",
+        "IBMWatson": "generic",
+        "OracleBot": "generic",
+        "Custom": "generic"
+      },
+      "name": "Keyword"
+    }
+  ],
+  "vartypes": [],
+  "messages": [
+    {
+      "id": "5f0f039f973c40477bc00ab0",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_b1f261f1.mp3",
+                  "ssmlText": "<speak>\n  <p>Hi, my name is Pen, and I'm your virtual assistant for Reecalls Canada. I can read you the latest reecalls, or help you look for a specific reecall or safety alert. How can I help you?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f03fe973c401d2ac00b37",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_376ac1ba.mp3"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 1,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_238b3579.mp3"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 2,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_3e458140.mp3"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 3,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_1a3db58d.mp3"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 4,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Latest recalls please</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_5326ae7d.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f061e973c406881c00d60",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_68260e7d.mp3",
+                  "ssmlText": "<speak>\n  <p>OK, I can read you the latest reecalls. Are you interested in all reecalls, or specifically food, health products or consumer products?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f062d973c40a248c00d83",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>All</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_133f1ab8.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f0659973c40bfaac00d90",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_620e7773.mp3",
+                  "ssmlText": "<speak>\n  <p>OK, great. Pulling up the latest from all categories.</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f072c973c402507c00dbd",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_a06355f6.mp3",
+                  "ssmlText": "<speak>\n  <p>[Recall title] was posted on [Date]. If this is the reecall you were looking for I can send you the link for more information. If not I can read you the next reecall.Would you like me to send a link, or continue reading?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f0761973c40706ec00e69",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_d623a7ca.mp3",
+                  "ssmlText": "<speak>\n  <p>More information please</p>\n</speak>"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 1,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_21e0dbba.mp3",
+                  "ssmlText": "<speak>\n  <p>Send the link</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f08e2973c40aea6c00f4b",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_ef34ab26.mp3",
+                  "ssmlText": "<speak>\n  <p>Great, glad we found what you were looking for. I'm sending you the link now.Would you like to continue looking for more reecalls?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f0976973c402910c00fb6",
+      "pathId": "5f0f093f973c407e37c00f76",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_42fc9180.mp3",
+                  "ssmlText": "<speak>\n  <p>No problem. Thanks for using Reecalls Canada. </p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f0f093f973c408298c00f77",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f0f09a1973c40058ac00feb",
+      "pathId": "5f0f0386973c40a023c00aa3",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>No, I'm good</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_94c1c876.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f0f031d973c40df18c00a6c",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3aa4f2f2243e524b552994",
+      "pathId": "5f3aa4cbf2243e6e90552984",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_bf571b28.mp3",
+                  "ssmlText": "<speak>\n  <p>Continue</p>\n</speak>"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 1,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_9bd43940.mp3",
+                  "ssmlText": "<speak>\n  <p>More</p>\n</speak>"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 2,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_705656ea.mp3",
+                  "ssmlText": "<speak>\n  <p>Next</p>\n</speak>"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 3,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_46dd8256.mp3",
+                  "ssmlText": "<speak>\n  <p>Another</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f3aa4cbf2243ed46f552985",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3aa569f2243e87c15529fc",
+      "pathId": "5f3aa4cbf2243e6e90552984",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_7fabd111.mp3",
+                  "ssmlText": "<speak>\n  <p>OK, here's the next reecall.</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f3aa4cbf2243ed46f552985",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3ab894f2243ec032553a6b",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_9316b655.mp3",
+                  "ssmlText": "<speak>\n  <p>OK, lets search for a specific reecall. We have thousands of reecalls, so lets narrow it down. Often the best keywords are brand names, but we can also search by type of product. What keywords would you like to look for?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3ab8b8f2243ee6a0553a6d",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Lettuce</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_6a7c1684.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3ab97bf2243ef5d9553bf3",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_e401b1f1.mp3",
+                  "ssmlText": "<speak>\n  <p>Lettuce related reecalls it is</p>\n</speak>"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 1,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_2361b4d0.mp3",
+                  "ssmlText": "<speak>\n  <p>OK, lets look for lettuce</p>\n</speak>"
+                }
+              ]
+            },
+            {
+              "utteranceIndex": 2,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_cb802fbe.mp3",
+                  "ssmlText": "<speak>\n  <p>Lettuce is it</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3aba46f2243e49bb553dc0",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_667f73a4.mp3",
+                  "ssmlText": "<speak>\n  <p>I've found 5 reecalls that match what you are looking for. If you like, I can read you the latest? Or we can try to narrow it down some more?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3aba69f2243ed37e553e1b",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_3a171cc8.mp3",
+                  "ssmlText": "<speak>\n  <p>Let's narrow it down</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3abb00f2243e37f4553e33",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_aea2eb9a.mp3",
+                  "ssmlText": "<speak>\n  <p>OK, are there any other keywords that might help narrow it down?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3abbb6f2243ec176553e83",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Adam Bros</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_849c8008.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3abbcdf2243e77ab553e85",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>OK, adding Adam Bros to the search.</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_9c995fe2.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3abc27f2243e4bfc553ec8",
+      "pathId": "5f3abc1af2243e06e7553ebd",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Read me the recall please</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_69eaf3a3.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f0f0386973c40d4d0c00aa4",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3abea7f2243e7232554030",
+      "pathId": "5f3ab765f2243ea96655398d",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Specific recall</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_90c8a3f1.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f3ab766f2243eaa6255398e",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3ac477f2243e4114554532",
+      "pathId": "5f3abc1af2243e06e7553ebd",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_e3565c61.mp3",
+                  "ssmlText": "<speak>\n  <p>[Recall title] was posted on [Date]. If this is the recall you were looking for I can send you the link for more information. If not I can read you the next recall.Would you like me to send a link, or continue reading?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f0f0386973c40d4d0c00aa4",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3ac66cf2243e4d70554760",
+      "pathId": "5f3abc1af2243e06e7553ebd",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_83e068c0.mp3",
+                  "ssmlText": "<speak>\n  <p>Great, glad we found what you were looking for. I'm sending you the link now.Would you like to continue looking for more recalls?</p>\n</speak>"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f0f0386973c40d4d0c00aa4",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3ac68ef2243e5198554770",
+      "pathId": "5f3abc1af2243e06e7553ebd",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Send me the link</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_0b123f9c.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f0f0386973c40d4d0c00aa4",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f3ac6b3f2243e063c554776",
+      "pathId": "5f3abc1af2243e06e7553ebd",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>No, I'm good</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_c032db54.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f0f0386973c40d4d0c00aa4",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f4027d9f41ee0126be800ee",
+      "pathId": "5f3aa4cbf2243e6e90552984",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>Continue</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_9fcba67c.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f031d973c40a4b6c00a68",
+      "intentId": "5f3aa4cbf2243ed46f552985",
+      "designId": "5f0f031d973c401ccec00a66"
+    },
+    {
+      "id": "5f468556860762a280e22d26",
+      "pathId": "5f3aa4cbf2243e6e90552984",
+      "attachments": [
+        {
+          "utterances": [
+            {
+              "utteranceIndex": 0,
+              "components": [
+                {
+                  "type": "ssml",
+                  "ssmlText": "<speak>\n  <p>[Recall title] was posted on [Date]. Would you like me to send a link, or continue reading?</p>\n</speak>",
+                  "audioUrl": "https://s3.amazonaws.com/botsociety.prod.us/audio/message_a9081e7a.mp3"
+                }
+              ]
+            }
+          ],
+          "deviceId": "eb5a9b8e-163d-4ccb-9675-52c3f8a344a8"
+        }
+      ],
+      "senderId": "5f0f0500973c40e263c00be7",
+      "intentId": "5f3aa4cbf2243ed46f552985",
+      "designId": "5f0f031d973c401ccec00a66"
+    }
+  ],
+  "paths": [
+    {
+      "_id": "5f0f0386973c40a023c00aa3",
+      "updatedAt": "2020-10-07T15:42:03.388Z",
+      "createdAt": "2020-07-15T13:24:22.476Z",
+      "_design": "5f0f031d973c401ccec00a66",
+      "__v": 0,
+      "_presetAnimations": [],
+      "_intent": "5f0f031d973c40df18c00a6c",
+      "translateY": 0,
+      "translateX": 0,
+      "device": null,
+      "name": "Happy Path - Latest",
+      "deleted": false,
+      "messageIds": [
+        "5f0f039f973c40477bc00ab0",
+        "5f0f03fe973c401d2ac00b37",
+        "5f0f061e973c406881c00d60",
+        "5f0f062d973c40a248c00d83",
+        "5f0f0659973c40bfaac00d90",
+        "5f0f072c973c402507c00dbd",
+        "5f0f0761973c40706ec00e69",
+        "5f0f08e2973c40aea6c00f4b",
+        "5f0f09a1973c40058ac00feb"
+      ]
+    },
+    {
+      "_id": "5f3ab765f2243ea96655398d",
+      "updatedAt": "2020-10-07T15:42:03.388Z",
+      "createdAt": "2020-08-17T16:59:17.985Z",
+      "_design": "5f0f031d973c401ccec00a66",
+      "__v": 0,
+      "_presetAnimations": [],
+      "_intent": "5f3ab766f2243eaa6255398e",
+      "translateY": 0,
+      "translateX": 1300,
+      "device": null,
+      "name": "Specific Recall Search",
+      "deleted": false,
+      "messageIds": [
+        "5f3abea7f2243e7232554030",
+        "5f3ab894f2243ec032553a6b",
+        "5f3ab8b8f2243ee6a0553a6d",
+        "5f3ab97bf2243ef5d9553bf3",
+        "5f3aba46f2243e49bb553dc0",
+        "5f3aba69f2243ed37e553e1b",
+        "5f3abb00f2243e37f4553e33",
+        "5f3abbb6f2243ec176553e83",
+        "5f3abbcdf2243e77ab553e85"
+      ]
+    },
+    {
+      "_id": "5f3abc1af2243e06e7553ebd",
+      "updatedAt": "2020-10-07T15:42:03.389Z",
+      "createdAt": "2020-08-17T17:19:22.574Z",
+      "_design": "5f0f031d973c401ccec00a66",
+      "__v": 0,
+      "_presetAnimations": [],
+      "_intent": "5f0f0386973c40d4d0c00aa4",
+      "translateY": 0,
+      "translateX": 1950,
+      "device": null,
+      "name": "Found Recall",
+      "deleted": false,
+      "messageIds": [
+        "5f3abc27f2243e4bfc553ec8",
+        "5f3ac477f2243e4114554532",
+        "5f3ac68ef2243e5198554770",
+        "5f3ac66cf2243e4d70554760",
+        "5f3ac6b3f2243e063c554776"
+      ]
+    },
+    {
+      "_id": "5f3aa4cbf2243e6e90552984",
+      "updatedAt": "2020-10-07T15:42:03.389Z",
+      "createdAt": "2020-08-17T15:39:55.430Z",
+      "_design": "5f0f031d973c401ccec00a66",
+      "__v": 0,
+      "_presetAnimations": [],
+      "_intent": "5f3aa4cbf2243ed46f552985",
+      "translateY": 0,
+      "translateX": 2600,
+      "device": null,
+      "name": "More recalls",
+      "deleted": false,
+      "messageIds": [
+        "5f3aa4f2f2243e524b552994",
+        "5f3aa569f2243e87c15529fc",
+        "5f468556860762a280e22d26",
+        "5f4027d9f41ee0126be800ee"
+      ]
+    },
+    {
+      "_id": "5f0f093f973c407e37c00f76",
+      "updatedAt": "2020-10-07T15:42:03.390Z",
+      "createdAt": "2020-07-15T13:48:47.411Z",
+      "_design": "5f0f031d973c401ccec00a66",
+      "__v": 0,
+      "_presetAnimations": [],
+      "_intent": "5f0f093f973c408298c00f77",
+      "translateY": 0,
+      "translateX": 3250,
+      "device": null,
+      "name": "Closing Path",
+      "deleted": false,
+      "messageIds": [
+        "5f0f0976973c402910c00fb6"
+      ]
+    }
+  ],
+  "presetName": "Generic Legacy",
+  "warning": "Export map not applied",
+  "storiesInfo": {}
+}

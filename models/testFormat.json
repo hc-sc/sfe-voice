@@ -1,0 +1,51 @@
+{
+  "ai": {
+    "5f0f039f973c40477bc00ab0": {
+      "message": "<speak>\n  <p>Hi, my name is Pen, and I'm your virtual assistant for Reecalls Canada. I can read you the latest reecalls, or help you look for a specific reecall or safety alert. How can I help you?</p>\n</speak>"
+    },
+    "5f0f061e973c406881c00d60": {
+      "message": "<speak>\n  <p>OK, I can read you the latest reecalls. Are you interested in all reecalls, or specifically food, health products or consumer products?</p>\n</speak>"
+    },
+    "5f0f0659973c40bfaac00d90": {
+      "message": "<speak>\n  <p>OK, great. Pulling up the latest from all categories.</p>\n</speak>"
+    },
+    "5f0f072c973c402507c00dbd": {
+      "message": "<speak>\n  <p>[Recall title] was posted on [Date]. If this is the reecall you were looking for I can send you the link for more information. If not I can read you the next reecall.Would you like me to send a link, or continue reading?</p>\n</speak>"
+    },
+    "5f0f08e2973c40aea6c00f4b": {
+      "message": "<speak>\n  <p>Great, glad we found what you were looking for. I'm sending you the link now.Would you like to continue looking for more reecalls?</p>\n</speak>"
+    },
+    "5f3ac66cf2243e4d70554760": {
+      "message": "<speak>\n  <p>Great, glad we found what you were looking for. I'm sending you the link now.Would you like to continue looking for more recalls?</p>\n</speak>"
+    },
+    "5f3ac477f2243e4114554532": {
+      "message": "<speak>\n  <p>[Recall title] was posted on [Date]. If this is the recall you were looking for I can send you the link for more information. If not I can read you the next recall.Would you like me to send a link, or continue reading?</p>\n</speak>"
+    },
+    "5f3ab894f2243ec032553a6b": {
+      "message": "<speak>\n  <p>OK, lets search for a specific reecall. We have thousands of reecalls, so lets narrow it down. Often the best keywords are brand names, but we can also search by type of product. What keywords would you like to look for?</p>\n</speak>"
+    }
+  },
+  "user": {
+    "5f0f03fe973c401d2ac00b37": {
+      "message": "<speak>\n  <p>Latest recalls please</p>\n</speak>"
+    },
+    "5f0f062d973c40a248c00d83": {
+      "message": "<speak>\n  <p>All</p>\n</speak>"
+    },
+    "5f0f0761973c40706ec00e69": {
+      "message": "<speak>\n  <p>More information please</p>\n</speak>"
+    },
+    "5f0f09a1973c40058ac00feb": {
+      "message": "<speak>\n  <p>No, I'm good</p>\n</speak>"
+    },
+    "5f3ac6b3f2243e063c554776": {
+      "message": "<speak>\n  <p>No, I'm good</p>\n</speak>"
+    },
+    "5f3ac68ef2243e5198554770": {
+      "message": "<speak>\n  <p>Send me the link</p>\n</speak>"
+    },
+    "5f3ab8b8f2243ee6a0553a6d": {
+      "message": "<speak>\n  <p>Lettuce</p>\n</speak>"
+    }
+  }
+}

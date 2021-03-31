@@ -1,0 +1,145 @@
+{
+  "invocation": "canada recalls",
+  "intents": [
+    {
+      "name": "WelcomeIntent",
+      "phrases": [
+        "hi",
+        "hello",
+        "Canada recalls"
+      ]
+    },
+    {
+      "name": "GetCategoryIntent",
+      "phrases": [
+        "Latest recalls please",
+        "Latest please",
+        "Latest recalls",
+        "Tell me the most recent recalls",
+        "I would like to hear the recent ones please",
+        "New recalls"
+      ]
+    },
+    {
+      "name": "LatestRecallsIntent",
+      "phrases": [
+        "Show me {recall-category} the latest recalls",
+        "{recall-category} please",
+        "{recall-category} recalls",
+        "Tell me the most recent {recall-category} recalls",
+        "I'd like to hear about {recall-category}",
+        "{recall-category}"
+      ],
+      "inputTypes": {
+        "name": "@recall-category",
+        "dialogflow": {
+          "automatedExpansion": true
+        },
+        "values": [
+          {
+            "value": "ALL",
+            "synonyms": [
+              "all",
+              "everything",
+              "entire",
+              "any",
+              "each and any",
+              "every single"
+            ]
+          },
+          {
+            "value": "FOOD",
+            "synonyms": [
+              "food",
+              "chow",
+              "grub"
+            ]
+          },
+          {
+            "value": "VEHICLES",
+            "synonyms": [
+              "vehicles",
+              "automobiles",
+              "cars",
+              "trucks",
+              "motorcycles"
+            ]
+          },
+          {
+            "value": "HEALTH",
+            "synonyms": [
+              "health products",
+              "drugs",
+              "vitamins",
+              "natural health products"
+            ]
+          },
+          {
+            "value": "CPS",
+            "synonyms": [
+              "consumer products",
+              "consumer goods",
+              "consumer things"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "MoreRecallsIntent",
+      "phrases": [
+        "More recalls please",
+        "Tell me more",
+        "Yes more"
+      ]
+    },
+    {
+      "name": "CloseRecallsIntent",
+      "phrases": [
+        "Thank you",
+        "Close",
+        "I'm done"
+      ]
+    }
+  ],
+  "alexa": {
+    "interactionModel": {
+      "languageModel": {
+        "intents": [
+          {
+            "name": "AMAZON.CancelIntent",
+            "samples": []
+          },
+          {
+            "name": "AMAZON.HelpIntent",
+            "samples": []
+          },
+          {
+            "name": "AMAZON.StopIntent",
+            "samples": []
+          }
+        ]
+      }
+    }
+  },
+  "dialogflow": {
+    "intents": [
+      {
+        "name": "Default Fallback Intent",
+        "auto": true,
+        "webhookUsed": true,
+        "fallbackIntent": true
+      },
+      {
+        "name": "Default Welcome Intent",
+        "auto": true,
+        "webhookUsed": true,
+        "events": [
+          {
+            "name": "WELCOME"
+          }
+        ]
+      }
+    ]
+  }
+}
